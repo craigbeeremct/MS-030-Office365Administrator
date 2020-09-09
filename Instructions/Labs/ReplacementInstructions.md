@@ -58,13 +58,13 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. In the Navigation menu, click **Security**. This opens the **Office 365 Security & Compliance** portal.
 
-    - Note that you can open this portal  by browsing to **https://protection.office.com**.
+    - Note that you can open this portal by browsing to **https://protection.office.com**.
   
 1. Select the **Microsoft 365 admin center** browser tab.
 
 1. In the Navigation menu, click **Compliance**. This opens the **Microsoft 365 compliance** portal.
 
-    - Note that you can open this portal  by browsing to **https://compliance.microsoft.com**.
+    - Note that you can open this portal by browsing to **https://compliance.microsoft.com**.
   
 1. Select the **Microsoft 365 admin center** browser tab.
 
@@ -72,7 +72,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Connect to **LON-DC1**.
 
-1. Open Internet Explorer. Browse to `https://admin.microsoft.com`.
+1. Open Internet Explorer. Browse to **https://admin.microsoft.com**.
 
 1. Sign in using the supplied tenant administrator (`admin@LODSXXXXXX.onmicrosoft.com`).
 
@@ -86,32 +86,62 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Copy the **TXT value** to the clipboard.
 
-1. Open DNS Manager (Start > Windows Administrative Tools > DNS).
+1. Open **DNS Manager** (**Start** > **Windows Administrative Tools** > **DNS**).
 
-1. Create a new Forward Lookup Zones.
+1. Create a new **Forward Lookup Zone**.
 
-| Setting | Value |
-| --- | --- |
-| Zone type: | Primary |
-| Store in Active Directory | Selected |
-| Replicated to | Domain controllers in the forest |
-| Zone name | The provided domain name (`adatumXXXXXX.onelearndns.com`) |
-| Dynamic updates | Allow only secure |
+    | Setting | Value |
+    | --- | --- |
+    | Zone type: | Primary |
+    | Store in Active Directory | Selected |
+    | Replicated to | Domain controllers in the forest |
+    | Zone name | The provided domain name (`adatumXXXXXX.onelearndns.com`) |
+    | Dynamic updates | Allow only secure |
 
-1. Right-click adatumXXXXXX.onelearndns.com, choose Other new records…, Text (TXT).
+1. Right-click **adatumXXXXXX.onelearndns.com**, choose **Other new records…**, **Text (TXT)**.
 
-| Setting | Value |
-| --- | --- |
-| Record name | (Leave blank) |
-| Text | (Paste the TXT value from above) |
+    | Setting | Value |
+    | --- | --- |
+    | Record name | (Leave blank) |
+    | Text | (Paste the TXT value from above) |
 
-1. Return to the **Microsoft 365 admin center**. On the Verify you own this domain screen, click **Verify**.
+1. Return to the **Microsoft 365 admin center**. On the **Verify you own this domain** page, click **Verify**.
 
-1. On the How do you want to connect your domain? screen, click **Close**. *We will add the DNS records later*.
+1. On the **How do you want to connect your domain?** page, click **Close**. *We will add the DNS records later*.
 
 ## Module 2: Managing Office 365 users and groups
 
+1. Connect to **LON-CL1**.
 
+1. Open Edge. Browse the **Microsoft 365 admin center** portal.
+
+1. Sign in using the supplied tenant administrator.
+
+1. In the Navigation menu (left-hand pane), click **Users > Active users**. 
+
+1. Add users as follows. Make a note of the automatically generated passwords.
+
+    | Setting | Value |
+    | --- | --- |
+    | First name | Lindsey |
+    | Last name | Gates |
+    | Display Name |  Lindsey Gates |
+    | Username | lindsey@adatumXXXXXX.onelearndns.com |
+    | Password | Auto-generate |
+    | Select location | Switzerland |
+    | Licenses | Office 365 E5 |
+    | Roles | User |
+    | Department | Sales |
+
+    | Setting | Value |
+    | --- | --- |
+    | First name | |
+    | Last name | |
+    | Display Name | |
+    | Username | @adatumXXXXXX.onelearndns.com |
+    | Password | Auto-generate |
+
+    
 
 
 
