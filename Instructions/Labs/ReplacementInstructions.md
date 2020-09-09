@@ -1,4 +1,6 @@
-#Course MS-030 - Replacement Labs#
+# Course MS-030 - Replacement Labs
+
+These instructions must be used in the virtual environment provided by learnondemand.net.
 
 ## Lab Setup
 
@@ -88,6 +90,8 @@
 
 1. Create a new Forward Lookup Zones.
 
+| Setting | Value |
+| --- | --- |
 | Zone type: | Primary |
 | Store in Active Directory | Selected |
 | Replicated to | Domain controllers in the forest |
@@ -96,6 +100,8 @@
 
 1. Right-click adatumXXXXXX.onelearndns.com, choose Other new records…, Text (TXT).
 
+| Setting | Value |
+| --- | --- |
 | Record name | (Leave blank) |
 | Text | (Paste the TXT value from above) |
 
