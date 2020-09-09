@@ -121,6 +121,8 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Add users as follows. Make a note of the automatically generated passwords.
 
+    [ ] Lindsey.
+
     | Setting | Value |
     | --- | --- |
     | First name | Lindsey |
@@ -128,7 +130,21 @@ These instructions must be used in the virtual environment provided by learnonde
     | Display Name |  Lindsey Gates |
     | Username | lindsey@adatumXXXXXX.onelearndns.com |
     | Password | Auto-generate |
-    | Select location | Switzerland |
+    | Location | Switzerland |
+    | Licenses | Office 365 E5 |
+    | Roles | User |
+    | Department | Sales |
+    
+    [ ] Christie.
+
+    | Setting | Value |
+    | --- | --- |
+    | First name | |
+    | Last name | |
+    | Display Name | |
+    | Username | @adatumXXXXXX.onelearndns.com |
+    | Password | Auto-generate |
+    | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
     | Department | Sales |
@@ -140,6 +156,34 @@ These instructions must be used in the virtual environment provided by learnonde
     | Display Name | |
     | Username | @adatumXXXXXX.onelearndns.com |
     | Password | Auto-generate |
+    | Location | Switzerland |
+    | Licenses | Office 365 E5 |
+    | Roles | User |
+    | Department | Sales |
+
+    | Setting | Value |
+    | --- | --- |
+    | First name | |
+    | Last name | |
+    | Display Name | |
+    | Username | @adatumXXXXXX.onelearndns.com |
+    | Password | Auto-generate |
+    | Location | Switzerland |
+    | Licenses | Office 365 E5 |
+    | Roles | User |
+    | Department | Sales |
+
+    | Setting | Value |
+    | --- | --- |
+    | First name | |
+    | Last name | |
+    | Display Name | |
+    | Username | @adatumXXXXXX.onelearndns.com |
+    | Password | Auto-generate |
+    | Location | Switzerland |
+    | Licenses | Office 365 E5 |
+    | Roles | User |
+    | Department | Sales |
 
     
 
