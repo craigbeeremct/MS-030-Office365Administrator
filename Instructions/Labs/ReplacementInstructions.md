@@ -6,7 +6,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 [Setup](#Lab Setup)
 
-[Module 1](#Module 1: Planning and Provisioning Office 365)
+[Module 1](#module-1-planning-and-provisioning-office-365)
 
 [Module 2](#Module 2: Managing Office 365 users and groups)
 
