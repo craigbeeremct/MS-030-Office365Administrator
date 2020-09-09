@@ -121,7 +121,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Add users as follows. Make a note of the automatically generated passwords.
 
-    [ ] Lindsey.
+    - [ ] Lindsey.
 
     | Setting | Value |
     | --- | --- |
@@ -135,7 +135,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | Sales |
     
-    [ ] Christie.
+    - [ ] Christie.
 
     | Setting | Value |
     | --- | --- |
