@@ -22,7 +22,7 @@
 
 1. Connect to **LON-CL1**.
 
-1. Open Edge. Browse to `https://admin.microsoft.com`. This opens the **Microsoft 365 admin center** portal.
+1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center** portal.
 
 1. Sign in using the supplied tenant administrator (`admin@LODSXXXXXX.onmicrosoft.com`).
 
@@ -34,12 +34,6 @@
 
 1. How many users are listed? What licences are assigned to them?
 
-1. In the Navigation menu, click **Security**. This opens the **Office 365 Security & Compliance* portal**.
-
-    - Note that you can open this portal  by browsing to `https://protection.office.com`.
-  
-1. Select the **Microsoft 365 admin center** browser tab.
-
 1. In the Navigation menu, click **Exchange**. This opens the **Exchange admin center** portal.
 
 1. In the Navigation menu, click **recipients**. In the centre pane, click **mailboxes**.
@@ -48,9 +42,29 @@
 
 1. Select the **Microsoft 365 admin center** browser tab.
 
+1. In the Navigation menu, click **Azure Active Directory**. This opens the **Azure Active Directory admin center** portal.
+
+1. In the navigation menu, click **Azure Active Directory**. In the **Contoso | Overview blade**, click **Users** in the **Manage** section.
+
+1. How many accounts are listed? The number should match the number of active users.
+
+1. Select the **Microsoft 365 admin center** browser tab.
+
 1. In the Navigation menu, click **Health > Service health**. 
 
 1. If there are any warnings or advisories then click on the link and read the messages.
+
+1. In the Navigation menu, click **Security**. This opens the **Office 365 Security & Compliance** portal.
+
+    - Note that you can open this portal  by browsing to **https://protection.office.com**.
+  
+1. Select the **Microsoft 365 admin center** browser tab.
+
+1. In the Navigation menu, click **Compliance**. This opens the **Microsoft 365 compliance** portal.
+
+    - Note that you can open this portal  by browsing to **https://compliance.microsoft.com**.
+  
+1. Select the **Microsoft 365 admin center** browser tab.
 
 ### Exercise 2: Add a DNS domain
 
@@ -89,7 +103,7 @@
 
 1. On the How do you want to connect your domain? screen, click **Close**. *We will add the DNS records later*.
 
-
+## Module 2: Managing Office 365 users and groups
 
 
 
