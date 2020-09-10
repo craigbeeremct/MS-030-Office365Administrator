@@ -126,7 +126,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. In the Navigation menu (left-hand pane), click **Users > Active users**. 
 
-1. Add users as follows. Make a note of the automatically generated passwords.
+1. Add users as follows.
 
     - [ ] Lindsey.
 
@@ -136,7 +136,8 @@ These instructions must be used in the virtual environment provided by learnonde
     | Last name | Gates |
     | Display Name |  Lindsey Gates |
     | Username | lindsey@adatumXXXXXX.onelearndns.com |
-    | Password | Auto-generate |
+    | Password | Pa55w.rd1234 |
+    | Require the user to change their password when they first sign in | No |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
@@ -150,7 +151,8 @@ These instructions must be used in the virtual environment provided by learnonde
     | Last name | Thomas |
     | Display Name | Christie Thomas |
     | Username | christie@adatumXXXXXX.onelearndns.com |
-    | Password | Auto-generate |
+    | Password | Pa55w.rd1234 |
+    | Require the user to change their password when they first sign in | No |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
@@ -164,7 +166,8 @@ These instructions must be used in the virtual environment provided by learnonde
     | Last name | Santiago |
     | Display Name | Amy Santiago |
     | Username | amy@adatumXXXXXX.onelearndns.com |
-    | Password | Auto-generate |
+    | Password | Pa55w.rd1234 |
+    | Require the user to change their password when they first sign in | No |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
@@ -178,7 +181,8 @@ These instructions must be used in the virtual environment provided by learnonde
     | Last name | McIntosh |
     | Display Name | Sallie McIntosh |
     | Username | sallie@adatumXXXXXX.onelearndns.com |
-    | Password | Auto-generate |
+    | Password | Pa55w.rd1234 |
+    | Require the user to change their password when they first sign in | No |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
@@ -192,7 +196,8 @@ These instructions must be used in the virtual environment provided by learnonde
     | Last name | Chaves |
     | Display Name | Francisco Chaves |
     | Username | francisco@adatumXXXXXX.onelearndns.com |
-    | Password | Auto-generate |
+    | Password | Pa55w.rd1234 |
+    | Require the user to change their password when they first sign in | No |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
@@ -206,7 +211,8 @@ These instructions must be used in the virtual environment provided by learnonde
     | Last name | Dickson |
     | Display Name | Holly Dickson |
     | Username | holly@adatumXXXXXX.onelearndns.com |
-    | Password | Auto-generate |
+    | Password | Pa55w.rd1234 |
+    | Require the user to change their password when they first sign in | No |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | Global admin |
@@ -220,7 +226,8 @@ These instructions must be used in the virtual environment provided by learnonde
     | Last name | Breland |
     | Display Name | Chris Breland |
     | Username | chris@adatumXXXXXX.onelearndns.com |
-    | Password | Auto-generate |
+    | Password | Pa55w.rd1234 |
+    | Require the user to change their password when they first sign in | No |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
