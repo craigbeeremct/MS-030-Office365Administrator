@@ -134,7 +134,9 @@ These instructions must be used in the virtual environment provided by learnonde
    | Record name | (Leave blank) |
    | Text | (Paste the TXT value from above) |
 
-1. Return to the **Microsoft 365 admin center**. On the **Verify you own this domain** page, click **Verify**.
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+
+1. On the **Verify you own this domain** page, click **Verify**.
 
 1. On the **How do you want to connect your domain?** page, click **Close**. *We will add the DNS records later*.
 
@@ -152,7 +154,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. In the Navigation menu, click **Users > Active users**. 
 
-1. Add users as follows.
+1. Add a user as follows.
 
    | Setting | Value |
    | --- | --- |
@@ -167,6 +169,8 @@ These instructions must be used in the virtual environment provided by learnonde
    | Roles | User |
    | Department | Sales |
     
+1. Add a user as follows.
+
    | Setting | Value |
    | --- | --- |
    | First name | Christie |
@@ -179,6 +183,8 @@ These instructions must be used in the virtual environment provided by learnonde
    | Licenses | Office 365 E5 |
    | Roles | User |
    | Department | Sales |
+
+1. Add a user as follows.
 
    | Setting | Value |
    | --- | --- |
@@ -193,6 +199,8 @@ These instructions must be used in the virtual environment provided by learnonde
    | Roles | User |
    | Department | (Leave blank) |
 
+1. Add a user as follows.
+
    | Setting | Value |
    | --- | --- |
    | First name | Sallie |
@@ -205,6 +213,8 @@ These instructions must be used in the virtual environment provided by learnonde
    | Licenses | Office 365 E5 |
    | Roles | User |
    | Department | Accounts |
+
+1. Add a user as follows.
 
    | Setting | Value |
    | --- | --- |
@@ -219,6 +229,8 @@ These instructions must be used in the virtual environment provided by learnonde
    | Roles | User |
    | Department | Accounts |
 
+1. Add a user as follows.
+
    | Setting | Value |
    | --- | --- |
    | First name | Holly |
@@ -231,19 +243,6 @@ These instructions must be used in the virtual environment provided by learnonde
    | Licenses | Office 365 E5 |
    | Roles | Global admin |
    | Department | IT |
-
-   | Setting | Value |
-   | --- | --- |
-   | First name | Chris |
-   | Last name | Breland |
-   | Display Name | Chris Breland |
-   | Username | chris@adatumXXXXXX.onelearndns.com |
-   | Password | Pa55w.rd1234 |
-   | Require the user to change their password when they first sign in | No |
-   | Location | Switzerland |
-   | Licenses | Office 365 E5 |
-   | Roles | User |
-   | Department | (Leave blank) |
     
 #### Exercise 2: Modify users
 
@@ -271,9 +270,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. In the **Active Users** list, click **Francisco Chaves**.
 
-1. Unblock Francisco's sign-in. *Note*: THis may take up to 15 minutes to take effect. 
+1. Unblock Francisco's sign-in. *Note*: This may take up to 15 minutes to take effect. 
 
-1. In Edge, open an InPrivate window and sign on to the Office portal again as Francisco.
+1. In Edge, open an InPrivate window and sign in to the Office portal again as Francisco.
 
 1. Close the InPrivate window.
 
@@ -299,7 +298,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Restore the user account. Use an automatically-generated password and note down the temporary password.
 
-1. In Edge, open an InPrivate window and sign on to the Office portal again as Lindsey, using the temporary password. Change the password to **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
+1. In Edge, open an InPrivate window and sign in to the Office portal again as Lindsey, using the temporary password. Change the password to **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
 
 1. Note that Lindsey has no apps in the list. Deleting the account removed the licence assignment.
 
@@ -337,19 +336,21 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 #### Exercise 7: Create groups
 
-1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the supplied tenant administrator.
 
 1. In the Navigation menu, click **Groups > Active groups**. 
 
-1. Add groups as follows.
+1. Add a group as follows.
 
    | Setting | Value |
    | --- | --- |
    | Type | Security |
    | Name | Sales |
    | Description | Sales department |
+
+1. Add a group as follows.
 
    | Setting | Value |
    | --- | --- |
@@ -377,7 +378,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
     
 #### Exercise 9: Delete a group
 
-1. In the **Active groups** list, click the selection circle to the left of **Accounts**. Click **Delete group**.
+1. In the **Active groups** list, click **Sales**. Click the trashcan icon.
 
 1. In the Navigation menu, click **Users > Active users**. Note that the user accounts for Amy, Christie and Lindsey are still present.
 
@@ -390,7 +391,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Exercise 1: Create users
 
-1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
 1. Using **Run as Administrator**, open **Windows PowerShell ISE**.
 
