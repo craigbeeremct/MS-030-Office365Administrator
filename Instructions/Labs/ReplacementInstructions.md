@@ -109,20 +109,20 @@ Module 2: Managing Office 365 users and groups
 
 1. Create a new **Forward Lookup Zone**.
 
-    | Setting | Value |
-    | --- | --- |
-    | Zone type: | Primary |
-    | Store in Active Directory | Selected |
-    | Replicated to | Domain controllers in the forest |
-    | Zone name | The provided domain name (`adatumXXXXXX.onelearndns.com`) |
-    | Dynamic updates | Allow only secure |
+   | Setting | Value |
+   | --- | --- |
+   | Zone type: | Primary |
+   | Store in Active Directory | Selected |
+   | Replicated to | Domain controllers in the forest |
+   | Zone name | The provided domain name (`adatumXXXXXX.onelearndns.com`) |
+   | Dynamic updates | Allow only secure |
 
 1. Right-click **adatumXXXXXX.onelearndns.com**, choose **Other new records…**, **Text (TXT)**.
 
-    | Setting | Value |
-    | --- | --- |
-    | Record name | (Leave blank) |
-    | Text | (Paste the TXT value from above) |
+   | Setting | Value |
+   | --- | --- |
+   | Record name | (Leave blank) |
+   | Text | (Paste the TXT value from above) |
 
 1. Return to the **Microsoft 365 admin center**. On the **Verify you own this domain** page, click **Verify**.
 
@@ -144,96 +144,96 @@ Module 2: Managing Office 365 users and groups
 
 1. Add users as follows.
 
-    | Setting | Value |
-    | --- | --- |
-    | First name | Lindsey |
-    | Last name | Gates |
-    | Display Name |  Lindsey Gates |
-    | Username | lindsey@adatumXXXXXX.onelearndns.com |
-    | Password | Pa55w.rd1234 |
-    | Require the user to change their password when they first sign in | No |
-    | Location | Switzerland |
-    | Licenses | Office 365 E5 |
-    | Roles | User |
-    | Department | Sales |
+   | Setting | Value |
+   | --- | --- |
+   | First name | Lindsey |
+   | Last name | Gates |
+   | Display Name |  Lindsey Gates |
+   | Username | lindsey@adatumXXXXXX.onelearndns.com |
+   | Password | Pa55w.rd1234 |
+   | Require the user to change their password when they first sign in | No |
+   | Location | Switzerland |
+   | Licenses | Office 365 E5 |
+   | Roles | User |
+   | Department | Sales |
     
-    | Setting | Value |
-    | --- | --- |
-    | First name | Christie |
-    | Last name | Thomas |
-    | Display Name | Christie Thomas |
-    | Username | christie@adatumXXXXXX.onelearndns.com |
-    | Password | Pa55w.rd1234 |
-    | Require the user to change their password when they first sign in | No |
-    | Location | Switzerland |
-    | Licenses | Office 365 E5 |
-    | Roles | User |
-    | Department | Sales |
+   | Setting | Value |
+   | --- | --- |
+   | First name | Christie |
+   | Last name | Thomas |
+   | Display Name | Christie Thomas |
+   | Username | christie@adatumXXXXXX.onelearndns.com |
+   | Password | Pa55w.rd1234 |
+   | Require the user to change their password when they first sign in | No |
+   | Location | Switzerland |
+   | Licenses | Office 365 E5 |
+   | Roles | User |
+   | Department | Sales |
 
-    | Setting | Value |
-    | --- | --- |
-    | First name | Amy |
-    | Last name | Santiago |
-    | Display Name | Amy Santiago |
-    | Username | amy@adatumXXXXXX.onelearndns.com |
-    | Password | Pa55w.rd1234 |
-    | Require the user to change their password when they first sign in | No |
-    | Location | Switzerland |
-    | Licenses | Office 365 E5 |
-    | Roles | User |
-    | Department | (Leave blank) |
+   | Setting | Value |
+   | --- | --- |
+   | First name | Amy |
+   | Last name | Santiago |
+   | Display Name | Amy Santiago |
+   | Username | amy@adatumXXXXXX.onelearndns.com |
+   | Password | Pa55w.rd1234 |
+   | Require the user to change their password when they first sign in | No |
+   | Location | Switzerland |
+   | Licenses | Office 365 E5 |
+   | Roles | User |
+   | Department | (Leave blank) |
 
-    | Setting | Value |
-    | --- | --- |
-    | First name | Sallie |
-    | Last name | McIntosh |
-    | Display Name | Sallie McIntosh |
-    | Username | sallie@adatumXXXXXX.onelearndns.com |
-    | Password | Pa55w.rd1234 |
-    | Require the user to change their password when they first sign in | No |
-    | Location | Switzerland |
-    | Licenses | Office 365 E5 |
-    | Roles | User |
-    | Department | Accounts |
+   | Setting | Value |
+   | --- | --- |
+   | First name | Sallie |
+   | Last name | McIntosh |
+   | Display Name | Sallie McIntosh |
+   | Username | sallie@adatumXXXXXX.onelearndns.com |
+   | Password | Pa55w.rd1234 |
+   | Require the user to change their password when they first sign in | No |
+   | Location | Switzerland |
+   | Licenses | Office 365 E5 |
+   | Roles | User |
+   | Department | Accounts |
 
-    | Setting | Value |
-    | --- | --- |
-    | First name | Francisco |
-    | Last name | Chaves |
-    | Display Name | Francisco Chaves |
-    | Username | francisco@adatumXXXXXX.onelearndns.com |
-    | Password | Pa55w.rd1234 |
-    | Require the user to change their password when they first sign in | No |
-    | Location | Switzerland |
-    | Licenses | Office 365 E5 |
-    | Roles | User |
-    | Department | Accounts |
+   | Setting | Value |
+   | --- | --- |
+   | First name | Francisco |
+   | Last name | Chaves |
+   | Display Name | Francisco Chaves |
+   | Username | francisco@adatumXXXXXX.onelearndns.com |
+   | Password | Pa55w.rd1234 |
+   | Require the user to change their password when they first sign in | No |
+   | Location | Switzerland |
+   | Licenses | Office 365 E5 |
+   | Roles | User |
+   | Department | Accounts |
 
-    | Setting | Value |
-    | --- | --- |
-    | First name | Holly |
-    | Last name | Dickson |
-    | Display Name | Holly Dickson |
-    | Username | holly@adatumXXXXXX.onelearndns.com |
-    | Password | Pa55w.rd1234 |
-    | Require the user to change their password when they first sign in | No |
-    | Location | Switzerland |
-    | Licenses | Office 365 E5 |
-    | Roles | Global admin |
-    | Department | IT |
+   | Setting | Value |
+   | --- | --- |
+   | First name | Holly |
+   | Last name | Dickson |
+   | Display Name | Holly Dickson |
+   | Username | holly@adatumXXXXXX.onelearndns.com |
+   | Password | Pa55w.rd1234 |
+   | Require the user to change their password when they first sign in | No |
+   | Location | Switzerland |
+   | Licenses | Office 365 E5 |
+   | Roles | Global admin |
+   | Department | IT |
 
-    | Setting | Value |
-    | --- | --- |
-    | First name | Chris |
-    | Last name | Breland |
-    | Display Name | Chris Breland |
-    | Username | chris@adatumXXXXXX.onelearndns.com |
-    | Password | Pa55w.rd1234 |
-    | Require the user to change their password when they first sign in | No |
-    | Location | Switzerland |
-    | Licenses | Office 365 E5 |
-    | Roles | User |
-    | Department | (Leave blank) |
+   | Setting | Value |
+   | --- | --- |
+   | First name | Chris |
+   | Last name | Breland |
+   | Display Name | Chris Breland |
+   | Username | chris@adatumXXXXXX.onelearndns.com |
+   | Password | Pa55w.rd1234 |
+   | Require the user to change their password when they first sign in | No |
+   | Location | Switzerland |
+   | Licenses | Office 365 E5 |
+   | Roles | User |
+   | Department | (Leave blank) |
     
 #### Exercise 2: Modify users
 
@@ -251,9 +251,7 @@ Module 2: Managing Office 365 users and groups
 
 1. Block Francisco's sign-in.
 
-1. In Edge, open an InPrivate window. Browse to **https://portal.office.com**. 
-
-1. Sign in as **francisco@adatumXXXXXX.onelearndns.com**, password **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
+1. In Edge, open an InPrivate window and browse to **https://portal.office.com**. Sign in as Francisco. If asked to save the password or to stay signed in, choose **No**.
 
 1. You wil see a "Your account has been locked" message.
 
@@ -265,7 +263,7 @@ Module 2: Managing Office 365 users and groups
 
 1. Unblock Francisco's sign-in. *Note*: THis may take up to 15 minutes to take effect. 
 
-1. In Edge, open an InPrivate window. Sign on to the portal again as Francisco.
+1. In Edge, open an InPrivate window and sign on to the portal again as Francisco.
 
 1. Close the InPrivate window.
 
@@ -277,11 +275,9 @@ Module 2: Managing Office 365 users and groups
 
 1. Delete Lindsey's account.
 
-1. In Edge, open an InPrivate window. Browse to **https://portal.office.com**. 
+1. In Edge, open an InPrivate window and browse to **https://portal.office.com**. Sign in as Lindsey.
 
-1. Sign in as **lindsey@adatumXXXXXX.onelearndns.com**.
-
-1. You wil see a "This username may be incorrect" message.
+1. You will see a "This username may be incorrect" message.
 
 1. Close the InPrivate window.
 
@@ -293,9 +289,7 @@ Module 2: Managing Office 365 users and groups
 
 1. Restore the user account. Use an automatically-generated password and note down the temporary password.
 
-1. In Edge, open an InPrivate window. Browse to **https://portal.office.com**. 
-
-1. Sign in as **lindsey@adatumXXXXXX.onelearndns.com**, using the temporary password. Change the password to **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
+1. In Edge, open an InPrivate window and sign on to the portal again as Lindsey, using the temporary password. Change the password to **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
 
 1. Note that Lindsey has no apps in the list. Deleting the account removed the licence assignment.
 
@@ -319,17 +313,13 @@ Module 2: Managing Office 365 users and groups
 
 1. Set 14 days before passwords expire, 14 days before a user is notified.
 
-1. Sign out of the portal and then close Edge.
-
-1. Open Edge, browse to **https://portal.office.com**. 
-
-1. Sign in as **lindsey@adatumXXXXXX.onelearndns.com**, password **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
+1. In Edge, open an InPrivate window and browse to **https://portal.office.com**. Sign in as Lindsey.
 
 1. Note that Lindsey now has Outlook, OneDrive, etc in the list.
 
 1. Click the Notification icon in the top right. Note the "Time to change your password" message.
 
-1. Sign out of the portal and then close Edge.
+1. Close the InPrivate window.
 
 #### Exercise 6: Multifactor Authentication
 
@@ -345,17 +335,17 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. Add groups as follows.
 
-    | Setting | Value |
-    | --- | --- |
-    | Type | Security |
-    | Name | Sales |
-    | Description | Sales department |
+   | Setting | Value |
+   | --- | --- |
+   | Type | Security |
+   | Name | Sales |
+   | Description | Sales department |
 
-    | Setting | Value |
-    | --- | --- |
-    | Type | Security |
-    | Name | Accounts |
-    | Description | Accounts department |
+   | Setting | Value |
+   | --- | --- |
+   | Type | Security |
+   | Name | Accounts |
+   | Description | Accounts department |
 
 #### Exercise 8: Modify groups
 
@@ -363,17 +353,17 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. In the **Active groups** list, click **Sales**. Set the members as follows.
 
-    | Setting | Value |
-    | --- | --- |
-    | Owners | Lindsey Gates |
-    | Members | Lindsey Gates, Christie Thomas, Amy Santiago |
+   | Setting | Value |
+   | --- | --- |
+   | Owners | Lindsey Gates |
+   | Members | Lindsey Gates, Christie Thomas, Amy Santiago |
     
 1. In the **Active groups** list, click **Accounts**. Set the members as follows.
 
-    | Setting | Value |
-    | --- | --- |
-    | Owners | Francisco Chaves |
-    | Members | Sallie McIntosh, Francisco Chaves |
+   | Setting | Value |
+   | --- | --- |
+   | Owners | Francisco Chaves |
+   | Members | Sallie McIntosh, Francisco Chaves |
     
 #### Exercise 9: Delete a group
 
@@ -577,6 +567,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
    ```PowerShell
    Add-MsolRoleMember –RoleName "Service Support Administrator" –RoleMemberEmailAddress "sallie@adatumXXXXXX.onelearndns.com"
+   ```
+   
+   ```PowerShell
    Add-MsolRoleMember –RoleName "Company Administrator" –RoleMemberEmailAddress "amy@adatumXXXXXX.onelearndns.com"
    ```
 
@@ -596,5 +589,50 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    $role = Get-MsolRole –RoleName "Company Administrator"
    Get-MsolRoleMember –RoleObjectId $role.ObjectId
    ```
+
+#### Exercise 3: Test service administrators
+
+1. Close all Edge windows.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in as Tameka.
+
+1. In the Navigation menu, click **Users > Active users**. 
+
+1. In the **Active Users** list, click **Jessica Jennings**.
+
+1. Note that you cannot change group membership or contact information.
+
+1. Reset Jessica's password. Make a note of the new password.
+
+1. Sign out of the admin center and close Edge.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in as Tameka.
+
+1. In the Navigation menu, click **Users > Active users**. 
+
+1. In the **Active Users** list, click **Jessica Jennings**.
+
+1. Note that you can change group membership and contact information.
+
+1. Add a user as follows.
+
+   | Setting | Value |
+   | --- | --- |
+   | First name | Chris |
+   | Last name | Breland |
+   | Display Name | Chris Breland |
+   | Username | chris@adatumXXXXXX.onelearndns.com |
+   | Password | Pa55w.rd1234 |
+   | Require the user to change their password when they first sign in | No |
+   | Location | Switzerland |
+   | Licenses | Office 365 E5 |
+   | Roles | User |
+   | Department | (Leave blank) |
+    
+1. In the **Active Users** list, click **Chris Breland**.
+
+1. Delete Chris Breland's user account.
+
+1. Sign out of the admin center and close Edge.
 
 
