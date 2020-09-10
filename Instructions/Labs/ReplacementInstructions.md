@@ -648,5 +648,5 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Delete Chris Breland's user account.
 
 1. Sign out of the admin center and close Edge.
-
+    
 
