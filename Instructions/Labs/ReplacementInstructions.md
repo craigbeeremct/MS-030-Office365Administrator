@@ -4,9 +4,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## TOC ##
 
-[Setup](#Lab Setup)
+[Setup](#lab-setup)
 
-[Module 1](#module-1)
+[Module 1](#Module-1-planning-and-provisioning-office-365)
 
 ## Lab Setup
 
@@ -25,7 +25,7 @@ These instructions must be used in the virtual environment provided by learnonde
 1. Record the full domain name (`adatumXXXXXX.onelearndns.com`), name server name (`NSadatumXXXXXX`), and public IP address in the text boxes in the LODS interface.
 
 
-## Module 1: Planning and Provisioning Office 365 {:#module-1}
+## Module 1: Planning and Provisioning Office 365
 
 ### Exercise 1: Explore the various administrative portals.
 
@@ -146,51 +146,86 @@ These instructions must be used in the virtual environment provided by learnonde
 
     | Setting | Value |
     | --- | --- |
-    | First name | |
-    | Last name | |
-    | Display Name | |
-    | Username | @adatumXXXXXX.onelearndns.com |
+    | First name | Christie |
+    | Last name | Thomas |
+    | Display Name | Christie Thomas |
+    | Username | christie@adatumXXXXXX.onelearndns.com |
     | Password | Auto-generate |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
     | Department | Sales |
 
-    | Setting | Value |
-    | --- | --- |
-    | First name | |
-    | Last name | |
-    | Display Name | |
-    | Username | @adatumXXXXXX.onelearndns.com |
-    | Password | Auto-generate |
-    | Location | Switzerland |
-    | Licenses | Office 365 E5 |
-    | Roles | User |
-    | Department | Sales |
+    - [ ] Amy.
 
     | Setting | Value |
     | --- | --- |
-    | First name | |
-    | Last name | |
-    | Display Name | |
-    | Username | @adatumXXXXXX.onelearndns.com |
+    | First name | Amy |
+    | Last name | Santiago |
+    | Display Name | Amy Santiago |
+    | Username | amy@adatumXXXXXX.onelearndns.com |
     | Password | Auto-generate |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
-    | Department | Sales |
+    | Department | (Leave blank) |
+
+    - [ ] Sallie.
 
     | Setting | Value |
     | --- | --- |
-    | First name | |
-    | Last name | |
-    | Display Name | |
-    | Username | @adatumXXXXXX.onelearndns.com |
+    | First name | Sallie |
+    | Last name | McIntosh |
+    | Display Name | Sallie McIntosh |
+    | Username | sallie@adatumXXXXXX.onelearndns.com |
     | Password | Auto-generate |
     | Location | Switzerland |
     | Licenses | Office 365 E5 |
     | Roles | User |
-    | Department | Sales |
+    | Department | Accounts |
+
+    - [ ] Francisco.
+
+    | Setting | Value |
+    | --- | --- |
+    | First name | Francisco |
+    | Last name | Chaves |
+    | Display Name | Francisco Chaves |
+    | Username | francisco@adatumXXXXXX.onelearndns.com |
+    | Password | Auto-generate |
+    | Location | Switzerland |
+    | Licenses | Office 365 E5 |
+    | Roles | User |
+    | Department | Accounts |
+
+    - [ ] Holly.
+
+    | Setting | Value |
+    | --- | --- |
+    | First name | Holly |
+    | Last name | Dickson |
+    | Display Name | Holly Dickson |
+    | Username | holly@adatumXXXXXX.onelearndns.com |
+    | Password | Auto-generate |
+    | Location | Switzerland |
+    | Licenses | Office 365 E5 |
+    | Roles | Global admin |
+    | Department | IT |
+
+    - [ ] Chris.
+
+    | Setting | Value |
+    | --- | --- |
+    | First name | Chris |
+    | Last name | Breland |
+    | Display Name | Chris Breland |
+    | Username | chris@adatumXXXXXX.onelearndns.com |
+    | Password | Auto-generate |
+    | Location | Switzerland |
+    | Licenses | Office 365 E5 |
+    | Roles | User |
+    | Department | (Leave blank) |
+    
 
     
 
