@@ -121,7 +121,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## Module 2: Managing Office 365 users and groups
 
-### Exercise 1: Create users using the portal
+### Exercise 1. Create users using the portal
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
@@ -236,7 +236,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | (Leave blank) |
     
-### Exercise 2: Modify users using the portal
+### Exercise 1. Modify users
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
@@ -244,15 +244,17 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Set Amy's department to Sales.
 
+### Exercise 1. Block a user
+
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+
 1. In the **Active Users** list, click **Francisco Chaves**.
 
 1. Block Francisco's sign-in.
 
 1. In Edge, open an InPrivate window. Browse to **https://portal.office.com**. 
 
-1. Sign in as **francisco@adatumXXXXXX.onelearndns.com**, password **Pa55w.rd1234**.
-
-1. If asked to save the password or to stay signed in, choose **No**.
+1. Sign in as **francisco@adatumXXXXXX.onelearndns.com**, password **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
 
 1. You wil see a "Your account has been locked" message.
 
@@ -266,7 +268,11 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. In Edge, open an InPrivate window. Sign on to the portal again as Francisco.
 
-1. Switch to the **Microsoft 365 admin center** browser window (signed in as the supplied tenant administrator).
+1. Close the InPrivate window.
+
+### Exercise 1.Delete and undelete a user
+
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
 1. In the **Active Users** list, click **Lindsey Gates**.
 
@@ -280,7 +286,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Close the InPrivate window.
 
-1. Switch to the **Microsoft 365 admin center** browser window (signed in as the supplied tenant administrator).
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
 1. In the Navigation menu (left-hand pane), click **Users > Deleted users**. 
 
@@ -290,11 +296,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. In Edge, open an InPrivate window. Browse to **https://portal.office.com**. 
 
-1. Sign in as **lindsey@adatumXXXXXX.onelearndns.com**, using the temporary password.
-
-1. Change the password to **Pa55w.rd1234**.
-
-1. If asked to save the password or to stay signed in, choose **No**.
+1. Sign in as **lindsey@adatumXXXXXX.onelearndns.com**, using the temporary password. Change the password to **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
 
 1. Note that Lindsey has no apps in the list. Deleting the account removed the licence assignment.
 
@@ -310,7 +312,12 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ### Exercise 3: Pasword Policy
 
-1. Switch to the **Microsoft 365 admin center** browser window (signed in as the supplied tenant administrator).
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
-1. In the Navigation menu (left-hand pane), click **Users > Deleted users**. 
+1. In the Navigation menu (left-hand pane), click **Settings > Org settings**. 
+
+1. In the middle pane, click **Security & privacy** then click **Password expiration policy**.
+
+1. 
+
 
