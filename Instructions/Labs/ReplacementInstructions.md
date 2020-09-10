@@ -648,5 +648,95 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Delete Chris Breland's user account.
 
 1. Sign out of the admin center and close Edge.
-    
 
+
+## Module 3: Configuring client connectivity to Microsoft Office 365 
+
+### Lab 3
+
+#### Exercise 1: DNS Records
+
+1. Connect to **LON-DC1**. Sign on as **ADATUM\Administrator**.
+
+1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** and sign in using the supplied tenant administrator.
+
+1. In the Navigation menu, click **Settings > Domains**. 
+
+1. Click **adatumXXXXXX.onelearndns.com** then click **Continue setup**.
+
+1. On the Add DNS Records screen, select **Exchange and Exchange Online Protection**, **Skype for Business**, and **Intune and Mobile Device Management for Microsoft 365**.
+
+1. Open **DNS Manager**. 
+
+1. Add the following records, copying the values from the web browser.
+
+   1. Mail Exchanger (MX).
+      | Setting | Value |
+      | --- | --- |
+      | Host or child domain | (Leave blank) |
+      | Fully qualified domain name (FQDN) of mail server | AdatumXXXXXX-onelearndns-com.mail.protection.outlook.com |
+      | Mail server priority | 0 |
+
+   1. CNAME.
+      | Setting | Value |
+      | --- | --- |
+      | Alias name | autodiscover |
+      | Fully qualified domain name (FQDN) for target host | autodiscover.outlook.com |
+
+   1. Text (TXT).
+      | Setting | Value |
+      | --- | --- |
+      | Record name | (Leave blank) |
+      | Text | v=spf1 include:spf.protection.outlook.com -all
+
+   1. CNAME.
+      | Setting | Value |
+      | --- | --- |
+      | Alias name | sip |
+      | Fully qualified domain name (FQDN) for target host | sipdir.online.lync.com |
+
+   1. CNAME.
+      | Setting | Value |
+      | --- | --- |
+      | Alias name | lyncdiscover |
+      | Fully qualified domain name (FQDN) for target host | webdir.online.lync.com |
+
+   1. Service Location (SRV).
+      | Setting | Value |
+      | --- | --- |
+      | Service | _sip |
+      | Protocol | _tls |
+      | Priority | 100 |
+      | Weight | 1 |
+      | Port number | 443 |
+      | Host offering this service | sipdir.online.lync.com |
+
+   1. Service Location (SRV).
+      | Setting | Value |
+      | --- | --- |
+      | Service | _sipfederationtls |
+      | Protocol | _tcp |
+      | Priority | 100 |
+      | Weight | 1 |
+      | Port number | 5061 |
+      | Host offering this service | sipfed.online.lync.com |
+
+   1. CNAME.
+      | Setting | Value |
+      | --- | --- |
+      | Alias name | enterpriseregistration |
+      | Fully qualified domain name (FQDN) for target host | enterpriseregistration.windows.net |
+
+   1. CNAME.
+      | Setting | Value |
+      | --- | --- |
+      | Alias name | enterpriseenrollment |
+      | Fully qualified domain name (FQDN) for target host | enterpriseenrollment.manage.microsoft.com |
+
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+
+1. Click **Continue** then **Done**. Correct any mismatches reported.
+
+
+
+   
