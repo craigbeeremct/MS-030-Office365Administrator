@@ -10,9 +10,11 @@ Module 1: Planning and Provisioning Office 365
 
 Module 2: Managing Office 365 users and groups
 
-[Lab 2A: using the portal](#lab-2a)
+[Lab 2A: Using the portal](#lab-2a)
 
-[Lab 2B: using PowerShell](#lab-2b)
+[Lab 2B: Using PowerShell](#lab-2b)
+
+[Lab 2C: Service administrators](#lab-2c)
 
 
 
@@ -398,6 +400,8 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
     Install-Module MSOnline -Force
 ```
 
+1. Close **Windows PowerShell ISE** and open it again without using Run as administrator.
+
 1. Connect to Office 365. Sing in as the supplied tenant administrator.
 
 ```PowerShell
@@ -481,8 +485,6 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Save the file and close Notepad.
 
-1. In PowerShell ISE create a new script.
-
 1. Load the file and use it to create users. Note that you might run out of licenses. If so, make a note of which users were not created.
 
 ```PowerShell
@@ -536,7 +538,7 @@ If you wanted to do this for all your domains, you could use the following.
 1. Reset a user's password.
 
 ```PowerShell
-    Set-MsolUserPassword –UserPrincipalName “Tameka@adatumXXXXXX.onelearndns.com” –NewPassword ‘Pa55w.rd123’
+    Set-MsolUserPassword –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –NewPassword "Pa55w.rd9876"
 ```
 
 1. Enable password expiry for all users.
@@ -544,3 +546,51 @@ If you wanted to do this for all your domains, you could use the following.
 ```PowerShell
     Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false 
 ```
+
+### Lab 2C
+
+#### Exercise 1: Setting service administrators using the portal
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in using the supplied tenant administrator.
+
+1. In the Navigation menu, click **Users > Active users**. 
+
+1. In the **Active Users** list, click **Francisco Chaves** then click **Manage roles**.
+
+1. Select **Billing admin** (in the **Other** section). 
+
+1. In the **Active Users** list, click **Tameka Reed** then click **Manage roles**.
+
+1. Select **Password admin** (in the **Identity** section). 
+
+1. In the **Active Users** list, click **Christie Thomas** then click **Manage roles**.
+
+1. Select **User admin**.
+
+#### Exercise 2: Setting service administrators using PowerShell
+
+1. Assign roles.
+
+```PowerShell
+Add-MsolRoleMember –RoleName "Service Support Administrator" –RoleMemberEmailAddress "sallie@adatumXXXXXX.onelearndns.com"
+Add-MsolRoleMember –RoleName "Company Administrator" –RoleMemberEmailAddress "amy@adatumXXXXXX.onelearndns.com"
+```
+
+1. Verify role membership.
+
+```PowerShell
+$role = Get-MsolRole –RoleName "Service Support Administrator"
+Get-MsolRoleMember –RoleObjectId $role.ObjectId
+```
+
+```PowerShell
+$role = Get-MsolRole –RoleName "Billing Administrator"
+Get-MsolRoleMember –RoleObjectId $role.ObjectId
+```
+
+```PowerShell
+$role = Get-MsolRole –RoleName "Company Administrator"
+Get-MsolRoleMember –RoleObjectId $role.ObjectId
+```
+
+
