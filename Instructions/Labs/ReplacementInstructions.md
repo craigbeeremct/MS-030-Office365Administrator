@@ -16,6 +16,7 @@ Module 2: Managing Office 365 users and groups
 
 
 
+
 ## Lab Setup
 
 #### Download lab files
@@ -402,7 +403,11 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
-2. Using **Run as Administrator**, open **Windows PowerShell ISE**.
+1. Using **Run as Administrator**, open **Windows PowerShell ISE**.
 
+1. Enter the command
 
+```PowerShell
+    Install-Module MSOnline -Force
+```
 
