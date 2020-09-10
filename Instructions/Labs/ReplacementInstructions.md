@@ -506,9 +506,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Add members.
 
 ```PowerShell
-    $MarketingGroup = Get-MsolGroup | Where-Object {$PSItem.DisplayName -eq "Marketing"}
-    $CatherineUser = Get-MsolUser | Where-Object {$PSItem.DisplayName -eq "Catherine Richard"}
-    $TamekaUser = Get-MsolUser | Where-Object {$PSItem.DisplayName -eq "Tameka Reed"}
+    $MarketingGroup = Get-MsolGroup | Where-Object DisplayName -eq "Marketing"
+    $CatherineUser = Get-MsolUser | Where-Object DisplayName -eq "Catherine Richard"
+    $TamekaUser = Get-MsolUser | Where-Object DisplayName -eq "Tameka Reed"
     Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $CatherineUser.ObjectId
     Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $TamekaUser.ObjectId
 ```
@@ -527,7 +527,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
     Set-MsolPasswordPolicy -DomainName "adatum26863b.onelearndns.com" -ValidityPeriod 90 -NotificationDays 14 
 ```
 
-    If you wanted to do this for all your domains, you could use the following.
+If you wanted to do this for all your domains, you could use the following.
     
 ```PowerShell
     Get-MsolDomain | Where-Object IsInitial -eq $false | Select-Object @{ l="DomainName"; e={$PSItem.Name} } | Set-MsolPasswordPolicy -ValidityPeriod 90 -NotificationDays 14
