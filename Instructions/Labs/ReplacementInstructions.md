@@ -2,21 +2,61 @@
 
 These instructions must be used in the virtual environment provided by learnondemand.net.
 
-## TOC ##
+## Table of Contents ##
 
-Module 1: Planning and Provisioning Office 365
+- Module 1: Planning and Provisioning Office 365
 
-[Lab 1](#lab-1)
+  - [Lab 1](#lab-1)
 
-Module 2: Managing Office 365 users and groups
+- Module 2: Managing Office 365 users and groups
 
-[Lab 2A: Using the portal](#lab-2a)
+  - [Lab 2A](#lab-2a)
 
-[Lab 2B: Using PowerShell](#lab-2b)
+  - [Lab 2B](#lab-2b)
 
-[Lab 2C: Service administrators](#lab-2c)
+  - [Lab 2C](#lab-2c)
 
+- Module 3: Configuring client connectivity to Microsoft Office 365
 
+  - [Lab 3](#lab-3)
+
+- Module 4: Planning and configuring directory synchronization
+
+  - [Lab 4](#lab-4)
+
+- Module 5: Planning and deploying Office 365 ProPlus
+
+  - [Lab 5](#lab-5)
+
+- Module 6: Planning and managing Exchange Online recipients ‎and permissions
+
+  - [Lab 6](#lab-6)
+
+- Module 7: Planning and configuring Exchange Online services
+
+  - [Lab 7A](#lab-7a)
+
+  - [Lab 7B](#lab-7b)
+
+- Module 8: Planning and deploying Microsoft Teams
+
+  - [Lab 8](#lab-8)
+
+- Module 9: Planning and configuring SharePoint Online
+
+  - [Lab 9](#lab-9)
+
+- Module 10: Planning and configuring an Office 365 collaboration solution
+
+  - [Lab 10](#lab-10)
+
+- Module 11: Planning and configuring security and compliance in ‎Office 365
+
+  - [Lab 11](#lab-11)
+
+- Module 12: Monitoring and troubleshooting Microsoft Office 365
+
+  - [Lab 12](#lab-12)
 
 
 ## Lab Setup
