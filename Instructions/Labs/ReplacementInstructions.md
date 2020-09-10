@@ -397,7 +397,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Install the latest version of the MSOnline module. 
 
    ```PowerShell
-    Install-Module MSOnline -Force
+   Install-Module MSOnline -Force
    ```
 
 1. Close **Windows PowerShell ISE** and open it again without using Run as administrator.
@@ -405,15 +405,17 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Connect to Office 365. Sing in as the supplied tenant administrator.
 
    ```PowerShell
-    Connect-MsolService
+   Connect-MsolService
    ```
 
 1. Create the users. 
 
    ```PowerShell
-    New-MsolUser –UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" –DisplayName "Catherine Richard" –FirstName "Catherine" –LastName "Richard" –Password "Pa55w.rd1234" –ForceChangePassword $false –UsageLocation "CH"
+   New-MsolUser –UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" –DisplayName "Catherine Richard" –FirstName "Catherine" –LastName "Richard" –Password "Pa55w.rd1234" –ForceChangePassword $false –UsageLocation "CH"
+   ```
 
-    New-MsolUser –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –DisplayName "Tameka Reed" –FirstName "Tameka" –LastName "Reed" -Password "Pa55w.rd1234" –ForceChangePassword $false –UsageLocation "CH"
+   ```PowerShell
+   New-MsolUser –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –DisplayName "Tameka Reed" –FirstName "Tameka" –LastName "Reed" -Password "Pa55w.rd1234" –ForceChangePassword $false –UsageLocation "CH"
    ```
 
 #### Exercise 2: Licence users
@@ -421,21 +423,23 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. List the unlicensed users.
 
    ```PowerShell
-    Get-MsolUser -UnlicensedUsersOnly
+   Get-MsolUser -UnlicensedUsersOnly
    ```
 
 1. Determine the available licenses.
 
    ```PowerShell
-    Get-MsolAccountSku
+   Get-MsolAccountSku
    ```
 
 1. Assign licenses. Edit the correct license name (LODSXXXXXXX:ENTERPRISEPREMIUM) before running the script.
 
    ```PowerShell
-    Set-MsolUserLicense -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" –AddLicenses "LODSXXXXXXX:ENTERPRISEPREMIUM"
+   Set-MsolUserLicense -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" –AddLicenses "LODSXXXXXXX:ENTERPRISEPREMIUM"
+   ```
 
-    Set-MsolUserLicense -UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –AddLicenses "LODSXXXXXXX:ENTERPRISEPREMIUM"
+   ```PowerShell
+   Set-MsolUserLicense -UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –AddLicenses "LODSXXXXXXX:ENTERPRISEPREMIUM"
    ```
 
 #### Exercise 3: Block a user
@@ -443,7 +447,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Block Catherine's sign-in.
 
    ```PowerShell
-    Set-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" -BlockCredential $true
+   Set-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" -BlockCredential $true
    ```
 
 #### Exercise 4: Delete and undelete a user
@@ -451,26 +455,26 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Delete Catherine's user account.
 
    ```PowerShell
-    Remove-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" 
+   Remove-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" 
    ```
 1. List all deleted users. Note that Catherin's account is still licensed.
 
    ```PowerShell
-    Get-MsolUser -ReturnDeletedUsers
+   Get-MsolUser -ReturnDeletedUsers
    ```
 
 1. Undelete Catherine's user account.
 
    ```PowerShell
-    Restore-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" 
+   Restore-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" 
    ```
 
 1. List users.
 
    ```PowerShell
-    Get-MsolUser
-    Get-MsolUser -UnlicensedUsersOnly
-    Get-MsolUser -ReturnDeletedUsers
+   Get-MsolUser
+   Get-MsolUser -UnlicensedUsersOnly
+   Get-MsolUser -ReturnDeletedUsers
    ```
 
 #### Exercise 5: Bulk create users
@@ -488,13 +492,13 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Load the file and use it to create users. Note that you might run out of licenses. If so, make a note of which users were not created.
 
    ```PowerShell
-    Import-Csv -Path "C:\labfiles\O365Users.csv" | ForEach-Object { New-MsolUser -UserPrincipalName $PSItem."UPN" -AlternateEmailAddresses $PSItem."AltEmail" -FirstName $PSItem."FirstName" -LastName $PSItem."LastName" -DisplayName $PSItem."DisplayName" -BlockCredential $False -ForceChangePassword $False -LicenseAssignment $PSItem."LicenseAssignment" -Password $PSItem."Password" -PasswordNeverExpires $True -Title $PSItem."Title" -Department $PSItem."Department" -Office $PSItem."Office" -PhoneNumber $PSItem."PhoneNumber" -MobilePhone $PSItem."MobilePhone" -Fax $PSItem."Fax" -StreetAddress $PSItem."StreetAddress" -City $PSItem."City" -State $PSItem."State" -PostalCode $PSItem."PostalCode" -Country $PSItem."Country" -UsageLocation $PSItem."UsageLocation" }`
+   Import-Csv -Path "C:\labfiles\O365Users.csv" | ForEach-Object { New-MsolUser -UserPrincipalName $PSItem."UPN" -AlternateEmailAddresses $PSItem."AltEmail" -FirstName $PSItem."FirstName" -LastName $PSItem."LastName" -DisplayName $PSItem."DisplayName" -BlockCredential $False -ForceChangePassword $False -LicenseAssignment $PSItem."LicenseAssignment" -Password $PSItem."Password" -PasswordNeverExpires $True -Title $PSItem."Title" -Department $PSItem."Department" -Office $PSItem."Office" -PhoneNumber $PSItem."PhoneNumber" -MobilePhone $PSItem."MobilePhone" -Fax $PSItem."Fax" -StreetAddress $PSItem."StreetAddress" -City $PSItem."City" -State $PSItem."State" -PostalCode $PSItem."PostalCode" -Country $PSItem."Country" -UsageLocation $PSItem."UsageLocation" }`
    ```
 
 1. List users.
 
    ```PowerShell
-    Get-MsolUser
+   Get-MsolUser
    ```
 
 #### Exercise 6: Modify groups
@@ -502,23 +506,23 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Create a group.
 
    ```PowerShell
-    New-MsolGroup –DisplayName "Marketing" –Description "Marketing department"
+   New-MsolGroup –DisplayName "Marketing" –Description "Marketing department"
    ```
 
 1. Add members.
 
    ```PowerShell
-$MarketingGroup = Get-MsolGroup | Where-Object DisplayName -eq "Marketing"
-$CatherineUser = Get-MsolUser | Where-Object DisplayName -eq "Catherine Richard"
-$TamekaUser = Get-MsolUser | Where-Object DisplayName -eq "Tameka Reed"
-Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $CatherineUser.ObjectId
-Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $TamekaUser.ObjectId
+   $MarketingGroup = Get-MsolGroup | Where-Object DisplayName -eq "Marketing"
+   $CatherineUser = Get-MsolUser | Where-Object DisplayName -eq "Catherine Richard"
+   $TamekaUser = Get-MsolUser | Where-Object DisplayName -eq "Tameka Reed"
+   Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $CatherineUser.ObjectId
+   Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $TamekaUser.ObjectId
    ```
 
 1. Verify membership.
 
    ```PowerShell
-Get-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId
+   Get-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId
    ```
 
 #### Exercise 7: Passwords, Password Policy
@@ -526,25 +530,25 @@ Get-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId
 1. Set password expiry back to the default values.
 
    ```PowerShell
-Set-MsolPasswordPolicy -DomainName "adatum26863b.onelearndns.com" -ValidityPeriod 90 -NotificationDays 14 
+   Set-MsolPasswordPolicy -DomainName "adatum26863b.onelearndns.com" -ValidityPeriod 90 -NotificationDays 14 
    ```
 
-If you wanted to do this for all your domains, you could use the following.
+   If you wanted to do this for all your domains, you could use the following.
     
    ```PowerShell
-Get-MsolDomain | Where-Object IsInitial -eq $false | Select-Object @{ l="DomainName"; e={$PSItem.Name} } | Set-MsolPasswordPolicy -ValidityPeriod 90 -NotificationDays 14
+   Get-MsolDomain | Where-Object IsInitial -eq $false | Select-Object @{ l="DomainName"; e={$PSItem.Name} } | Set-MsolPasswordPolicy -ValidityPeriod 90 -NotificationDays 14
    ```
 
 1. Reset a user's password.
 
    ```PowerShell
-Set-MsolUserPassword –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –NewPassword "Pa55w.rd9876"
+   Set-MsolUserPassword –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –NewPassword "Pa55w.rd9876"
    ```
 
 1. Enable password expiry for all users.
 
    ```PowerShell
-Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false 
+   Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false 
    ```
 
 ### Lab 2C
