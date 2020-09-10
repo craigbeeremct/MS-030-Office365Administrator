@@ -381,7 +381,10 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. In the Navigation menu, click **Groups > Deleted groups**. Note that the Sales group does not appear. Only Microsoft 365 groups can be undeleted.
 
+
 ### Lab 2B
+
+Before running the code below, you must replace the placeholder "@adatumXXXXXX.onelearndns.com" with your actual domain name.
 
 #### Exercise 1: Create users
 
@@ -401,7 +404,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
     Connect-MsolService
 ```
 
-1. Create the users. Edit the correct domain name (@adatumXXXXXX.onelearndns.com) before running the commands.
+1. Create the users. 
 
 ```PowerShell
     New-MsolUser –UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" –DisplayName "Catherine Richard" –FirstName "Catherine" –LastName "Richard" –Password "Pa55w.rd1234" –ForceChangePassword $false –UsageLocation "CH"
@@ -423,7 +426,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
     Get-MsolAccountSku
 ```
 
-1. Assign licenses. Edit the correct domain name and license name (LODSXXXXXXX:ENTERPRISEPREMIUM) before running the script.
+1. Assign licenses. Edit the correct license name (LODSXXXXXXX:ENTERPRISEPREMIUM) before running the script.
 
 ```PowerShell
     Set-MsolUserLicense -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" –AddLicenses "LODSXXXXXXX:ENTERPRISEPREMIUM"
@@ -446,13 +449,11 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 ```PowerShell
     Remove-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" 
 ```
-1. List all deleted users. 
+1. List all deleted users. Note that Catherin's account is still licensed.
 
 ```PowerShell
     Get-MsolUser -ReturnDeletedUsers
 ```
-
-Note that Catherin's account is still licensed.
 
 1. Undelete Catherine's user account.
 
@@ -516,4 +517,30 @@ Note that Catherin's account is still licensed.
 
 ```PowerShell
     Get-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId
+```
+
+#### Exercise 7: Passwords, Password Policy
+
+1. Set password expiry back to the default values.
+
+```PowerShell
+    Set-MsolPasswordPolicy -DomainName "adatum26863b.onelearndns.com" -ValidityPeriod 90 -NotificationDays 14 
+```
+
+    If you wanted to do this for all your domains, you could use the following.
+    
+```PowerShell
+    Get-MsolDomain | where IsInitial -eq $false | select @{ l="DomainName"; e={$PSItem.Name} } | Set-MsolPasswordPolicy -ValidityPeriod 90 -NotificationDays 14
+```
+
+1. Reset a user's password.
+
+```PowerShell
+    Set-MsolUserPassword –UserPrincipalName “Tameka@adatumXXXXXX.onelearndns.com” –NewPassword ‘Pa55w.rd123’
+```
+
+1. Enable password expiry for all users.
+
+```PowerShell
+    Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false 
 ```
