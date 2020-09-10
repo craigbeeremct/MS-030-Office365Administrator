@@ -85,7 +85,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center** portal.
+1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center**.
 
 1. Sign in using the supplied tenant administrator (`admin@LODSXXXXXX.onmicrosoft.com`).
 
@@ -97,7 +97,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. How many users are listed? What licences are assigned to them?
 
-1. In the Navigation menu, click **Exchange**. This opens the **Exchange admin center** portal.
+1. In the Navigation menu, click **Exchange**. This opens the **Exchange admin center**.
 
 1. In the Navigation menu, click **recipients**. In the centre pane, click **mailboxes**.
 
@@ -105,9 +105,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Select the **Microsoft 365 admin center** browser tab.
 
-1. In the Navigation menu, click **Azure Active Directory**. This opens the **Azure Active Directory admin center** portal.
+1. In the Navigation menu, click **Azure Active Directory**. This opens the **Azure Active Directory admin center**.
 
-1. In the navigation menu, click **Azure Active Directory**. In the **Contoso | Overview blade**, click **Users** in the **Manage** section.
+1. In the navigation menu of the **Azure Active Directory admin center**, click **Azure Active Directory**. In the **Contoso | Overview blade**, click **Users** in the **Manage** section.
 
 1. How many accounts are listed? The number should match the number of active users.
 
@@ -117,13 +117,13 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. If there are any warnings or advisories then click on the link and read the messages.
 
-1. In the Navigation menu, click **Security**. This opens the **Office 365 Security & Compliance** portal.
+1. In the Navigation menu, click **Security**. This opens the **Office 365 Security & Compliance**.
 
     - Note that you can open this portal by browsing to **https://protection.office.com**.
   
 1. Select the **Microsoft 365 admin center** browser tab.
 
-1. In the Navigation menu, click **Compliance**. This opens the **Microsoft 365 compliance** portal.
+1. In the Navigation menu, click **Compliance**. This opens the **Microsoft 365 compliance**.
 
     - Note that you can open this portal by browsing to **https://compliance.microsoft.com**.
   
@@ -133,7 +133,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Connect to **LON-DC1**. Sign on as **ADATUM\Administrator**.
 
-1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** portal (admin.microsoft.com) and sign in using the supplied tenant administrator.
+1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** (admin.microsoft.com) and sign in using the supplied tenant administrator.
 
 1. If asked to save the password or to stay signed in, choose **Yes**.
 
@@ -178,7 +178,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in using the supplied tenant administrator.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the supplied tenant administrator.
 
 1. In the Navigation menu, click **Users > Active users**. 
 
@@ -303,7 +303,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Unblock Francisco's sign-in. *Note*: THis may take up to 15 minutes to take effect. 
 
-1. In Edge, open an InPrivate window and sign on to the portal again as Francisco.
+1. In Edge, open an InPrivate window and sign on to the Office portal again as Francisco.
 
 1. Close the InPrivate window.
 
@@ -329,7 +329,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Restore the user account. Use an automatically-generated password and note down the temporary password.
 
-1. In Edge, open an InPrivate window and sign on to the portal again as Lindsey, using the temporary password. Change the password to **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
+1. In Edge, open an InPrivate window and sign on to the Office portal again as Lindsey, using the temporary password. Change the password to **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
 
 1. Note that Lindsey has no apps in the list. Deleting the account removed the licence assignment.
 
@@ -369,7 +369,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in using the supplied tenant administrator.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the supplied tenant administrator.
 
 1. In the Navigation menu, click **Groups > Active groups**. 
 
@@ -585,7 +585,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Exercise 1: Setting service administrators using the portal
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in using the supplied tenant administrator.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the supplied tenant administrator.
 
 1. In the Navigation menu, click **Users > Active users**. 
 
@@ -600,6 +600,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. In the **Active Users** list, click **Christie Thomas** then click **Manage roles**.
 
 1. Select **User admin**.
+
+1. Close all Edge windows.
+
 
 #### Exercise 2: Setting service administrators using PowerShell
 
@@ -632,9 +635,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Exercise 3: Test service administrators
 
-1. Close all Edge windows.
-
-1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in as Tameka.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as Tameka.
 
 1. In the Navigation menu, click **Users > Active users**. 
 
@@ -646,7 +647,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Sign out of the admin center and close Edge.
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in as Tameka.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as Tameka.
 
 1. In the Navigation menu, click **Users > Active users**. 
 
