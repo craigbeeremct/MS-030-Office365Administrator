@@ -508,17 +508,17 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Add members.
 
 ```PowerShell
-    $MarketingGroup = Get-MsolGroup | Where-Object DisplayName -eq "Marketing"
-    $CatherineUser = Get-MsolUser | Where-Object DisplayName -eq "Catherine Richard"
-    $TamekaUser = Get-MsolUser | Where-Object DisplayName -eq "Tameka Reed"
-    Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $CatherineUser.ObjectId
-    Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $TamekaUser.ObjectId
+$MarketingGroup = Get-MsolGroup | Where-Object DisplayName -eq "Marketing"
+$CatherineUser = Get-MsolUser | Where-Object DisplayName -eq "Catherine Richard"
+$TamekaUser = Get-MsolUser | Where-Object DisplayName -eq "Tameka Reed"
+Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $CatherineUser.ObjectId
+Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $TamekaUser.ObjectId
 ```
 
 1. Verify membership.
 
 ```PowerShell
-    Get-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId
+Get-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId
 ```
 
 #### Exercise 7: Passwords, Password Policy
@@ -526,25 +526,25 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Set password expiry back to the default values.
 
 ```PowerShell
-    Set-MsolPasswordPolicy -DomainName "adatum26863b.onelearndns.com" -ValidityPeriod 90 -NotificationDays 14 
+Set-MsolPasswordPolicy -DomainName "adatum26863b.onelearndns.com" -ValidityPeriod 90 -NotificationDays 14 
 ```
 
 If you wanted to do this for all your domains, you could use the following.
     
 ```PowerShell
-    Get-MsolDomain | Where-Object IsInitial -eq $false | Select-Object @{ l="DomainName"; e={$PSItem.Name} } | Set-MsolPasswordPolicy -ValidityPeriod 90 -NotificationDays 14
+Get-MsolDomain | Where-Object IsInitial -eq $false | Select-Object @{ l="DomainName"; e={$PSItem.Name} } | Set-MsolPasswordPolicy -ValidityPeriod 90 -NotificationDays 14
 ```
 
 1. Reset a user's password.
 
 ```PowerShell
-    Set-MsolUserPassword –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –NewPassword "Pa55w.rd9876"
+Set-MsolUserPassword –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –NewPassword "Pa55w.rd9876"
 ```
 
 1. Enable password expiry for all users.
 
 ```PowerShell
-    Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false 
+Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false 
 ```
 
 ### Lab 2C
