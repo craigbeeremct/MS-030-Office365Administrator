@@ -342,4 +342,50 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 ### Lab 2B
 
+#### Exercise 1: Create groups using the portal
+
+1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in using the supplied tenant administrator.
+
+1. In the Navigation menu, click **Groups > Active groups**. 
+
+1. Add groups as follows.
+
+    - [ ] **Sales**
+
+    | Setting | Value |
+    | --- | --- |
+    | Type | Security |
+    | Name | Sales |
+    | Description | Sales department |
+
+    - [ ] **Accounts**
+
+    | Setting | Value |
+    | --- | --- |
+    | Type | Security |
+    | Name | Accounts |
+    | Description | Accounts department |
+
+1. In the **Active groups** list, click **Refresh**. Repeat until both Sales and Accounts are in the list.
+
+1. In the **Active groups** list, click **Sales**. Set the members as follows.
+
+    | Setting | Value |
+    | --- | --- |
+    | Owners | Lindsey Gates |
+    | Members | Lindsey Gates, Christie Thomas, Amy Santiago |
+    
+1. In the **Active groups** list, click **Accounts**. Set the members as follows.
+
+    | Setting | Value |
+    | --- | --- |
+    | Owners | Francisco Chaves |
+    | Members | Sallie McIntosh, Francisco Chaves |
+    
+    
+    
+    
+
 
