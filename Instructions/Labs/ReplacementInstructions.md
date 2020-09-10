@@ -8,11 +8,13 @@ These instructions must be used in the virtual environment provided by learnonde
 
 [Module 1](#Module-1-planning-and-provisioning-office-365)
 
+
+
 ## Lab Setup
 
 ### Exercise 1: Download lab files
 
-1. Connect to **LON-CL1**.
+1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
 1. *Follow the instructions in the LODS instructions.*
 
@@ -25,11 +27,12 @@ These instructions must be used in the virtual environment provided by learnonde
 1. Record the full domain name (`adatumXXXXXX.onelearndns.com`), name server name (`NSadatumXXXXXX`), and public IP address in the text boxes in the LODS interface.
 
 
+
 ## Module 1: Planning and Provisioning Office 365
 
 ### Exercise 1: Explore the various administrative portals.
 
-1. Connect to **LON-CL1**.
+1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center** portal.
 
@@ -77,11 +80,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ### Exercise 2: Add a DNS domain
 
-1. Connect to **LON-DC1**.
+1. Connect to **LON-DC1**. Sign on as **ADATUM\Administrator**.
 
-1. Open Internet Explorer. Browse to **https://admin.microsoft.com**.
-
-1. Sign in using the supplied tenant administrator (`admin@LODSXXXXXX.onmicrosoft.com`).
+1. Open Internet Explorer. Browse the **Microsoft 365 admin center** portal and sign in using the supplied tenant administrator.
 
 1. If asked to save the password or to stay signed in, choose **Yes**.
 
@@ -116,19 +117,21 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. On the **How do you want to connect your domain?** page, click **Close**. *We will add the DNS records later*.
 
+
+
 ## Module 2: Managing Office 365 users and groups
 
-1. Connect to **LON-CL1**.
+### Exercise 1: Create users using the portal
 
-1. Open Edge. Browse the **Microsoft 365 admin center** portal.
+1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
-1. Sign in using the supplied tenant administrator.
+1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in using the supplied tenant administrator.
 
 1. In the Navigation menu (left-hand pane), click **Users > Active users**. 
 
 1. Add users as follows.
 
-    - [ ] Lindsey.
+    - [ ] **Lindsey**
 
     | Setting | Value |
     | --- | --- |
@@ -143,7 +146,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | Sales |
     
-    - [ ] Christie.
+    - [ ] **Christie**
 
     | Setting | Value |
     | --- | --- |
@@ -158,7 +161,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | Sales |
 
-    - [ ] Amy.
+    - [ ] **Amy**
 
     | Setting | Value |
     | --- | --- |
@@ -173,7 +176,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | (Leave blank) |
 
-    - [ ] Sallie.
+    - [ ] **Sallie**
 
     | Setting | Value |
     | --- | --- |
@@ -188,7 +191,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | Accounts |
 
-    - [ ] Francisco.
+    - [ ] **Francisco**
 
     | Setting | Value |
     | --- | --- |
@@ -203,7 +206,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | Accounts |
 
-    - [ ] Holly.
+    - [ ] **Holly**
 
     | Setting | Value |
     | --- | --- |
@@ -218,7 +221,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | Global admin |
     | Department | IT |
 
-    - [ ] Chris.
+    - [ ] **Chris**
 
     | Setting | Value |
     | --- | --- |
@@ -233,8 +236,81 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | (Leave blank) |
     
+### Exercise 2: Modify users using the portal
 
-    
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
+1. In the **Active Users** list, click **Amy Santiago**.
 
+1. Set Amy's department to Sales.
+
+1. In the **Active Users** list, click **Francisco Chaves**.
+
+1. Block Francisco's sign-in.
+
+1. In Edge, open an InPrivate window. Browse to **https://portal.office.com**. 
+
+1. Sign in as **francisco@adatumXXXXXX.onelearndns.com**, password **Pa55w.rd1234**.
+
+1. If asked to save the password or to stay signed in, choose **No**.
+
+1. You wil see a "Your account has been locked" message.
+
+1. Close the InPrivate window.
+
+1. Select the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+
+1. In the **Active Users** list, click **Francisco Chaves**.
+
+1. Unblock Francisco's sign-in. *Note*: THis may take up to 15 minutes to take effect. 
+
+1. In Edge, open an InPrivate window. Sign on to the portal again as Francisco.
+
+1. Switch to the **Microsoft 365 admin center** browser window (signed in as the supplied tenant administrator).
+
+1. In the **Active Users** list, click **Lindsey Gates**.
+
+1. Delete Lindsey's account.
+
+1. In Edge, open an InPrivate window. Browse to **https://portal.office.com**. 
+
+1. Sign in as **lindsey@adatumXXXXXX.onelearndns.com**.
+
+1. You wil see a "This username may be incorrect" message.
+
+1. Close the InPrivate window.
+
+1. Switch to the **Microsoft 365 admin center** browser window (signed in as the supplied tenant administrator).
+
+1. In the Navigation menu (left-hand pane), click **Users > Deleted users**. 
+
+1. In the **Deleted Users** list, click **Lindsey Gates**.
+
+1. Restore the user account. Use an automatically-generated password and note down the temporary password.
+
+1. In Edge, open an InPrivate window. Browse to **https://portal.office.com**. 
+
+1. Sign in as **lindsey@adatumXXXXXX.onelearndns.com**, using the temporary password.
+
+1. Change the password to **Pa55w.rd1234**.
+
+1. If asked to save the password or to stay signed in, choose **No**.
+
+1. Note that Lindsey has no apps in the list. Deleting the account removed the licence assignment.
+
+1. Close the InPrivate window.
+
+1. Switch to the **Microsoft 365 admin center** browser window (signed in as the supplied tenant administrator).
+
+1. In the Navigation menu (left-hand pane), click **Users > Active users**. 
+
+1. In the **Active Users** list, click **Lindsey Gates**.
+
+1. Assign an Office 365 E5 license.
+
+### Exercise 3: Pasword Policy
+
+1. Switch to the **Microsoft 365 admin center** browser window (signed in as the supplied tenant administrator).
+
+1. In the Navigation menu (left-hand pane), click **Users > Deleted users**. 
 
