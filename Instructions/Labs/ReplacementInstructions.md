@@ -530,7 +530,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
     If you wanted to do this for all your domains, you could use the following.
     
 ```PowerShell
-    Get-MsolDomain | where IsInitial -eq $false | select @{ l="DomainName"; e={$PSItem.Name} } | Set-MsolPasswordPolicy -ValidityPeriod 90 -NotificationDays 14
+    Get-MsolDomain | Where-Object IsInitial -eq $false | Select-Object @{ l="DomainName"; e={$PSItem.Name} } | Set-MsolPasswordPolicy -ValidityPeriod 90 -NotificationDays 14
 ```
 
 1. Reset a user's password.
