@@ -4,21 +4,21 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## TOC ##
 
-[Setup](#lab-setup)
-
-[Module 1](#Module-1-planning-and-provisioning-office-365)
+[Lab 1](#lab-1)
+[Lab 2A](#lab-2a)
+[Lab 2B](#lab-2b)
 
 
 
 ## Lab Setup
 
-### Exercise 1: Download lab files
+#### Download lab files
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
 1. *Follow the instructions in the LODS instructions.*
 
-### Exercise 2: DNS Registration
+#### DNS Registration
 
 1. Connect to **LON-DC1**.
 
@@ -30,7 +30,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## Module 1: Planning and Provisioning Office 365
 
-### Exercise 1: Explore the various administrative portals.
+### Lab 1
+
+#### Exercise 1: Explore the various administrative portals.
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
@@ -78,7 +80,7 @@ These instructions must be used in the virtual environment provided by learnonde
   
 1. Select the **Microsoft 365 admin center** browser tab.
 
-### Exercise 2: Add a DNS domain
+#### Exercise 2: Add a DNS domain
 
 1. Connect to **LON-DC1**. Sign on as **ADATUM\Administrator**.
 
@@ -121,7 +123,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## Module 2: Managing Office 365 users and groups
 
-### Exercise 1: Create users using the portal
+### Lab 2A
+
+#### Exercise 1: Create users using the portal
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
@@ -236,7 +240,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | (Leave blank) |
     
-### Exercise 2: Modify users
+#### Exercise 2: Modify users
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
@@ -244,7 +248,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Set Amy's department to Sales.
 
-### Exercise 3: Block a user
+#### Exercise 3: Block a user
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
@@ -270,7 +274,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Close the InPrivate window.
 
-### Exercise 4: Delete and undelete a user
+#### Exercise 4: Delete and undelete a user
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
@@ -310,7 +314,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Assign an Office 365 E5 license.
 
-### Exercise 5: Pasword Policy
+#### Exercise 5: Pasword Policy
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
@@ -332,9 +336,10 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Sign out of the portal and then close Edge.
 
-### Exercise 6: Multifactor Authentication
+#### Exercise 6: Multifactor Authentication
 
 TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
 
+### Lab 2B
 
 
