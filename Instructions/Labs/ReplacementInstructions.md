@@ -82,15 +82,15 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Connect to **LON-DC1**. Sign on as **ADATUM\Administrator**.
 
-1. Open Internet Explorer. Browse the **Microsoft 365 admin center** portal and sign in using the supplied tenant administrator.
+1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** portal (admin.microsoft.com) and sign in using the supplied tenant administrator.
 
 1. If asked to save the password or to stay signed in, choose **Yes**.
 
 1. In the Navigation menu, click **Settings > Domains**. Click **Add domain**.
 
-1. Type the provided domain name (`adatumXXXXXX.onelearndns.com`). Click **Use this domain**.
+1. Type the provided domain name (`adatumXXXXXX.onelearndns.com`) then click **Use this domain**.
 
-1. Select **Add a TXT record**. Click **Continue**.
+1. Select **Add a TXT record** then click **Continue**.
 
 1. Copy the **TXT value** to the clipboard.
 
@@ -127,7 +127,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** portal and sign in using the supplied tenant administrator.
 
-1. In the Navigation menu (left-hand pane), click **Users > Active users**. 
+1. In the Navigation menu, click **Users > Active users**. 
 
 1. Add users as follows.
 
@@ -288,7 +288,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
-1. In the Navigation menu (left-hand pane), click **Users > Deleted users**. 
+1. In the Navigation menu, click **Users > Deleted users**. 
 
 1. In the **Deleted Users** list, click **Lindsey Gates**.
 
@@ -304,7 +304,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Switch to the **Microsoft 365 admin center** browser window (signed in as the supplied tenant administrator).
 
-1. In the Navigation menu (left-hand pane), click **Users > Active users**. 
+1. In the Navigation menu, click **Users > Active users**. 
 
 1. In the **Active Users** list, click **Lindsey Gates**.
 
@@ -314,7 +314,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
-1. In the Navigation menu (left-hand pane), click **Settings > Org settings**. 
+1. In the Navigation menu, click **Settings > Org settings**. 
 
 1. In the middle pane, click **Security & privacy** then click **Password expiration policy**.
 
@@ -331,6 +331,10 @@ These instructions must be used in the virtual environment provided by learnonde
 1. Click the Notification icon in the top right. Note the "Time to change your password" message.
 
 1. Sign out of the portal and then close Edge.
+
+### Exercise 6: Multifactor Authentication
+
+TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
 
 
 
