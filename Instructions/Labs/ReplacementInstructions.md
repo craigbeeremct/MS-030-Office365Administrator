@@ -142,8 +142,6 @@ Module 2: Managing Office 365 users and groups
 
 1. Add users as follows.
 
-    - [ ] **Lindsey**
-
     | Setting | Value |
     | --- | --- |
     | First name | Lindsey |
@@ -157,8 +155,6 @@ Module 2: Managing Office 365 users and groups
     | Roles | User |
     | Department | Sales |
     
-    - [ ] **Christie**
-
     | Setting | Value |
     | --- | --- |
     | First name | Christie |
@@ -171,8 +167,6 @@ Module 2: Managing Office 365 users and groups
     | Licenses | Office 365 E5 |
     | Roles | User |
     | Department | Sales |
-
-    - [ ] **Amy**
 
     | Setting | Value |
     | --- | --- |
@@ -187,8 +181,6 @@ Module 2: Managing Office 365 users and groups
     | Roles | User |
     | Department | (Leave blank) |
 
-    - [ ] **Sallie**
-
     | Setting | Value |
     | --- | --- |
     | First name | Sallie |
@@ -201,8 +193,6 @@ Module 2: Managing Office 365 users and groups
     | Licenses | Office 365 E5 |
     | Roles | User |
     | Department | Accounts |
-
-    - [ ] **Francisco**
 
     | Setting | Value |
     | --- | --- |
@@ -217,8 +207,6 @@ Module 2: Managing Office 365 users and groups
     | Roles | User |
     | Department | Accounts |
 
-    - [ ] **Holly**
-
     | Setting | Value |
     | --- | --- |
     | First name | Holly |
@@ -231,8 +219,6 @@ Module 2: Managing Office 365 users and groups
     | Licenses | Office 365 E5 |
     | Roles | Global admin |
     | Department | IT |
-
-    - [ ] **Chris**
 
     | Setting | Value |
     | --- | --- |
@@ -357,15 +343,11 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. Add groups as follows.
 
-    - [ ] **Sales**
-
     | Setting | Value |
     | --- | --- |
     | Type | Security |
     | Name | Sales |
     | Description | Sales department |
-
-    - [ ] **Accounts**
 
     | Setting | Value |
     | --- | --- |
@@ -419,7 +401,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
     Connect-MsolService
 ```
 
-1. Create the users. Edit the correct DNS domain name before running the commands.
+1. Create the users. Edit the correct domain name (@adatumXXXXXX.onelearndns.com) before running the commands.
 
 ```PowerShell
     New-MsolUser –UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" –DisplayName "Catherine Richard" –FirstName "Catherine" –LastName "Richard" –Password "Pa55w.rd1234" –ForceChangePassword $false –UsageLocation "CH"
@@ -439,4 +421,99 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 ```PowerShell
     Get-MsolAccountSku
+```
+
+1. Assign licenses. Edit the correct domain name and license name (LODSXXXXXXX:ENTERPRISEPREMIUM) before running the script.
+
+```PowerShell
+    Set-MsolUserLicense -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" –AddLicenses "LODSXXXXXXX:ENTERPRISEPREMIUM"
+
+    Set-MsolUserLicense -UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –AddLicenses "LODSXXXXXXX:ENTERPRISEPREMIUM"
+```
+
+#### Exercise 3: Block a user
+
+1. Block Catherine's sign-in.
+
+```PowerShell
+    Set-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" -BlockCredential $true
+```
+
+#### Exercise 4: Delete and undelete a user
+
+1. Delete Catherine's user account.
+
+```PowerShell
+    Remove-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" 
+```
+1. List all deleted users. 
+
+```PowerShell
+    Get-MsolUser -ReturnDeletedUsers
+```
+
+Note that Catherin's account is still licensed.
+
+1. Undelete Catherine's user account.
+
+```PowerShell
+    Restore-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" 
+```
+
+1. List users.
+
+```PowerShell
+    Get-MsolUser
+    Get-MsolUser -UnlicensedUsersOnly
+    Get-MsolUser -ReturnDeletedUsers
+```
+
+#### Exercise 5: Bulk create users
+
+1. Run Explorer and navigate to C:\Labfiles.
+
+1. Right-click O365users.csv, choose Edit.
+
+1. Replace all "yourdomain.hostdomain.com" with your domain name (adatumXXXXXX.onelearndns.com).
+
+1. Replace all "adatumyyxxxx:ENTERPRISEPACK" with your license name (LODSXXXXXXX:ENTERPRISEPREMIUM).
+
+1. Save the file and close Notepad.
+
+1. In PowerShell ISE create a new script.
+
+1. Load the file and use it to create users. Note that you might run out of licenses. If so, make a note of which users were not created.
+
+```PowerShell
+    Import-Csv -Path "C:\labfiles\O365Users.csv" | ForEach-Object { New-MsolUser -UserPrincipalName $PSItem."UPN" -AlternateEmailAddresses $PSItem."AltEmail" -FirstName $PSItem."FirstName" -LastName $PSItem."LastName" -DisplayName $PSItem."DisplayName" -BlockCredential $False -ForceChangePassword $False -LicenseAssignment $PSItem."LicenseAssignment" -Password $PSItem."Password" -PasswordNeverExpires $True -Title $PSItem."Title" -Department $PSItem."Department" -Office $PSItem."Office" -PhoneNumber $PSItem."PhoneNumber" -MobilePhone $PSItem."MobilePhone" -Fax $PSItem."Fax" -StreetAddress $PSItem."StreetAddress" -City $PSItem."City" -State $PSItem."State" -PostalCode $PSItem."PostalCode" -Country $PSItem."Country" -UsageLocation $PSItem."UsageLocation" }`
+```
+
+1. List users.
+
+```PowerShell
+    Get-MsolUser
+```
+
+#### Exercise 6: Modify groups
+
+1. Create a group.
+
+```PowerShell
+    New-MsolGroup –DisplayName "Marketing" –Description "Marketing department"
+```
+
+1. Add members.
+
+```PowerShell
+    $MarketingGroup = Get-MsolGroup | Where-Object {$PSItem.DisplayName -eq "Marketing"}
+    $CatherineUser = Get-MsolUser | Where-Object {$PSItem.DisplayName -eq "Catherine Richard"}
+    $TamekaUser = Get-MsolUser | Where-Object {$PSItem.DisplayName -eq "Tameka Reed"}
+    Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $CatherineUser.ObjectId
+    Add-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId -GroupMemberType "User" -GroupMemberObjectId $TamekaUser.ObjectId
+```
+
+1. Verify membership.
+
+```PowerShell
+    Get-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId
 ```
