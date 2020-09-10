@@ -121,7 +121,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## Module 2: Managing Office 365 users and groups
 
-### Exercise 1. Create users using the portal
+### Exercise 1: Create users using the portal
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
@@ -236,7 +236,7 @@ These instructions must be used in the virtual environment provided by learnonde
     | Roles | User |
     | Department | (Leave blank) |
     
-### Exercise 1. Modify users
+### Exercise 2: Modify users
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
@@ -244,7 +244,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Set Amy's department to Sales.
 
-### Exercise 1. Block a user
+### Exercise 3: Block a user
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
@@ -270,7 +270,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Close the InPrivate window.
 
-### Exercise 1.Delete and undelete a user
+### Exercise 4: Delete and undelete a user
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
@@ -310,7 +310,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Assign an Office 365 E5 license.
 
-### Exercise 3: Pasword Policy
+### Exercise 5: Pasword Policy
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
 
@@ -318,6 +318,19 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. In the middle pane, click **Security & privacy** then click **Password expiration policy**.
 
-1. 
+1. Set 14 days before passwords expire, 14 days before a user is notified.
+
+1. Sign out of the portal and then close Edge.
+
+1. Open Edge, browse to **https://portal.office.com**. 
+
+1. Sign in as **lindsey@adatumXXXXXX.onelearndns.com**, password **Pa55w.rd1234**. If asked to save the password or to stay signed in, choose **No**.
+
+1. Note that Lindsey now has Outlook, OneDrive, etc in the list.
+
+1. Click the Notification icon in the top right. Note the "Time to change your password" message.
+
+1. Sign out of the portal and then close Edge.
+
 
 
