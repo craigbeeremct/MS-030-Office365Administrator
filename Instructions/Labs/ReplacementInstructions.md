@@ -378,7 +378,9 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
     
 #### Exercise 9: Delete a group
 
-1. In the **Active groups** list, click **Sales**. Click the trashcan icon.
+1. In the **Active groups** list, click **Sales**. 
+
+1. Delete the group.
 
 1. In the Navigation menu, click **Users > Active users**. Note that the user accounts for Amy, Christie and Lindsey are still present.
 
@@ -458,7 +460,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    ```PowerShell
    Remove-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" 
    ```
-1. List all deleted users. Note that Catherin's account is still licensed.
+1. List all deleted users. Note that Catherine's account is still licensed.
 
    ```PowerShell
    Get-MsolUser -ReturnDeletedUsers
@@ -480,9 +482,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Exercise 5: Bulk create users
 
-1. Run Explorer and navigate to C:\Labfiles.
+1. Run **Explorer** and navigate to **C:\Labfiles**.
 
-1. Right-click O365users.csv, choose Edit.
+1. Right-click **O365users.csv**, choose **Edit**.
 
 1. Replace all "yourdomain.hostdomain.com" with your domain name (adatumXXXXXX.onelearndns.com).
 
@@ -528,10 +530,10 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Exercise 7: Passwords, Password Policy
 
-1. Set password expiry back to the default values.
+1. Set password expiry.
 
    ```PowerShell
-   Set-MsolPasswordPolicy -DomainName "adatum26863b.onelearndns.com" -ValidityPeriod 90 -NotificationDays 14 
+   Set-MsolPasswordPolicy -DomainName "adatumXXXXXX.onelearndns.com" -ValidityPeriod 90 -NotificationDays 14 
    ```
 
    If you wanted to do this for all your domains, you could use the following.
