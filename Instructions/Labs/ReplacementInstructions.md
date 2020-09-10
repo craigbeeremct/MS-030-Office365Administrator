@@ -4,9 +4,15 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## TOC ##
 
+Module 1: Planning and Provisioning Office 365
+
 [Lab 1](#lab-1)
-[Lab 2A](#lab-2a)
-[Lab 2B](#lab-2b)
+
+Module 2: Managing Office 365 users and groups
+
+[Lab 2A: using the portal](#lab-2a)
+
+[Lab 2B: using PowerShell](#lab-2b)
 
 
 
@@ -125,7 +131,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ### Lab 2A
 
-#### Exercise 1: Create users using the portal
+#### Exercise 1: Create users
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
@@ -340,9 +346,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
 
-### Lab 2B
-
-#### Exercise 1: Create groups using the portal
+#### Exercise 7: Create groups
 
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
@@ -368,6 +372,8 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
     | Name | Accounts |
     | Description | Accounts department |
 
+#### Exercise 8: Modify groups
+
 1. In the **Active groups** list, click **Refresh**. Repeat until both Sales and Accounts are in the list.
 
 1. In the **Active groups** list, click **Sales**. Set the members as follows.
@@ -384,8 +390,19 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
     | Owners | Francisco Chaves |
     | Members | Sallie McIntosh, Francisco Chaves |
     
-    
-    
-    
+#### Exercise 9: Delete a group
+
+1. In the **Active groups** list, click the selection circle to the left of **Accounts**. Click **Delete group**.
+
+1. In the Navigation menu, click **Users > Active users**. Note that the user accounts for Amy, Christie and Lindsey are still present.
+
+1. In the Navigation menu, click **Groups > Deleted groups**. Note that the Sales group does not appear. Only Microsoft 365 groups can be undeleted.
+
+### Lab 2B
+
+1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+
+2. Using **Run as Administrator**, open **Windows PowerShell ISE**.
+
 
 
