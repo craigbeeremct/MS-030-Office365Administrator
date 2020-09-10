@@ -2,6 +2,7 @@
 
 These instructions must be used in the virtual environment provided by learnondemand.net.
 
+
 ## Table of Contents ##
 
 - Module 1: Planning and Provisioning Office 365 - [Lab 1](#lab-1)
@@ -751,7 +752,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. In the navigation menu, click **Office 365**. In the main pane, click **Help Identify My Issue with Lync DNS**.
 
-1. Enter Francisco's sign-in address (francisco@adatum26863b.onelearndns.com), select **Office 365 (Default)**, then click **Perform Test**.
+1. Enter Francisco's sign-in address (francisco@adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then click **Perform Test**.
 
 1. Verify that there are no errors.
 
@@ -761,11 +762,53 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Verify that there are no errors.
 
+1. In the navigation menu, click **SARA Client**. Download and install the tool.
+
+#### Exercise 3: Office 365 Support and Recovery Assistant
+
+1. In the **Microsoft Support and Recovery Assistant**, select **Outlook** then click **Next**. 
+
+1. Select **I need help setting up my Office 365 email in Outlook** then click **Next**.
+
+1. Select **Yes** to **Is this the affected machine?** then click **Next**.
+
+1. Enter the email address and password of the supplied tenant administrator (admin@LODSXXXXXX.onmicrosoft.com) then click **Next**.
+
+1. Note any recommendations then close the tool.
+
+#### Exercise 4: Connecting Office 2016 clients
+
+1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+
+1. Run Outlook 2016. 
+   | Setting | Value |
+   | --- | --- |
+   | Your name | MOD Administrator |
+   | E-mail address | admin@LODSXXXXXX.onmicrosoft.com |
+
+1. Send an email to Francisco.
+
+1. Create a meeting and invite Francisco.
+
+1. Connect to **LON-CL2**. Sign on as **.\Student**.
+
+1. Run Outlook 2016. 
+   | Setting | Value |
+   | --- | --- |
+   | Your name | Francisco Chaves |
+   | E-mail address | francisco@adatumXXXXXX.onelearndns.com |
+
+1. Reply to the email from MOD Administrator.
+
+1. Accept the meeting invitation from MOD Administrator.
 
 
 
+## Module 3: Planning and configuring directory synchronization
 
+### Lab 4
 
+#### Exercise 1: Preparing for Directory Synchonisation
 
 
 
