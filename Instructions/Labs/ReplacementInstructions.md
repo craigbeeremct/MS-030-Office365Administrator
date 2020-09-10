@@ -737,6 +737,35 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Click **Continue** then **Done**. Correct any mismatches reported.
 
+#### Exercise 2: Office 365 connectivity analyzer
+
+1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to **https://testconnectivity.microsoft.com**. This opens the **Microsoft Remote Connectivity Analyzer**.
+
+1. In the navigation menu, click **Office 365**. In the main pane, click **Help Identify My Issue with Exchange DNS**.
+
+1. Enter your domain name (adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then click **Perform Test**.
+
+1. Verify that there are no errors.
+
+1. In the navigation menu, click **Office 365**. In the main pane, click **Help Identify My Issue with Lync DNS**.
+
+1. Enter Francisco's sign-in address (francisco@adatum26863b.onelearndns.com), select **Office 365 (Default)**, then click **Perform Test**.
+
+1. Verify that there are no errors.
+
+1. In the navigation menu, click **Office 365**. In the main pane, click **Outlook Connectivity**.
+
+1. Enter Francisco's sign-in address and password, select **Use Autodiscover to detect server settings**, select the **I understand** box, then click **Perform Test**.
+
+1. Verify that there are no errors.
 
 
-   
+
+
+
+
+
+
+
