@@ -401,13 +401,42 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 ### Lab 2B
 
+#### Exercise 1: Create users
+
 1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
 
 1. Using **Run as Administrator**, open **Windows PowerShell ISE**.
 
-1. Enter the command
+1. Install the latest version of the MSOnline module. 
 
 ```PowerShell
     Install-Module MSOnline -Force
 ```
 
+1. Connect to Office 365. Sing in as the supplied tenant administrator.
+
+```PowerShell
+    Connect-MsolService
+```
+
+1. Create the users. Edit the correct DNS domain name before running the commands.
+
+```PowerShell
+    New-MsolUser –UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" –DisplayName "Catherine Richard" –FirstName "Catherine" –LastName "Richard" –Password "Pa55w.rd1234" –ForceChangePassword $false –UsageLocation "CH"
+
+    New-MsolUser –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –DisplayName "Tameka Reed" –FirstName "Tameka" –LastName "Reed" -Password "Pa55w.rd1234" –ForceChangePassword $false –UsageLocation "CH"
+```
+
+#### Exercise 2: Licence users
+
+1. List the unlicensed users.
+
+```PowerShell
+    Get-MsolUser -UnlicensedUsersOnly
+```
+
+1. Determine the available licenses.
+
+```PowerShell
+    Get-MsolAccountSku
+```
