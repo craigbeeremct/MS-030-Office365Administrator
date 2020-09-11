@@ -1073,6 +1073,8 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. In the Navigation menu, click **Groups > Active groups**. 
 
-1. Check that Ada is a member of the group and that Vera and Tia are not.
+1. Check that Project Team is present.
+
+1. Check that Ada is a member of the Research group and that Vera and Tia are not.
 
 
