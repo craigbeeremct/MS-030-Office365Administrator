@@ -938,7 +938,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
 
-##### Exercise 6: Verify that synchronization was successful
+#### Exercise 6: Verify that synchronization was successful
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -965,7 +965,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Check that Ada Russell (Marketing) does not have an account.
 
 
-##### Exercise 7: Modify synchronisation
+#### Exercise 7: Modify synchronisation
 
 1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
 
@@ -993,7 +993,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Start-AdSyncSyncCycle Delta
    ```
 
-##### Exercise 8: Verify that synchronization was successful
+#### Exercise 8: Verify that synchronization was successful
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -1043,7 +1043,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Right click **Ada Russell**, choose **Move**. Move the account to the **Research** OU.
 
 
-##### Exercise 10: Synchronise
+#### Exercise 10: Synchronise
 
 1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
 
@@ -1055,7 +1055,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Start-AdSyncSyncCycle Delta
    ```
 
-##### Exercise 11: Verify that synchronization was successful
+#### Exercise 11: Verify that synchronization was successful
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
