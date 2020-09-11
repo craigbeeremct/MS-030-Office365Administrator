@@ -32,19 +32,13 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## Lab Setup
 
-#### Download lab files
-
-1. Connect to @@LON-CL1@@. Sign on as **ADATUM\Administrator**.
-
-1. *Follow the instructions in the LODS instructions.*
-
 #### DNS Registration
 
 1. Connect to **LON-DC1**.
 
 1. *Follow the instructions in the LODS instructions.*
 
-1. Record the full domain name (adatum*XXXXXX*.onelearndns.com), name server name (`NSadatumXXXXXX`), and public IP address in the text boxes in the LODS interface.
+1. Record the full domain name (`adatumXXXXXX.onelearndns.com`), name server name (`NSadatumXXXXXX`), and public IP address in the text boxes in the LODS interface.
 
 
 
@@ -54,11 +48,11 @@ These instructions must be used in the virtual environment provided by learnonde
 
 #### Exercise 1: Explore the various administrative portals.
 
-1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center**.
 
-1. Sign in using the supplied tenant administrator (`admin@LODSXXXXXX.onmicrosoft.com`).
+1. Sign in using the tenant owner account (`admin@LODSXXXXXX.onmicrosoft.com`).
 
 1. If asked to save the password or to stay signed in, choose **Yes**.
 
@@ -102,9 +96,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 #### Exercise 2: Add a DNS domain
 
-1. Connect to **LON-DC1**. Sign on as **ADATUM\Administrator**.
+1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
 
-1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** (admin.microsoft.com) and sign in using the supplied tenant administrator.
+1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** (admin.microsoft.com) and sign in using the tenant owner account.
 
 1. If asked to save the password or to stay signed in, choose **Yes**.
 
@@ -116,7 +110,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Copy the **TXT value** to the clipboard.
 
-1. Open **DNS Manager** (**Start** > **Windows Administrative Tools** > **DNS**).
+1. Open **DNS Manager**.
 
 1. Create a new **Forward Lookup Zone**.
 
@@ -135,7 +129,7 @@ These instructions must be used in the virtual environment provided by learnonde
    | Record name | (Leave blank) |
    | Text | (Paste the TXT value from above) |
 
-1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
 1. On the **Verify you own this domain** page, click **Verify**.
 
@@ -149,9 +143,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 #### Exercise 1: Create users
 
-1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the supplied tenant administrator.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
 1. In the Navigation menu, click **Users > Active users**. 
 
@@ -247,7 +241,7 @@ These instructions must be used in the virtual environment provided by learnonde
     
 #### Exercise 2: Modify users
 
-1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
 1. In the **Active Users** list, click **Amy Santiago**.
 
@@ -255,7 +249,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 #### Exercise 3: Block a user
 
-1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
 1. In the **Active Users** list, click **Francisco Chaves**.
 
@@ -267,7 +261,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Close the InPrivate window.
 
-1. Select the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+1. Select the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
 1. In the **Active Users** list, click **Francisco Chaves**.
 
@@ -279,7 +273,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 #### Exercise 4: Delete and undelete a user
 
-1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
 1. In the **Active Users** list, click **Lindsey Gates**.
 
@@ -291,7 +285,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Close the InPrivate window.
 
-1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
 1. In the Navigation menu, click **Users > Deleted users**. 
 
@@ -305,7 +299,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Close the InPrivate window.
 
-1. Switch to the **Microsoft 365 admin center** browser window (signed in as the supplied tenant administrator).
+1. Switch to the **Microsoft 365 admin center** browser window (signed in as the tenant owner account).
 
 1. In the Navigation menu, click **Users > Active users**. 
 
@@ -315,7 +309,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 #### Exercise 5: Pasword Policy
 
-1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
 1. In the Navigation menu, click **Settings > Org settings**. 
 
@@ -339,7 +333,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the supplied tenant administrator.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
 1. In the Navigation menu, click **Groups > Active groups**. 
 
@@ -406,10 +400,16 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Close **Windows PowerShell ISE** and open it again without using Run as administrator.
 
-1. Connect to Office 365. Sing in as the supplied tenant administrator.
+1. Connect to Office 365. Sing in as the tenant owner account.
 
    ```PowerShell
    Connect-MsolService
+   ```
+
+1. Enable Directory Synchonisation (in preperation for Lab 4).
+
+   ```PowerShell
+   Set-MsolDirSyncEnabled -EnableDirSync $true -Force
    ```
 
 1. Create the users. 
@@ -559,7 +559,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Exercise 1: Setting service administrators using the portal
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the supplied tenant administrator.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
 1. In the Navigation menu, click **Users > Active users**. 
 
@@ -657,9 +657,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Exercise 1: DNS Records
 
-1. Connect to **LON-DC1**. Sign on as **ADATUM\Administrator**.
+1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
 
-1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** and sign in using the supplied tenant administrator.
+1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
 1. In the Navigation menu, click **Settings > Domains**. 
 
@@ -734,13 +734,13 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
       | Alias name | enterpriseenrollment |
       | Fully qualified domain name (FQDN) for target host | enterpriseenrollment.manage.microsoft.com |
 
-1. Switch to the **Microsoft 365 admin center** browser window signed in as the supplied tenant administrator.
+1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
 1. Click **Continue** then **Done**. Correct any mismatches reported.
 
 #### Exercise 2: Office 365 connectivity analyzer
 
-1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to **https://testconnectivity.microsoft.com**. This opens the **Microsoft Remote Connectivity Analyzer**.
 
@@ -772,13 +772,13 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Select **Yes** to **Is this the affected machine?** then click **Next**.
 
-1. Enter the email address and password of the supplied tenant administrator (admin@LODSXXXXXX.onmicrosoft.com) then click **Next**.
+1. Enter the email address and password of the tenant owner account (admin@LODSXXXXXX.onmicrosoft.com) then click **Next**.
 
 1. Note any recommendations then close the tool.
 
 #### Exercise 4: Connecting Office 2016 clients
 
-1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
 1. Run Outlook 2016. 
    | Setting | Value |
@@ -790,7 +790,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Create a meeting and invite Francisco.
 
-1. Connect to **LON-CL2**. Sign on as **.\Student**.
+1. Connect to **LON-CL2**. Sign in as **.\Student**.
 
 1. Run Outlook 2016. 
    | Setting | Value |
@@ -804,11 +804,167 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
-## Module 3: Planning and configuring directory synchronization
+## Module 4: Planning and configuring directory synchronization
 
 ### Lab 4
 
 #### Exercise 1: Preparing for Directory Synchonisation
 
+1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
+
+1. Open **Active Directory Domains and Trusts**.
+
+1. In the console tree, right-click **Active Directory Domains and Trusts [LON-DC1.Adatum.com]** and choose **Prperties**.
+
+1. Add a UPN suffix of **adatumXXXXXX.onelearndns.com**.
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
+
+1. Set the UPN suffixes for all users.
+
+   ```PowerShell
+   Get-ADUser –Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $PSItem -UserPrincipalName ($PSItem.SamAccountName + "@adatum26863b.onelearndns.com" ) }
+   ```
+
+#### Exercise 2: Create issues 
+
+1. Run the break script.
+
+   ``PowerShell
+   cd C:\Labfiles
+   .\CreateProblemUsers.ps1
+   ```
+
+1. Verify that five accounts were updated - Klemen, Lara, Logan, Holly and Maj. Note that IdFix will not detect the issues with Holly and Maj.
+
+#### Exercise 3: Resolve issues
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+   Not LON-DC1 - it does not have the .NET Framework required.
+
+1. Open Edge. Browse to **https://github.com/microsoft/idfix**.
+
+1. Scroll down to the ClickOnce Launch heading and click the launch link. Install and run the app.
+
+1. In IdFIx, click Query on the toolbar. Five issues will be shown.
+
+1. Issue: An Dung Dao's account has spaces in the User Principal Name.
+
+   Resolution: In the Action column, select **EDIT**.
+
+1. Issue: DefaultAccount has a blank Display Name.
+
+   Resolution: In the Action column, select **EDIT**.
+
+1. Issue: Klemen Sic's account has two @ symbols in the User Principal Name.
+
+   Resolution: In the Action column, select **EDIT**.
+
+1. Issue: Ngoc Bich Tran's account has spaces in the User Principal Name.
+
+   Resolution: In the Action column, select **EDIT**.
+
+1. Issue: Lara Raisic and Logan Boyle have the same email adrress. IdFIx doesn't display Logan's account (a bug?).
+
+   Resolution: In the Update column, enter **larar@adatum.com**. In the Action column, select **EDIT**.
+
+1. In the toolbar, click Apply.
+
+1. In the toolbar, click Query. Verify that no issues are listed.
+
+1. Close IdFix.
+
+#### Exercise 4: Configure the Azure AD tenant
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
+
+1. Connect to Office 365. Sing in as the tenant owner account.
+
+   ```PowerShell
+   Connect-MsolService
+   ```
+
+1. Get DirSync information.
+
+   ```PowerShell
+   Get-MsolCompanyInformation | fl *sync*
+   ```
+
+   Verify that DirectorySynchronizationEnable is True. If it is not then run the following and check again.
+
+   ```PowerShell
+   Set-MsolDirSyncEnabled -EnableDirSync $true -Force
+   ```
+
+1. Do not close PowerShell, it will be used later.
+
+#### Exercise 5: Download and install AD Connect
+
+1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Azure Acive Directory**. 
+
+1. In the navigation menu of the **Azure Active Directory admin center**, click **Azure Active Directory**. In the **Contoso | Overview blade**, click **Azure AD Connect** in the **Manage** section.
+
+1. Click **Download Azure AD Connect**. Download and install the tool.
+
+1. In the Microsoft Azure Active Directory Connect tool, click **Customize**.
+
+1. At the **Install required components** screen, click **Install**.
+
+1. At the **User-sign-in** screen, select **Password Hash Synchronization** and click **Next**.
+
+1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and click **Next**.
+
+1. At the **Connect your directories** screen, click **Add directory**. 
+
+1. At the **Ad forest account** screen, select **Create new AD account**, sign in using **ADATUM\Administrator** and click **OK**.
+
+1. At the **Connect your directories** screen, verify that Adatum.com has been added, then click **Next**. 
+
+1. At the **Azure AD sing-in configuration** screen, select **Continue without matching all UPN suffixes to verified domains** and click **Next**.
+
+1. At the **Domain and OU filtering** screen, choose **Sync selected domains and OUs** and select only the **IT** OU, then clikck **Next**.
+
+1. At the **Uniquely identifying your users** screen, click **Next**.
+
+1. At the **Filter users and devices** screen, click **Next**.
+
+1. At the **Optional features** screen, click **Next**.
+
+1. At the **Ready to congure** screen, click **Install**.
+
+1. At the **Configuration complete** screen, click **Exit**.
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
 
+##### Exercise 6: Verify that synchronization was successful
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Switch to the PowerShell session where Connect-MsolService was run.
+
+1. Get DirSync information.
+
+   ```PowerShell
+   Get-MsolCompanyInformation | fl *sync*
+   ```
+
+   Verify that all the properties have values (in particular that LastDirSyncTime has a date and time).
+
+1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Users > Active users**. 
+
+1. Verify that there are more users than before.
+
+
+##### Exercise 7: Modify synchronisation
+
+1. Open **Azure AD Connect**. Click **Configure**.
