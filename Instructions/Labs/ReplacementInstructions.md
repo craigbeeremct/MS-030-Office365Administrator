@@ -17,7 +17,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 4: Planning and configuring directory synchronization](#lab-4-planning-and-configuring-directory-synchronization)
 
-- Module 5: Planning and deploying Office 365 ProPlus - [Lab 5](#lab-5)
+- [Lab 5: Planning and deploying Office 365 ProPlus](#lab-5-planning-and-deploying-office-365-proplus)
 
 - Module 6: Planning and managing Exchange Online recipients ‎and permissions - [Lab 6](#lab-6)
 
@@ -43,6 +43,7 @@ These instructions must be used in the virtual environment provided by learnonde
 1. *Follow the instructions in the LODS instructions.*
 
 1. Record the full domain name (`adatumXXXXXX.onelearndns.com`), name server name (`NSadatumXXXXXX`), and public IP address in the text boxes in the LODS interface.
+
 
 
 ## Lab 1: Planning and Provisioning Office 365
@@ -1073,3 +1074,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Check that Ada is a member of the Research group and that Vera and Tia are not.
 
 
+
+## Lab 5: Planning and deploying Office 365 ProPlus
+
+### Exercise 1: 
