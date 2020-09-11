@@ -5,7 +5,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## Table of Contents ##
 
-- Module 1: Planning and Provisioning Office 365 - [Lab 1](#lab-1)
+- [Lab 1: Planning and Provisioning Office 365](#lab-1-planning-and-provisioning-office-365)
 
 - Module 2: Managing Office 365 users and groups - [Lab 2A](#lab-2a), [Lab 2B](#lab-2b), [Lab 2C](#lab-2c)
 
@@ -42,9 +42,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 
 
-## Module 1: Planning and Provisioning Office 365
-
-### Lab 1
+## Lab 1: Planning and Provisioning Office 365
 
 #### Exercise 1: Explore the various administrative portals.
 
