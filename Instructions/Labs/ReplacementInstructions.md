@@ -15,7 +15,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 3: Configuring client connectivity to Microsoft Office 365](#lab-3-configuring-client-connectivity-to-microsoft-office-365)
 
-- [Lab 4: Planning and configuring directory synchronization](#lab-4-lanning-and-configuring-directory-synchronization)
+- [Lab 4: Planning and configuring directory synchronization](#lab-4-planning-and-configuring-directory-synchronization)
 
 - Module 5: Planning and deploying Office 365 ProPlus - [Lab 5](#lab-5)
 
