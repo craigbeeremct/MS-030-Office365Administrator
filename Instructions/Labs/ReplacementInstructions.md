@@ -9,7 +9,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 2A: Managing Office 365 users and groups using the portal](#lab-2a-managing-office-365-users-and-groups-using-the-portal)
 
-- [Lab 2B: Managing Office 365 users and groups using PowerShell](#lab-2a-managing-office-365-users-and-groups-using-powershell)
+- [Lab 2B: Managing Office 365 users and groups using PowerShell](#lab-2b-managing-office-365-users-and-groups-using-powershell)
+
+- [Lab 2C: Managing Office 365 service administrators](#lab-2c-managing-office-365-service-administrators)
 
 - Module 2: Managing Office 365 users and groups - [Lab 2A](#lab-2a), [Lab 2B](#lab-2b), [Lab 2C](#lab-2c)
 
@@ -555,7 +557,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false 
    ```
 
-### Lab 2C
+## Lab 2C: Managing Office 365 service administrators
 
 #### Exercise 1: Setting service administrators using the portal
 
