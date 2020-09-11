@@ -34,9 +34,9 @@ These instructions must be used in the virtual environment provided by learnonde
 - Module 12: Monitoring and troubleshooting Microsoft Office 365 - [Lab 12](#lab-12)
 
 
-## Lab Setup
+# Lab Setup
 
-### DNS Registration
+## DNS Registration
 
 1. Connect to **LON-DC1**.
 
@@ -46,9 +46,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 
 
-## Lab 1: Planning and Provisioning Office 365
+# Lab 1: Planning and Provisioning Office 365
 
-### Exercise 1: Explore the various administrative portals.
+## Exercise 1: Explore the various administrative portals.
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -96,7 +96,7 @@ These instructions must be used in the virtual environment provided by learnonde
   
 1. Select the **Microsoft 365 admin center** browser tab.
 
-### Exercise 2: Add a DNS domain
+## Exercise 2: Add a DNS domain
 
 1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
 
@@ -139,9 +139,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 
 
-## Lab 2A: Managing Office 365 users and groups using the portal
+# Lab 2A: Managing Office 365 users and groups using the portal
 
-### Exercise 1: Create users
+## Exercise 1: Create users
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -239,7 +239,7 @@ These instructions must be used in the virtual environment provided by learnonde
    | Roles | Global admin |
    | Department | IT |
     
-### Exercise 2: Modify users
+## Exercise 2: Modify users
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
@@ -247,7 +247,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Set Amy's department to Sales.
 
-### Exercise 3: Block a user
+## Exercise 3: Block a user
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
@@ -271,7 +271,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Close the InPrivate window.
 
-### Exercise 4: Delete and undelete a user
+## Exercise 4: Delete and undelete a user
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
@@ -307,7 +307,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Assign an Office 365 E5 license.
 
-### Exercise 5: Pasword Policy
+## Exercise 5: Pasword Policy
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
@@ -325,11 +325,11 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Close the InPrivate window.
 
-### Exercise 6: Multifactor Authentication
+## Exercise 6: Multifactor Authentication
 
 TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
 
-### Exercise 7: Create groups
+## Exercise 7: Create groups
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -353,7 +353,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
    | Name | Accounts |
    | Description | Accounts department |
 
-### Exercise 8: Modify groups
+## Exercise 8: Modify groups
 
 1. In the **Active groups** list, click **Refresh**. Repeat until both Sales and Accounts are in the list.
 
@@ -371,7 +371,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
    | Owners | Francisco Chaves |
    | Members | Sallie McIntosh, Francisco Chaves |
     
-### Exercise 9: Delete a group
+## Exercise 9: Delete a group
 
 1. In the **Active groups** list, click **Sales**. 
 
@@ -382,11 +382,11 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 1. In the Navigation menu, click **Groups > Deleted groups**. Note that the Sales group does not appear. Only Microsoft 365 groups can be undeleted.
 
 
-## Lab 2B: Managing Office 365 users and groups using PowerShell
+# Lab 2B: Managing Office 365 users and groups using PowerShell
 
 Before running the code below, you must replace the placeholder "@adatumXXXXXX.onelearndns.com" with your actual domain name.
 
-### Exercise 1: Create users
+## Exercise 1: Create users
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -422,7 +422,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    New-MsolUser –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –DisplayName "Tameka Reed" –FirstName "Tameka" –LastName "Reed" -Password "Pa55w.rd1234" –ForceChangePassword $false –UsageLocation "CH"
    ```
 
-### Exercise 2: Licence users
+## Exercise 2: Licence users
 
 1. List the unlicensed users.
 
@@ -446,7 +446,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Set-MsolUserLicense -UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –AddLicenses "LODSXXXXXXX:ENTERPRISEPREMIUM"
    ```
 
-### Exercise 3: Block a user
+## Exercise 3: Block a user
 
 1. Block Catherine's sign-in.
 
@@ -454,7 +454,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Set-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" -BlockCredential $true
    ```
 
-### Exercise 4: Delete and undelete a user
+## Exercise 4: Delete and undelete a user
 
 1. Delete Catherine's user account.
 
@@ -481,7 +481,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-MsolUser -ReturnDeletedUsers
    ```
 
-### Exercise 5: Bulk create users
+## Exercise 5: Bulk create users
 
 1. Run **Explorer** and navigate to **C:\Labfiles**.
 
@@ -505,7 +505,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-MsolUser
    ```
 
-### Exercise 6: Modify groups
+## Exercise 6: Modify groups
 
 1. Create a group.
 
@@ -529,7 +529,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId
    ```
 
-### Exercise 7: Passwords, Password Policy
+## Exercise 7: Passwords, Password Policy
 
 1. Set password expiry.
 
@@ -555,9 +555,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false 
    ```
 
-## Lab 2C: Managing Office 365 service administrators
+# Lab 2C: Managing Office 365 service administrators
 
-### Exercise 1: Setting service administrators using the portal
+## Exercise 1: Setting service administrators using the portal
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
@@ -578,7 +578,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Close all Edge windows.
 
 
-### Exercise 2: Setting service administrators using PowerShell
+## Exercise 2: Setting service administrators using PowerShell
 
 1. Assign roles.
 
@@ -607,7 +607,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-MsolRoleMember –RoleObjectId $role.ObjectId
    ```
 
-### Exercise 3: Test service administrators
+## Exercise 3: Test service administrators
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as Tameka.
 
@@ -651,9 +651,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Sign out of the admin center and close Edge.
 
 
-## Lab 3: Configuring client connectivity to Microsoft Office 365 
+# Lab 3: Configuring client connectivity to Microsoft Office 365 
 
-### Exercise 1: DNS Records
+## Exercise 1: DNS Records
 
 1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
 
@@ -736,7 +736,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Click **Continue** then **Done**. Correct any mismatches reported.
 
-### Exercise 2: Office 365 connectivity analyzer
+## Exercise 2: Office 365 connectivity analyzer
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -762,7 +762,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. In the navigation menu, click **SARA Client**. Download and install the tool.
 
-### Exercise 3: Office 365 Support and Recovery Assistant
+## Exercise 3: Office 365 Support and Recovery Assistant
 
 1. In the **Microsoft Support and Recovery Assistant**, select **Outlook** then click **Next**. 
 
@@ -774,7 +774,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Note any recommendations then close the tool.
 
-### Exercise 4: Connecting Office 2016 clients
+## Exercise 4: Connecting Office 2016 clients
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -802,9 +802,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
-## Lab 4: Planning and configuring directory synchronization
+# Lab 4: Planning and configuring directory synchronization
 
-### Exercise 1: Preparing for Directory Synchonisation
+## Exercise 1: Preparing for Directory Synchonisation
 
 1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
 
@@ -822,7 +822,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-ADUser –Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $PSItem -UserPrincipalName ($PSItem.SamAccountName + "@adatum26863b.onelearndns.com" ) }
    ```
 
-### Exercise 2: Create issues 
+## Exercise 2: Create issues 
 
 1. Run the break script.
 
@@ -833,7 +833,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Verify that five accounts were updated - Klemen, Lara, Logan, Holly and Maj. Note that IdFix will not detect the issues with Holly and Maj.
 
-### Exercise 3: Resolve issues
+## Exercise 3: Resolve issues
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -871,7 +871,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Close IdFix.
 
-### Exercise 4: Configure the Azure AD tenant
+## Exercise 4: Configure the Azure AD tenant
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
@@ -895,7 +895,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Do not close PowerShell, it will be used later.
 
-### Exercise 5: Download and install AD Connect, set up synchronization
+## Exercise 5: Download and install AD Connect, set up synchronization
 
 1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
 
@@ -938,7 +938,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
 
-### Exercise 6: Verify that synchronization was successful
+## Exercise 6: Verify that synchronization was successful
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -965,7 +965,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Check that Ada Russell (Marketing) does not have an account.
 
 
-### Exercise 7: Modify synchronisation
+## Exercise 7: Modify synchronisation
 
 1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
 
@@ -993,7 +993,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Start-AdSyncSyncCycle Delta
    ```
 
-### Exercise 8: Verify that synchronization was successful
+## Exercise 8: Verify that synchronization was successful
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -1003,7 +1003,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Check that Arturs Priede (a researcher) does have an account.
 
-### Exercise 9: Managing AD DS users and groups
+## Exercise 9: Managing AD DS users and groups
 
 1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
 
@@ -1043,7 +1043,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Right click **Ada Russell**, choose **Move**. Move the account to the **Research** OU.
 
 
-### Exercise 10: Synchronise
+## Exercise 10: Synchronise
 
 1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
 
@@ -1055,7 +1055,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Start-AdSyncSyncCycle Delta
    ```
 
-### Exercise 11: Verify that synchronization was successful
+## Exercise 11: Verify that synchronization was successful
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
@@ -1075,6 +1075,6 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
-## Lab 5: Planning and deploying Office 365 ProPlus
+# Lab 5: Planning and deploying Office 365 ProPlus
 
-### Exercise 1: 
+## Exercise 1: 
