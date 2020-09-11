@@ -34,7 +34,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 #### Download lab files
 
-1. Connect to **LON-CL1**. Sign on as **ADATUM\Administrator**.
+1. Connect to @@LON-CL1@@. Sign on as **ADATUM\Administrator**.
 
 1. *Follow the instructions in the LODS instructions.*
 
