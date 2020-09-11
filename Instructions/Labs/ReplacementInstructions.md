@@ -44,7 +44,6 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Record the full domain name (`adatumXXXXXX.onelearndns.com`), name server name (`NSadatumXXXXXX`), and public IP address in the text boxes in the LODS interface.
 
-<!-- ############################################################################################################# -->
 
 ## Lab 1: Planning and Provisioning Office 365
 
