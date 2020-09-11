@@ -13,11 +13,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 2C: Managing Office 365 service administrators](#lab-2c-managing-office-365-service-administrators)
 
-- Module 2: Managing Office 365 users and groups - [Lab 2A](#lab-2a), [Lab 2B](#lab-2b), [Lab 2C](#lab-2c)
+- [Lab 3: Configuring client connectivity to Microsoft Office 365](#lab-3-configuring-client-connectivity-to-microsoft-office-365)
 
-- Module 3: Configuring client connectivity to Microsoft Office 365 - [Lab 3](#lab-3)
-
-- Module 4: Planning and configuring directory synchronization - [Lab 4](#lab-4)
+- [Lab 4: Planning and configuring directory synchronization](#lab-4-lanning-and-configuring-directory-synchronization)
 
 - Module 5: Planning and deploying Office 365 ProPlus - [Lab 5](#lab-5)
 
@@ -653,9 +651,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Sign out of the admin center and close Edge.
 
 
-## Module 3: Configuring client connectivity to Microsoft Office 365 
-
-### Lab 3
+## Lab 3: Configuring client connectivity to Microsoft Office 365 
 
 #### Exercise 1: DNS Records
 
@@ -806,9 +802,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
-## Module 4: Planning and configuring directory synchronization
-
-### Lab 4
+## Lab 4: Planning and configuring directory synchronization
 
 #### Exercise 1: Preparing for Directory Synchonisation
 
