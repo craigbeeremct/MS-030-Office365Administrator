@@ -7,6 +7,8 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 1: Planning and Provisioning Office 365](#lab-1-planning-and-provisioning-office-365)
 
+- [## Lab 2A: Managing Office 365 users and groups using the portal](#lab-2a-managing-office-365-users-and-groups-using-the-portal)
+
 - Module 2: Managing Office 365 users and groups - [Lab 2A](#lab-2a), [Lab 2B](#lab-2b), [Lab 2C](#lab-2c)
 
 - Module 3: Configuring client connectivity to Microsoft Office 365 - [Lab 3](#lab-3)
@@ -32,7 +34,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ## Lab Setup
 
-#### DNS Registration
+### DNS Registration
 
 1. Connect to **LON-DC1**.
 
@@ -135,9 +137,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 
 
-## Module 2: Managing Office 365 users and groups
-
-### Lab 2A
+## Lab 2A: Managing Office 365 users and groups using the portal
 
 #### Exercise 1: Create users
 
