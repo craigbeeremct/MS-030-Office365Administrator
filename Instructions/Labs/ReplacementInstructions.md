@@ -116,7 +116,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
    | Setting | Value |
    | --- | --- |
-   | Zone type: | Primary |
+   | Zone type | Primary |
    | Store in Active Directory | Selected |
    | Replicated to | Domain controllers in the forest |
    | Zone name | The provided domain name (`adatumXXXXXX.onelearndns.com`) |
@@ -830,7 +830,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Run the break script.
 
-   ``PowerShell
+   ```PowerShell
    cd C:\Labfiles
    .\CreateProblemUsers.ps1
    ```
@@ -879,7 +879,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
-1. Connect to Office 365. Sing in as the tenant owner account.
+1. Connect to Office 365. Sign in as the tenant owner account.
 
    ```PowerShell
    Connect-MsolService
@@ -899,7 +899,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Do not close PowerShell, it will be used later.
 
-#### Exercise 5: Download and install AD Connect
+#### Exercise 5: Download and install AD Connect, set up synchronization
 
 1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
 
@@ -925,9 +925,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. At the **Connect your directories** screen, verify that Adatum.com has been added, then click **Next**. 
 
-1. At the **Azure AD sing-in configuration** screen, select **Continue without matching all UPN suffixes to verified domains** and click **Next**.
+1. At the **Azure AD sign-in configuration** screen, select **Continue without matching all UPN suffixes to verified domains** and click **Next**.
 
-1. At the **Domain and OU filtering** screen, choose **Sync selected domains and OUs** and select only the **IT** OU, then clikck **Next**.
+1. At the **Domain and OU filtering** screen, choose **Sync selected domains and OUs** and select only the **IT** OU, then click **Next**.
 
 1. At the **Uniquely identifying your users** screen, click **Next**.
 
@@ -956,15 +956,123 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
    Verify that all the properties have values (in particular that LastDirSyncTime has a date and time).
 
-1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
-
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
 1. In the Navigation menu, click **Users > Active users**. 
 
 1. Verify that there are more users than before.
 
+1. Check that Vera Pace (IT) does have an account.
+
+1. Check that Arturs Priede (Research) does not have an account.
+
+1. Check that Ada Russell (Marketing) does not have an account.
+
 
 ##### Exercise 7: Modify synchronisation
 
+1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
+
 1. Open **Azure AD Connect**. Click **Configure**.
+
+1. At the **Additional tasks** screen, select **Customize synchronisation options** and click **Next**.
+
+1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and click **Next**.
+
+1. At the **Connect your directories** screen, click **Next**. 
+
+1. 1. At the **Domain and OU filtering** screen, select the **Research** OU, then click **Next**.
+
+1. At the **Optional features** screen, click **Next**.
+
+1. At the **Ready to congure** screen, click **Configure**.
+
+1. At the **Configuration complete** screen, click **Exit**.
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
+
+1. Perform a manual sync.
+
+   ```PowerShell
+   Start-AdSyncSyncCycle Delta
+   ```
+
+##### Exercise 8: Verify that synchronization was successful
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Users > Active users**. 
+
+1. Check that Arturs Priede (a researcher) does have an account.
+
+#### Exercise 9: Managing AD DS users and groups
+
+1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
+
+1. Open **Active Directory Users and Computers**.
+
+1. In the console tree, click **Research**.
+
+1. Create a user.
+
+   | Setting | Value |
+   | --- | --- |
+   | First name | Perry |
+   | Last name | Brill |
+   | Full name | Perry Brill |
+   | User logon name | perry@adatumXXXXXX.onelearndns.com |
+   | User logon name (pre-Windows 2000) | ADATUM\perry |
+   | Password | Pa55w.rd |
+   | Password options | Unselected |
+
+1. Create a group.
+
+   | Setting | Value |
+   | --- | --- |
+   | Group name | Project Team |
+   | Group name (pre-Windows 2000) | Project Team |
+   | Scope | Universal |
+   | Type | Security |
+
+1. Right click **Vera Pace**, choose **Move**. Move the account to the **Marketing** OU.
+
+1. Right-click **Research** security group, click **Properties**.
+
+1. Remove **Vera Pace** and **Tia Zecirevic** from the group. Add **Ada Russell* to the group.
+
+1. In the console tree, click **Marketing**.
+
+1. Right click **Ada Russell**, choose **Move**. Move the account to the **Research** OU.
+
+
+##### Exercise 10: Synchronise
+
+1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
+
+1. Perform a manual sync.
+
+   ```PowerShell
+   Start-AdSyncSyncCycle Delta
+   ```
+
+##### Exercise 11: Verify that synchronization was successful
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Users > Active users**. 
+
+1. Check that Vera Pace (IT) does not have an account.
+
+1. Check that Ada Russell (Marketing) does have an account.
+
+1. In the Navigation menu, click **Groups > Active groups**. 
+
+1. Check that Ada is a member of the group and that Vera and Tia are not.
+
+
