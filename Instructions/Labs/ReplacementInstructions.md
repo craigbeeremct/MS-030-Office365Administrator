@@ -7,7 +7,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 1: Planning and Provisioning Office 365](#lab-1-planning-and-provisioning-office-365)
 
-- [## Lab 2A: Managing Office 365 users and groups using the portal](#lab-2a-managing-office-365-users-and-groups-using-the-portal)
+- [Lab 2A: Managing Office 365 users and groups using the portal](#lab-2a-managing-office-365-users-and-groups-using-the-portal)
+
+- [Lab 2B: Managing Office 365 users and groups using PowerShell](#lab-2a-managing-office-365-users-and-groups-using-powershell)
 
 - Module 2: Managing Office 365 users and groups - [Lab 2A](#lab-2a), [Lab 2B](#lab-2b), [Lab 2C](#lab-2c)
 
@@ -380,7 +382,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 1. In the Navigation menu, click **Groups > Deleted groups**. Note that the Sales group does not appear. Only Microsoft 365 groups can be undeleted.
 
 
-### Lab 2B
+## Lab 2B: Managing Office 365 users and groups using PowerShell
 
 Before running the code below, you must replace the placeholder "@adatumXXXXXX.onelearndns.com" with your actual domain name.
 
