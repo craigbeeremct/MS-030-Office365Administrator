@@ -1127,7 +1127,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Open **Command Prompt**. 
 
-   ```
+   ```bat
    cd C:\Shares\OfficeProPlus
 
    ```
