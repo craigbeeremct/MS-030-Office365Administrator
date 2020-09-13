@@ -19,7 +19,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 5: Planning and deploying Office 365 ProPlus](#lab-5-planning-and-deploying-office-365-proplus)
 
-- Module 6: Planning and managing Exchange Online recipients ‎and permissions - [Lab 6](#lab-6)
+- [Lab 6: Managing Exchange Online recipients and permissions](#lab-6-managing-exchange-online-recipients-and-permissions)
 
 - Module 7: Planning and configuring Exchange Online services - [Lab 7A](#lab-7a), [Lab 7B](#lab-7b)
 
@@ -52,7 +52,15 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center**.
+1. Open Edge. Browse to **https://portal.office.com**. This opens the **Office 365 home page**.
+
+1. Sign in using the tenant owner account (`admin@LODSXXXXXX.onmicrosoft.com`).
+
+1. Click the Admin link. This opens the **Microsoft 365 admin center**.
+
+1. Close Edge.
+
+1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center** directly, without having to go to the Office 365 home page.
 
 1. Sign in using the tenant owner account (`admin@LODSXXXXXX.onmicrosoft.com`).
 
@@ -390,7 +398,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
-1. Using **Run as Administrator**, open **Windows PowerShell ISE**.
+1. Using **Run as Administrator**, open **Windows PowerShell ISE** or **Windows PowerShell**.
 
 1. Install the latest version of the MSOnline module. 
 
@@ -784,7 +792,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    | Your name | MOD Administrator |
    | E-mail address | admin@LODSXXXXXX.onmicrosoft.com |
 
-1. Send an email to Francisco.
+1. Send an e-mail to Francisco.
 
 1. Create a meeting and invite Francisco.
 
@@ -796,9 +804,9 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    | Your name | Francisco Chaves |
    | E-mail address | francisco@adatumXXXXXX.onelearndns.com |
 
-1. Reply to the email from MOD Administrator.
+1. Reply to MOD Administrator's email.
 
-1. Accept the meeting invitation from MOD Administrator.
+1. Accept MOD Administrator's meeting request.
 
 
 
@@ -819,7 +827,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Set the UPN suffixes for all users.
 
    ```PowerShell
-   Get-ADUser –Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $PSItem -UserPrincipalName ($PSItem.SamAccountName + "@adatum26863b.onelearndns.com" ) }
+   Get-ADUser –Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $PSItem -UserPrincipalName ($PSItem.SamAccountName + "@adatumXXXXXX.onelearndns.com" ) }
    ```
 
 ### Exercise 2: Create issues 
@@ -1125,9 +1133,124 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Save the file as **"AdatumConfiguration.xml"**. Including the double-quotes in Notepad will stop Notepad from appending.txt to the file name.
 
-1. Open **Command Prompt**. 
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
-   ```bat
+1. Download the setup files.
+
+   ```PowerShell
    cd C:\Shares\OfficeProPlus
-
+   .\setup.exe /download \\LON-DC1\OfficeProPlus\AdatumConfiguration.xml
    ```
+
+   This download takes several minutes to complete. COntinue with the next task and leave the download in the background.
+
+### Exercise 2: Managing user-driven Office 365 ProPlus installations
+
+#### Task 1: Managing user rights to install Office 365 ProPlus
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Users > Active users**. 
+
+1. Click **Lindsey Gates**. On a **Licenses and Apps** section, deselect **Microsoft 365 apps for enterprise**. 
+
+1. Connect to **LON-CL3**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Office 365 home page** (https://portal.office.com) and sign in as **abbi@adatumXXXXXX.onelearndns.com**. This is an AD DS account so the password is **Pa55w.rd**.
+
+   Note that Abbi has no apps in the list and no option to install Office 365 apps (the orange link at the top right).
+
+1. Sign out from the portal. Close Edge.
+
+1. Open Edge. Browse to the **Office 365 home page** and sign in as **lindsey@adatumXXXXXX.onelearndns.com**.
+
+   Note that Lindsey has Outlook and OneDrive and the other apps, because she has an Office 365 license. She does not have the option to install Office 365 apps, because we deslected this.
+
+1. Sign out from the portal. Close Edge.
+
+#### Task 2: Installing Office 365 ProPlus from the Office 365 portal
+
+1. Open Edge. Browse to the **Office 365 home page** and sign in as **amy@adatumXXXXXX.onelearndns.com**.
+
+   Note that Amy has Outlook and OneDrive and the other apps the option to install Office 365 apps.
+
+1. Click **Install Office** then click **Office 365 apps**. 
+
+1. Download and run the installer.
+
+   This installation takes several minutes to complete. Continue with the next task and leave the download in the background.
+
+### Exercise 3: Managing centralized Office 365 ProPlus installations
+
+#### Task 1: Verify ODT download
+
+1. Connect to **LON-DS1**. 
+
+1. Verify that the ODT download has completed without errors.
+
+1. Run File Explorer. Browse to **C:\Shares\OfficeProPlus**.
+
+   Note the Office folder containing the installation source files.
+
+#### Task 2: Install Office 365 apps
+
+1. Connect to **LON-CL4**. Sign in as **ADATUM\Administrator**.
+
+1. Using **Run as Administrator**, open **Windows PowerShell ISE** or **Windows PowerShell**.
+
+1. Install Office 365 apps.
+
+   ```PowerShell
+   \\LON-DC1\OfficeProPlus\setup.exe /configure \\LON-DC1\OfficeProPlus\AdatumConfiguration.xml
+   ```
+
+1. Wait until the installation has finished on both **LON-CL3** and **LON-CL4**.
+
+#### Task 2: Verify installation
+
+1. Connect to **LON-CL3**. 
+
+1. Open **Word**. Sign in as Amy.
+
+1. At the **Stay signed in to all your apps** screen, click **No, sign in to this app only**.
+
+1. Create and save a document. Note that the default save location is OneDrive for Business.
+
+1. Close Word.
+
+1. Open **Outlook**. Sign in as **Amy.
+
+1. Send an e-mail to Sallie.
+
+1. Create a meeting and invite Sallie.
+
+1. Connect to **LON-CL4**. 
+
+1. Open **Word**. Sign in as Sallie.
+
+1. At the **Stay signed in to all your apps** screen, click **No, sign in to this app only**.
+
+1. Create and save a document. Note that OneDrive for Business is not set up for Sallie, because the installation was done as ADATUM\Administrator. Save the document to **Documents**.
+
+1. Close Word.
+
+1. Open **Outlook**. Sign in as Sallie
+
+1. Reply to Amy's e-mail.
+
+1. Accept Amy's meeting request.
+
+
+
+## Lab 6: Managing Exchange Online recipients and permissions
+
+### Exercise 1: Configuring Exchange Online recipients
+
+
+
+
+
+
+
