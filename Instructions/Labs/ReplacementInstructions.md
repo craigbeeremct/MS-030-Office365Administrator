@@ -1,3 +1,4 @@
+
 # Course MS-030 - Replacement Labs
 
 These instructions must be used in the virtual environment provided by learnondemand.net.
@@ -46,6 +47,12 @@ These instructions must be used in the virtual environment provided by learnonde
 1. *Follow the instructions in the LODS instructions.*
 
 1. Record the full domain name (`adatumXXXXXX.onelearndns.com`), name server name (`NSadatumXXXXXX`), and public IP address in the text boxes in the LODS interface.
+
+### External email address
+
+You require an external email address (for example an outlook.com or gmail.com account). The lab instructions refer to this as `alias@outlook.com`.
+
+   This can be from any email provider, however some features (for example SharePoint Online site sharing) only work with Microsoft accounts.
 
 
 
@@ -1473,11 +1480,11 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Open **Outlook**, signed in as Amy.
 
-1. Send an e-mail to an external address that you have access to (for example, an outlook.com or gmail.com address).
+1. Send an e-mail to alias@outlook.com.
 
 1. Send an email to Holly.
 
-1. Open a web browser and sign in to your external address and verify the disclaimer has been added.
+1. Open a web browser and sign in to alias@outlook.com  and verify the disclaimer has been added.
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -1827,18 +1834,62 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Open Edge. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing. Sign in as **francisco@adatumXXXXXX.onelearndns.com**. 
 
-   Francisco has acess to the site.
+   Francisco has access to the site.
 
 1. Sign out Francisco and close Edge.
 
+### Exercise 3: Configuring and verifying external user sharing
 
-
-
-
-
+#### Task 1: Configure a site collection for external user sharing
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+2. Open Edge. Browse to the **SharePoint admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Users > Active users**. 
+3. In the Navigation menu, click **Sites > Active sites**. 
+
+4. Select **Policies**, **External Sharing**. Set **Site content can be shared with:** **Anyone**.
+
+5. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/AcctsProj.
+
+6. Select **Share** (top-right).
+
+7. Invite alias@outlook.com.
+
+8. Select the **Documents** collection. Create a **Word document** called **Budgets**.
+ 
+9. Select **Share** (top-right). Select **Anyone with the link can view**. Copy the link.
+
+10. Open Outlook on the Web in a new browser tab. 
+
+11. Send  an e-mail to Alias@outlook.com with a subject of "Document link" and the link pasted into the message body.
+
+#### Task 2: Verify external user sharing
+
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
+
+2. Close all Edge windows.
+
+3. Open Edge. Open the e-mail client for alias@outlook.com.
+
+4. Open the "MOD Administrator wants to share Accounts project" e-mail and click **Go To Accounts Project**.
+
+5. Verify that the site loads.
+
+6. Open the "Document link" e-mail and click **Budgets.docx**.
+
+7. Verify that the document loads.
+
+8. Close all Edge windows.
+
+ 
+
+
+ 
+
+
+10. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+
+11. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+12. In the Navigation menu, click **Users > Active users**. 
