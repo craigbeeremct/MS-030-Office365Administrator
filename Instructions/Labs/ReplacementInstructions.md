@@ -21,7 +21,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 6: Managing Exchange Online recipients and permissions](#lab-6-managing-exchange-online-recipients-and-permissions)
 
-- Module 7: Planning and configuring Exchange Online services - [Lab 7A](#lab-7a), [Lab 7B](#lab-7b)
+- [Lab 7A: Configuring message transport in Exchange Online](#lab-7a-configuring-message-transport-in-exchange-online)
+
+
 
 - Module 8: Planning and deploying Microsoft Teams - [Lab 8](#lab-8)
 
@@ -1403,6 +1405,8 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Verify that Branch Office Admins is present.
 
 
+
+## Lab 7A: Configuring message transport in Exchange Online
 
 
 
