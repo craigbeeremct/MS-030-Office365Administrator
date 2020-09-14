@@ -23,8 +23,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 7A: Configuring message transport in Exchange Online](#lab-7a-configuring-message-transport-in-exchange-online)
 
-- [Lab 7B: Configuring email protection and client policies](###lab-7b-configuring-email-protection-and-client-policies)
-
+- [Lab 7B: Configuring email protection and client policies](#lab-7b-configuring-email-protection-and-client-policies)
 
 - Module 8: Planning and deploying Microsoft Teams - [Lab 8](#lab-8)
 
@@ -1306,7 +1305,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    ```PowerShell
    New-DistributionGroup -Name "IT2" -Members holly -DisplayName "IT 2"
    New-DistributionGroup -Name "Development" -Members catherine, tameka -DisplayName "Development"
-   Get-DistributionGroup
+   New-DistributionGroup -Name "Sales" -Members lindsey, christie -DisplayName "Sales"   Get-DistributionGroup
    ```
 
 1. Create Microsoft 365 groups.
@@ -1379,7 +1378,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. In the Navigation menu, click **permissions**. In the centre pane, click **admin roles**.
 
-1. Click **Organization Management**, and then click **Edit** (the pencil icon).
+1. Click **Organization Management**, then click **Edit** (the pencil icon).
 
 1. Under **Members**, Select **Add** (the plus icon).
 
@@ -1547,6 +1546,122 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    | Notify administrator about undelivered messages from external senders | Admin@adatumXXXXXX.onelearndns.com |
 
 #### Task 2: Configure the connection filter
+
+1. In the navigation menu, click **protection**. In the centre pane, click **connection filter**.
+
+1. Click **Default**, and then click **Edit** (the pencil icon).
+
+   | Setting | Value |
+   | --- | --- |
+   | IP Block list | Add 191.161.0.0/24 |
+   | Enable safe list | Selected |
+
+#### Task 3: Configure the spam filter
+
+1. In the navigation menu, click **protection**. In the centre pane, click **spam filter**.
+
+1. Click **Default**, and then click **Edit** (the pencil icon).
+
+   | Setting | Value |
+   | --- | --- |
+   | Spam | Move message to Junk Email folder |
+   | High confidence spam | Quarantine message |
+
+1. Click **New** (the plus icon).
+
+   | Setting | Value |
+   | --- | --- |
+   | Name | Sales spam policy |
+   | Spam | Prepend subject line with text. |
+   | High confidence spam | Move message to Junk Email folder |
+   | Prepend subject line with this text | Junk: |
+   | Applied to *(scroll to bottom)* | If the recipient is a member of… Sales |
+
+#### Task 4: Test the spam-filter settings *(optional)*
+
+*This feature sometimes take time to be implemented. Come back to this task later.*
+
+1. Open a web browser and sign in to your external address.
+
+1. Create a new message to lindsey@adatumXXXXXX.onelearndns.com.
+
+1. Copy and paste the following into the body of the message and then send.
+
+   ```
+   XJS*C4JDBQADN1.NSBN3*2IDNEN*GTUBE-STANDARD-ANTI-UBE-TEST-EMAIL*C.34X
+   ```
+
+1. Repeat the above, to francisco@adatumXXXXXX.onelearndns.com.
+
+1. Switch to the Edge tab running  **Office 365 Security & Compliance**.
+
+1. In the navigation pane, click **Threat management > Review**. In the center pane, click **Quarantine**.
+
+1. Review the quarantined messages.
+
+
+### Exercise 2: Configuring client access policies
+
+#### Task 1: Configure an Outlook Web App policy
+
+1. Switch to the Edge tab running **Exchange admin center**.
+
+1. In the navigation menu, click **permissions**. In the centre pane, click **Outlook Web App policies**.
+
+1. Click **New** (the plus icon).
+
+   | Setting | Value |
+   | --- | --- |
+   | Name | Limited features |
+   | Instant messaging | Not selected |
+   | Text messaging | Not selected |
+   | Unified messaging | Not selected |
+   | LinkedIn contact sync | Not selected |
+   | Journaling | Not selected |
+   | Direct File Access | Not selected |
+
+1. In the navigation menu, click **recipients**. In the centre pane, click **mailboxes**.
+
+1. Click **Sallie McIntosh**, then click **Edit** (the pencil icon).
+
+1. On the **mailbox features** tab, next to Email Connectivity, Outlook on the web: Enabled, click **View details**. Assign the Limited features policy.
+
+1. Open **Outlook 2016**, signed in as MOD Administrator.
+
+1. Send a message to Sallie, attaching the csv files in C:\Labfiles.
+
+*This feature sometimes take time to be implemented. Come back to this task later.*
+
+1. In Edge, open an InPrivate window and browse to **https://portal.office.com**. Sign in as Sallie. If asked to save the password or to stay signed in, choose **No**.
+
+1. Open the e-mail from MOD Administrator. 
+
+#### Task 2: Configure mobile-device access
+
+1. Switch to the Edge tab running **Exchange admin center**.
+
+1. In the navigation menu, click **mobile**. In the centre pane, click **mobile device access**.
+
+1. Click **edit** (right-hand side).
+
+   | Setting | Value |
+   | --- | --- |
+   | When a mobile device that isn't managed by a rule or personal exemption connects to Exchange | Quarantine |
+   | Select administrators to receive email messages when a mobile device is quarantined | MOD Administrator |
+
+#### Task 3: Configure a mailbox policy for mobile devices
+
+1. In the navigation menu, click **mobile**. In the centre pane, click **mobile device mailbox policies**.
+
+1. Click **Default (default)**, and then click **Edit** (the pencil icon).
+
+   | Setting | Value |
+   | --- | --- |
+   | Require a password | Selected |
+   | Allow simple passwords | Selected |
+   | Minimum password length | 6 |
+
+
 
 
 
