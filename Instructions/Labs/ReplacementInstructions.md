@@ -39,6 +39,7 @@ These instructions must be used in the virtual environment provided by learnonde
 - Module 12: Monitoring and troubleshooting Microsoft Office 365 - [Lab 12](#lab-12)
 
 
+____________________________________________________________
 ## Lab Setup
 
 ### DNS Registration
@@ -56,7 +57,7 @@ You require an external email address (for example an outlook.com or gmail.com a
    This can be from any email provider, however some features (for example SharePoint Online site sharing) only work with Microsoft accounts.
 
 
-
+____________________________________________________________
 ## Lab 1: Planning and Provisioning Office 365
 
 ### Exercise 1: Explore the various administrative portals.
@@ -161,7 +162,7 @@ You require an external email address (for example an outlook.com or gmail.com a
 1. On the **How do you want to connect your domain?** page, click **Close**. *We will add the DNS records later*.
 
 
-
+____________________________________________________________
 ## Lab 2A: Managing Office 365 users and groups using the portal
 
 ### Exercise 1: Create users
@@ -405,6 +406,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 1. In the Navigation menu, click **Groups > Deleted groups**. Note that the Sales group does not appear. Only Microsoft 365 groups can be undeleted.
 
 
+____________________________________________________________
 ## Lab 2B: Managing Office 365 users and groups using PowerShell
 
 Before running the code below, you must replace the placeholder "@adatumXXXXXX.onelearndns.com" with your actual domain name.
@@ -578,6 +580,8 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false 
    ```
 
+
+____________________________________________________________
 ## Lab 2C: Managing Office 365 service administrators
 
 ### Exercise 1: Setting service administrators using the portal
@@ -674,6 +678,8 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Sign out of the admin center and close Edge.
 
 
+
+____________________________________________________________
 ## Lab 3: Configuring client connectivity to Microsoft Office 365 
 
 ### Exercise 1: DNS Records
@@ -825,6 +831,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
+____________________________________________________________
 ## Lab 4: Planning and configuring directory synchronization
 
 ### Exercise 1: Preparing for Directory Synchonisation
@@ -1098,6 +1105,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
+____________________________________________________________
 ## Lab 5: Planning and deploying Office 365 ProPlus
 
 ### Exercise 1: Preparing an Office 365 ProPlus managed installation
@@ -1257,6 +1265,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
+____________________________________________________________
 ## Lab 6: Managing Exchange Online recipients and permissions
 
 ### Exercise 1: Configuring Exchange Online recipients
@@ -1414,6 +1423,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
+____________________________________________________________
 ## Lab 7A: Configuring message transport in Exchange Online
 
 ### Exercise 1: Configuring message-transport settings
@@ -1528,6 +1538,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
+____________________________________________________________
 ## Lab 7B: Configuring email protection and client policies
 
 ### Exercise 1: Configuring email protection
@@ -1668,12 +1679,14 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
+____________________________________________________________
 ## Lab 8: Teams Overview
 
 *Do the lab in LODS. It is reasonably well-written.*
 
 
 
+____________________________________________________________
 ## Lab 9: Configuring SharePoint Online
 
 ### Exercise 1: Configuring SharePoint Online settings
@@ -1884,13 +1897,13 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Close all Edge windows.
 
  
-__________________________________________________
+____________________________________________________________
 ## Lab 10: Planning and configuring an Office 365 collaboration solution
 
  
 
 
---------------------------------------
+---
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
