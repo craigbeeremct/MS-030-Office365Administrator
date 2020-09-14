@@ -1731,7 +1731,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 2: Create a site collection using Windows PowerShell
 
-   In the script below, replace *<TenantPrefix>* with your tenant details (for example, LODSA1234567).
+   In the script below, replace *LODSAXXXXXX* with your tenant details (for example, LODSA1234567).
 
 1. Open Edge. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=35588**. Download and install the x64 version of the tool.
 
@@ -1746,7 +1746,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Connect to SharePoint Online. 
 
    ```PowerShell
-   Connect-SPOService –Url https://<TenantPrefix>-admin.sharepoint.com -Credential $Credential
+   Connect-SPOService –Url https://LODSAXXXXXX-admin.sharepoint.com -Credential $Credential
    ```
 
 1. Verify connectivity.
@@ -1758,13 +1758,78 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 1. Create a new site.
 
    ```PowerShell
-   New-SPOSite -Url https://<TenantPrefix>.sharepoint.com/sites/AcctsProj -Owner admin@<TenantPrefix>.onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title "Accounts Project"
+   New-SPOSite -Url https://LODSAXXXXXX.sharepoint.com/sites/AcctsProj -Owner admin@LODSAXXXXXX.onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title "Accounts Project"
    ```
 
 #### Task 3: Configure permissions on the site collections
 
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
+1. In the **SharePoint admin center**, select **Sites > Active Sites**, then click the **Site name** column of **Marketing**.
 
+1. Under **Permissions**, **Additional Admins**, select **Manage**. Add **Tameka**.
+
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Office 365 home page** and sign in as **tameka@adatumXXXXXX.onelearndns.com**.
+
+1. Select SharePoint. Note that Tameka has no sites listed.
+
+1. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing.
+
+1. Click **Not following** and wait for the link to change to "Following".
+
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
+
+1. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing. Sign in as **catherine@adatumXXXXXX.onelearndns.com**. 
+
+   This should fail. Catherine's account is blocked (from a previous lab).
+
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. Unblock Catherine's account.
+
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
+
+1. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing. Sign in as **catherine@adatumXXXXXX.onelearndns.com**. 
+
+1. In the **You need permission to access this site** box, enter some text and request access.
+
+1. Close Edge.
+
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
+
+1. Switch to the **SharePoint** browser tab and refresh the page. Marketing will appear in the **Following* list.
+
+1. Switch to the **Marketing - Home** browser tab.
+
+1. Select **Settings** (the cog icon), **Site permissions**, **Advanced permissions settings**.
+
+1. Select **Show access requests and invitations**. **Aprove** Catherine's request.
+
+1. Select **Home**.
+
+1. Select **Settings** (the cog icon), **Site permissions**, **Advanced permissions settings**.
+
+1. select **Marketing Members** then **New**. 
+
+1. Invite Francisco.
+
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing. Sign in as **catherine@adatumXXXXXX.onelearndns.com**. 
+
+   Catherine has acess to the site.
+
+1. Sign out Catherine and close Edge.
+
+1. Open Edge. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing. Sign in as **francisco@adatumXXXXXX.onelearndns.com**. 
+
+   Francisco has acess to the site.
+
+1. Sign out Francisco and close Edge.
 
 
 
