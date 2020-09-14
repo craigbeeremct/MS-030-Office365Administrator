@@ -1675,3 +1675,56 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 ### Exercise 1: Configuring SharePoint Online settings
 
 #### Task 1: Configure settings
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **SharePoint admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Settings**. In the centre pane click **Site storage limits**
+
+1. Verify that Site storage limits is set to **Automatic**.
+
+1. In the Navigation menu, click **Policies > Sharing**. In the centre pane, verify that both SharePoint and OneDrive are set to **Most permissive**.
+
+#### Task 2: Configure user profiles
+
+1. In the Navigation menu, click **More features**. In the centre pane, under **User profiles** click **Open**.
+
+1. Click ** Manage user profiles**. 
+
+1. Enter "Ada", click **Find**. Edit Ada's profile.
+
+1. Set the **Manager** to **MOD Administrator**.
+
+1. Close the browser tab and click **Open** again. *This is because many SharePoint central admin pages have no breadcrumb trail.*
+
+1. Click **Setup My Sites**.
+
+1. Under **My Site Cleanup**, set the **Secondary owner** to **MOD Administrator**. Click **OK** (bottom-right).
+
+1. Close the browser tab.
+
+#### Task 3: Configure apps
+
+1. In the Navigation menu, click **More features**. In the centre pane, under **Apps** click **Open**.
+
+1. Click **Configure Store settings**. Set **Should Apps for Office from the store be able to start when documents are opened in the browser?** to **No**.
+
+### Exercise 2: Creating and configuring SharePoint Online site collections
+
+#### Task 1: Create a site collection using the SharePoint admin center
+
+
+
+
+
+
+
+
+
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Users > Active users**. 
