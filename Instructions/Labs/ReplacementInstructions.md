@@ -23,6 +23,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 7A: Configuring message transport in Exchange Online](#lab-7a-configuring-message-transport-in-exchange-online)
 
+- [Lab 7B: Configuring email protection and client policies](###lab-7b-configuring-email-protection-and-client-policies)
 
 
 - Module 8: Planning and deploying Microsoft Teams - [Lab 8](#lab-8)
@@ -76,6 +77,8 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. In the Navigation menu, click **Exchange**. This opens the **Exchange admin center**.
 
+   You can open this site directly by browsing to `https://outlook.office365.com/ecp`.
+
 1. In the Navigation menu, click **recipients**. In the centre pane, click **mailboxes**.
 
 1. How many mailboxes are listed? The number should match the number of active users licensed with Office 365.
@@ -83,6 +86,8 @@ These instructions must be used in the virtual environment provided by learnonde
 1. Select the **Microsoft 365 admin center** browser tab.
 
 1. In the Navigation menu, click **Azure Active Directory**. This opens the **Azure Active Directory admin center**.
+
+   You can open this site directly by browsing to `https://aad.portal.azure.com`.
 
 1. In the navigation menu of the **Azure Active Directory admin center**, click **Azure Active Directory**. In the **Contoso | Overview blade**, click **Users** in the **Manage** section.
 
@@ -1256,9 +1261,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
-
-1. In the Navigation menu, click **Exchange**. 
+1. Open Edge. Browse to the **Exchange admin center** and sign in using the tenant owner account. 
 
 1. In the Navigation menu, click **recipients**. In the centre pane, click **mailboxes**.
 
@@ -1298,14 +1301,15 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 3: Create groups and assign members
 
-1. Create a distribution group and add a member.
+1. Create distribution groups.
 
    ```PowerShell
    New-DistributionGroup -Name "IT2" -Members holly -DisplayName "IT 2"
+   New-DistributionGroup -Name "Development" -Members catherine, tameka -DisplayName "Development"
    Get-DistributionGroup
    ```
 
-1. Create a Microsoft 365 group and add a member.
+1. Create Microsoft 365 groups.
 
    ```PowerShell
    New-UnifiedGroup -Name "Social Club" -Members amy, sallie -DisplayName "Social Club" -Alias "socialclub"
@@ -1377,7 +1381,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Click **Organization Management**, and then click **Edit** (the pencil icon).
 
-1. Under **Members**, Select **Add** (the + icon).
+1. Under **Members**, Select **Add** (the plus icon).
 
 1. Add **Holly**.
 
@@ -1414,25 +1418,135 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+1. Open Edge. Browse to the **Exchange admin center** and sign in using the tenant owner account. 
 
-1. In the Navigation menu, click **Exchange**. 
+1. In the Exchange admin center navigation menu, click **mail flow**. In the centre pane, click **connectors**.
 
-1. In the Navigation menu, click **mail flow**. In the centre pane, click **connectors**.
-
-1. Click **New** (the + icon).
-
-1. Create a send connector.
+1. Click **New** (the plus icon).
 
    | Setting | Value |
    | --- | --- |
    | From | Office 365 |
    | To | Partner organization |
    | Name | Humongous Insurance Outgoing |
-   | When do you want to use this connector? | Onely when email messages are sent to these domains: humongousinsurance.com |
+   | When do you want to use this connector? | Only when email messages are sent to these domains: humongousinsurance.com |
    | How do you want to route email messages? | Use the MX record |
    | How should Office 365 connect? | Always use Transport Layer Security, Issued by a trusted CA |
+   | Validate this connector | Yes, to postmaster@humongousinsurance.com, but note that this will fail |
 
+1. Click **New** (the plus icon).
+
+   | Setting | Value |
+   | --- | --- |
+   | From | Partner organization |
+   | To | Office 365 |
+   | Name | Humongous Insurance Incoming |
+   | How do you want to identify the partner organization? | Use the sender's domain |
+   | What sender domain? | humongousinsurance.com |
+   | What security restrictions do you want to apply? | Reject email messages if they aren’t sent over TLS |
+
+#### Task 2: Create transport rules
+
+1. In the Navigation menu, click **mail flow**. In the centre pane, click **rules**.
+
+1. Click the **down arrow** button next to the plus icon, choose **Apply disclaimers…**
+
+   | Setting | Value |
+   | --- | --- |
+   | Name | A. Datum disclaimer |
+   | Apply this rule if… | The recipient is located… Outside the organization |
+   | Do the following… | Append the disclaimer… |
+   | Edit text | \<hr /\>Disclaimer goes here. |
+   | Fall back to action | Wrap |
+   | Audit this rule with severity level | Low |
+   | Choose a mode for this rule | Enforce |
+
+1. Click the **down arrow** button next to the plus icon, choose **Send messages to a moderator…**
+
+   | Setting | Value |
+   | --- | --- |
+   | Name | IT2 Moderation |
+   | Apply this rule if… | The recipient is a member of… IT 2 |
+   | Do the following… | Forward the message for approval to… MOD Administrator |
+   | Audit this rule with severity level | Medium |
+   | Choose a mode for this rule | Enforce |
+
+#### Task 3: Verify transport rules
+
+1. Connect to **LON-CL3**. Sign in as **ADATUM\Administrator**.
+
+1. Open **Outlook**, signed in as Amy.
+
+1. Send an e-mail to an external address that you have access to (for example, an outlook.com or gmail.com address).
+
+1. Send an email to Holly.
+
+1. Open a web browser and sign in to your external address and verify the disclaimer has been added.
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Open **Outlook 2016**, signed in as MOD Administrator.
+
+1. Approve Amy's e-mail message to Holly.
+
+#### Task 4: Create a journal rule for members of the research department
+
+1. Switch to Edge running the Exchange admin center.
+
+1. In the navigation menu, click **compliance management**. In the centre pane, click **journal rules**.
+
+1. Next to **Send undeliverable journal reports to**, CLick **Select address**. Select **MOD Administrator**
+
+1. Click **New** (the plus icon).
+
+   | Setting | Value |
+   | --- | --- |
+   | Send journal reports to | journal@humongousinsurance.com |
+   | Name | Development journalling | 
+   | If the message is sent to or received from… | A specific user or group… Development |
+   | Journal the following messages… | All messages |
+
+#### Task 5: Track internal and external message delivery
+
+1. Open a new Edge tab. Browse to the **Office 365 Security & Compliance** (protection.office.com) and sign in using the tenant owner account.
+
+1. In the navigation pane, click **Mail flow > Message trace**.
+
+1. Click **Start a trace**.
+
+   | Setting | Value |
+   | --- | --- |
+   | By these people | Amy |
+   | To these people | All recipients |
+   | Within this time range | In the last 6 hours |
+
+1. Review the message trace search results.
+
+
+
+## Lab 7B: Configuring email protection and client policies
+
+### Exercise 1: Configuring email protection
+
+#### Task 1: Configure the malware filter
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Exchange admin center** and sign in using the tenant owner account. 
+
+1. In the navigation menu, click **protection**. In the centre pane, click **malware filter**.
+
+1. Click **Default**, and then click **Edit** (the pencil icon).
+
+   | Setting | Value |
+   | --- | --- |
+   | Do you want to notify recipients if their messages are quarantined? | Yes and use custom notification text |
+   | Custom notification text | Malware has been detected. Please wait to be contacted by the IT team. |
+   | Sender notifications | Both internal senders and external senders |
+   | Notify administrator about undelivered messages from internal senders | Admin@adatumXXXXXX.onelearndns.com |
+   | Notify administrator about undelivered messages from external senders | Admin@adatumXXXXXX.onelearndns.com |
+
+#### Task 2: Configure the connection filter
 
 
 
