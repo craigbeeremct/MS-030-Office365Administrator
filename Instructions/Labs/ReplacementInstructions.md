@@ -25,9 +25,10 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 7B: Configuring email protection and client policies](#lab-7b-configuring-email-protection-and-client-policies)
 
-- Module 8: Planning and deploying Microsoft Teams - [Lab 8](#lab-8)
+- [Lab 8: Teams Overview](#lab-8-teams-overview)
 
-- Module 9: Planning and configuring SharePoint Online - [Lab 9](#lab-9)
+- [Lab 9: Configuring SharePoint Online](#lab-9-configuring-sharepoint-online)
+
 
 - Module 10: Planning and configuring an Office 365 collaboration solution - [Lab 10](#lab-10)
 
@@ -1630,7 +1631,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Send a message to Sallie, attaching the csv files in C:\Labfiles.
 
-*This feature sometimes take time to be implemented. Come back to this task later.*
+   *This feature sometimes take time to be implemented. Come back to this task later.*
 
 1. In Edge, open an InPrivate window and browse to **https://portal.office.com**. Sign in as Sallie. If asked to save the password or to stay signed in, choose **No**.
 
@@ -1663,10 +1664,14 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
+## Lab 8: Teams Overview
+
+*Do the lab in LODS. It is reasonably well-written.*
 
 
 
+## Lab 9: Configuring SharePoint Online
 
-   ```PowerShell
+### Exercise 1: Configuring SharePoint Online settings
 
-   ```
+#### Task 1: Configure settings
