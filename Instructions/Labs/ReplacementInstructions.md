@@ -30,8 +30,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 9: Configuring SharePoint Online](#lab-9-configuring-sharepoint-online)
 
+- [Lab 10: Planning and configuring an Office 365 collaboration solution](#lab-10-planning-and-configuring-an-office-365-collaboration-solution)
 
-- Module 10: Planning and configuring an Office 365 collaboration solution - [Lab 10](#lab-10)
+
 
 - Module 11: Planning and configuring security and compliance in ‎Office 365 - [Lab 11](#lab-11)
 
@@ -1844,52 +1845,55 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
-2. Open Edge. Browse to the **SharePoint admin center** and sign in using the tenant owner account.
+1. Open Edge. Browse to the **SharePoint admin center** and sign in using the tenant owner account.
 
-3. In the Navigation menu, click **Sites > Active sites**. 
+1. In the Navigation menu, click **Sites > Active sites**. 
 
-4. Select **Policies**, **External Sharing**. Set **Site content can be shared with:** **Anyone**.
+1. Select **Policies**, **External Sharing**. Set **Site content can be shared with:** **Anyone**.
 
-5. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/AcctsProj.
+1. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/AcctsProj.
 
-6. Select **Share** (top-right).
+1. Select **Share** (top-right).
 
-7. Invite alias@outlook.com.
+1. Invite alias@outlook.com.
 
-8. Select the **Documents** collection. Create a **Word document** called **Budgets**.
+1. Select the **Documents** collection. Create a **Word document** called **Budgets**.
  
-9. Select **Share** (top-right). Select **Anyone with the link can view**. Copy the link.
+1. Select **Share** (top-right). Select **Anyone with the link can view**. Copy the link.
 
-10. Open Outlook on the Web in a new browser tab. 
+1. Open Outlook on the Web in a new browser tab. 
 
-11. Send  an e-mail to Alias@outlook.com with a subject of "Document link" and the link pasted into the message body.
+1. Send  an e-mail to Alias@outlook.com with a subject of "Document link" and the link pasted into the message body.
 
 #### Task 2: Verify external user sharing
 
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
-2. Close all Edge windows.
+1. Close all Edge windows.
 
-3. Open Edge. Open the e-mail client for alias@outlook.com.
+1. Open Edge. Open the e-mail client for alias@outlook.com.
 
-4. Open the "MOD Administrator wants to share Accounts project" e-mail and click **Go To Accounts Project**.
+1. Open the "MOD Administrator wants to share Accounts project" e-mail and click **Go To Accounts Project**.
 
-5. Verify that the site loads.
+1. Verify that the site loads.
 
-6. Open the "Document link" e-mail and click **Budgets.docx**.
+1. Open the "Document link" e-mail and click **Budgets.docx**.
 
-7. Verify that the document loads.
+1. Verify that the document loads.
 
-8. Close all Edge windows.
+1. Close all Edge windows.
+
+ 
+__________________________________________________
+## Lab 10: Planning and configuring an Office 365 collaboration solution
 
  
 
 
- 
+--------------------------------------
 
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
-10. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-11. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
-
-12. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, click **Users > Active users**. 
