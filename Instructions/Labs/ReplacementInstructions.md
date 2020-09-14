@@ -41,7 +41,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ### DNS Registration
 
-1. Connect to **LON-DC1**.
+1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
 1. *Follow the instructions in the LODS instructions.*
 
@@ -53,7 +53,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ### Exercise 1: Explore the various administrative portals.
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to **https://portal.office.com**. This opens the **Office 365 home page**.
 
@@ -69,9 +69,9 @@ These instructions must be used in the virtual environment provided by learnonde
 
 1. If asked to save the password or to stay signed in, choose **Yes**.
 
-1. In the Navigation menu, click **… Show all**.
+1. In the Navigation menu (left-hand pane), click **… Show all**.
 
-1. In the Navigation menu (left-hand pane), click **Users > Active users**. 
+1. In the Navigation menu, click **Users > Active users**. 
 
 1. How many users are listed? What licences are assigned to them?
 
@@ -113,7 +113,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ### Exercise 2: Add a DNS domain
 
-1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
 1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** (admin.microsoft.com) and sign in using the tenant owner account.
 
@@ -158,7 +158,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 ### Exercise 1: Create users
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
@@ -346,7 +346,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 ### Exercise 7: Create groups
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
@@ -403,7 +403,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 1: Create users
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Using **Run as Administrator**, open **Windows PowerShell ISE** or **Windows PowerShell**.
 
@@ -670,7 +670,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 1: DNS Records
 
-1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
 1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
@@ -753,7 +753,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 2: Office 365 connectivity analyzer
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to **https://testconnectivity.microsoft.com**. This opens the **Microsoft Remote Connectivity Analyzer**.
 
@@ -791,7 +791,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 4: Connecting Office 2016 clients
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Run Outlook 2016. 
    | Setting | Value |
@@ -803,7 +803,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Create a meeting and invite Francisco.
 
-1. Connect to **LON-CL2**. Sign in as **.\Student**.
+1. On **LON-CL2**, signed in as **.\Student**.
 
 1. Run Outlook 2016. 
    | Setting | Value |
@@ -821,7 +821,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 1: Preparing for Directory Synchonisation
 
-1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
 1. Open **Active Directory Domains and Trusts**.
 
@@ -850,7 +850,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 3: Resolve issues
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
    Not LON-DC1 - it does not have the .NET Framework required.
 
@@ -912,7 +912,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 5: Download and install AD Connect, set up synchronization
 
-1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-DS1**, signed in as **ADATUM\Administrator**.
 
 1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
@@ -955,7 +955,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 6: Verify that synchronization was successful
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Switch to the PowerShell session where Connect-MsolService was run.
 
@@ -982,7 +982,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 7: Modify synchronisation
 
-1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-DS1**, signed in as **ADATUM\Administrator**.
 
 1. Open **Azure AD Connect**. Click **Configure**.
 
@@ -1010,7 +1010,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 8: Verify that synchronization was successful
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
@@ -1020,7 +1020,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 9: Managing AD DS users and groups
 
-1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
 1. Open **Active Directory Users and Computers**.
 
@@ -1060,7 +1060,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 10: Synchronise
 
-1. Connect to **LON-DS1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-DS1**, signed in as **ADATUM\Administrator**.
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
@@ -1072,7 +1072,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 11: Verify that synchronization was successful
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
@@ -1096,7 +1096,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 1: Download the Office 365 deployment tool
 
-1. Connect to **LON-DC1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
 1. Open **Server Manager**. Choose **File and Storage Services** > **Shares**, **Tasks**, **New Share**. 
 
@@ -1113,9 +1113,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    | NTFS Permissions | Disable inheritance, leave entries as default |
    | Share permissions | Authenticated Users: Full Control |
 
-1. Open Internet Explorer. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=49117**.
-
-1. Download and run the ODT. Store the extracted files in **C:\Shares\OfficeProPlus**.
+1. Open Internet Explorer. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=49117**. Download and run the tool. Store the extracted files in **C:\Shares\OfficeProPlus**.
 
 #### Task 2: Modify an Office 365 ProPlus installation
 
@@ -1155,7 +1153,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 1: Managing user rights to install Office 365 ProPlus
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
@@ -1163,7 +1161,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Click **Lindsey Gates**. On a **Licenses and Apps** section, deselect **Microsoft 365 apps for enterprise**. 
 
-1. Connect to **LON-CL3**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Office 365 home page** (https://portal.office.com) and sign in as **abbi@adatumXXXXXX.onelearndns.com**. This is an AD DS account so the password is **Pa55w.rd**.
 
@@ -1183,17 +1181,15 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
    Note that Amy has Outlook and OneDrive and the other apps the option to install Office 365 apps.
 
-1. Click **Install Office** then click **Office 365 apps**. 
+1. Click **Install Office** then click **Office 365 apps**. Download and run the tool.
 
-1. Download and run the installer.
-
-   This installation takes several minutes to complete. Continue with the next task and leave the download in the background.
+   *This installation takes several minutes to complete. Continue with the next task and leave the download in the background.*
 
 ### Exercise 3: Managing centralized Office 365 ProPlus installations
 
 #### Task 1: Verify ODT download
 
-1. Connect to **LON-DS1**. 
+1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
 1. Verify that the ODT download has completed without errors.
 
@@ -1203,7 +1199,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 2: Install Office 365 apps
 
-1. Connect to **LON-CL4**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
 1. Using **Run as Administrator**, open **Windows PowerShell ISE** or **Windows PowerShell**.
 
@@ -1217,7 +1213,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 2: Verify installation
 
-1. Connect to **LON-CL3**. 
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
 1. Open **Word**. Sign in as Amy.
 
@@ -1233,7 +1229,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Create a meeting and invite Sallie.
 
-1. Connect to **LON-CL4**. 
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
 1. Open **Word**. Sign in as Sallie.
 
@@ -1259,7 +1255,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 1: Exchange admin center
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Exchange admin center** and sign in using the tenant owner account. 
 
@@ -1345,7 +1341,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 5: Test resource mailboxes.
 
-1. Connect to **LON-CL3**. 
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
 1. Open Outlook, signed in as Amy.
 
@@ -1355,7 +1351,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Wait for the "accepted" messages from Demonstration Laptop and Conference Room.
 
-1. Connect to **LON-CL4**. 
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
 1. Open Outlook, signed in as Sallie.
 
@@ -1373,7 +1369,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 1: Assign users to built-in role groups
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Swith to Edge connected to the Exchange admin center.
 
@@ -1416,7 +1412,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 1: Create a custom send and receive connector to enforce TLS
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Exchange admin center** and sign in using the tenant owner account. 
 
@@ -1473,7 +1469,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 3: Verify transport rules
 
-1. Connect to **LON-CL3**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
 1. Open **Outlook**, signed in as Amy.
 
@@ -1483,7 +1479,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Open a web browser and sign in to your external address and verify the disclaimer has been added.
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open **Outlook 2016**, signed in as MOD Administrator.
 
@@ -1530,7 +1526,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 1: Configure the malware filter
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Exchange admin center** and sign in using the tenant owner account. 
 
@@ -1676,19 +1672,19 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 1: Configure settings
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **SharePoint admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Settings**. In the centre pane click **Site storage limits**
+1. In the **SharePoint admin center**, select **Settings** then click **Site storage limits**
 
 1. Verify that Site storage limits is set to **Automatic**.
 
-1. In the Navigation menu, click **Policies > Sharing**. In the centre pane, verify that both SharePoint and OneDrive are set to **Most permissive**.
+1. In the **SharePoint admin center**, select **Policies > Sharing**. Verify that both SharePoint and OneDrive are set to **Most permissive**.
 
 #### Task 2: Configure user profiles
 
-1. In the Navigation menu, click **More features**. In the centre pane, under **User profiles** click **Open**.
+1. In the **SharePoint admin center**, select **More features**. In the centre pane, under **User profiles** click **Open**.
 
 1. Click ** Manage user profiles**. 
 
@@ -1706,14 +1702,66 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 3: Configure apps
 
-1. In the Navigation menu, click **More features**. In the centre pane, under **Apps** click **Open**.
+1. In the **SharePoint admin center**, select **More features**. In the centre pane, under **Apps** click **Open**.
 
-1. Click **Configure Store settings**. Set **Should Apps for Office from the store be able to start when documents are opened in the browser?** to **No**.
+1. Select **Configure Store settings**. Set **Should Apps for Office from the store be able to start when documents are opened in the browser?** to **No**.
 
 ### Exercise 2: Creating and configuring SharePoint Online site collections
 
 #### Task 1: Create a site collection using the SharePoint admin center
 
+1. In the **SharePoint admin center**, select **Sites > Active Sites**, then select **+ Create**.
+
+1. Create a new **Team site**.
+
+   | Setting | Value |
+   | --- | --- |
+   | Site name, email address, address | Marketing |
+   | Group owner | MOD Administrator |
+   | Language | English |
+   | Privacy settings | Private |
+   | Time zone | Pacific Time (US and Canada) |
+   | Site description | Marketing department |
+   | Addition owners | (None) |
+   | Members | (None) |
+
+1. Select the new site's name then click **Sharing**
+
+1. Set **Site concent can be shared with** to **Anyone**.
+
+#### Task 2: Create a site collection using Windows PowerShell
+
+   In the script below, replace *<TenantPrefix>* with your tenant details (for example, LODSA1234567).
+
+1. Open Edge. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=35588**. Download and install the x64 version of the tool.
+
+1. Run **Windows PowerShell ISE** or **Windows PowerShell**.
+
+1. Enter a credential. Sign in as the tenant owner account.
+
+   ```PowerShell
+   $Credential = Get-Credential
+   ```
+
+1. Connect to SharePoint Online. 
+
+   ```PowerShell
+   Connect-SPOService –Url https://<TenantPrefix>-admin.sharepoint.com -Credential $Credential
+   ```
+
+1. Verify connectivity.
+
+   ```PowerShell
+   Get-SpoSite
+   ```
+
+1. Create a new site.
+
+   ```PowerShell
+   New-SPOSite -Url https://<TenantPrefix>.sharepoint.com/sites/AcctsProj -Owner admin@<TenantPrefix>.onmicrosoft.com -StorageQuota 500 -NoWait -Template PROJECTSITE#0 –Title "Accounts Project"
+   ```
+
+#### Task 3: Configure permissions on the site collections
 
 
 
@@ -1723,7 +1771,8 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 
 
-1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
