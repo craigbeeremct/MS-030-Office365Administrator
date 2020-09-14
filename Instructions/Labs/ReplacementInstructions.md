@@ -1408,6 +1408,34 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ## Lab 7A: Configuring message transport in Exchange Online
 
+### Exercise 1: Configuring message-transport settings
+
+#### Task 1: Create a custom send and receive connector to enforce TLS
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Exchange**. 
+
+1. In the Navigation menu, click **mail flow**. In the centre pane, click **connectors**.
+
+1. Click **New** (the + icon).
+
+1. Create a send connector.
+
+   | Setting | Value |
+   | --- | --- |
+   | From | Office 365 |
+   | To | Partner organization |
+   | Name | Humongous Insurance Outgoing |
+   | When do you want to use this connector? | Onely when email messages are sent to these domains: humongousinsurance.com |
+   | How do you want to route email messages? | Use the MX record |
+   | How should Office 365 connect? | Always use Transport Layer Security, Issued by a trusted CA |
+
+
+
+
 
 
    ```PowerShell
