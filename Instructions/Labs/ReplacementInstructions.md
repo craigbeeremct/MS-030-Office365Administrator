@@ -1242,11 +1242,132 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Accept Amy's meeting request.
 
+1. Leave Outlook running on LON-CL3 and LON-CL4. They will be used in later labs.
+
 
 
 ## Lab 6: Managing Exchange Online recipients and permissions
 
 ### Exercise 1: Configuring Exchange Online recipients
+
+#### Task 1: Exchange admin center
+
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Exchange**. 
+
+1. In the Navigation menu, click **recipients**. In the centre pane, click **mailboxes**.
+
+   Note the mailboxes for the licensed users.
+
+1. In the centre pane, click **groups**.
+
+   Note the default groups. 
+
+1. Click the **down arrow** button next to **New Microsoft 365 group**.
+
+   Note that the Exchange admin center allows you to create four types of group: Microsoft 365, distribution, Mail-enabled security, and dynamic distribution.
+
+#### Task 2: Connect to Exchange Online with Windows PowerShell
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**.
+
+1. Enter credential.
+
+   ```PowerShell
+   Connect to Exchange Online.
+   ```
+
+   Sign in as the tenant owner account.
+
+1. Connect to Exchange Online.
+
+   ```PowerShell
+   $PSSession = New-PSSession -ConfigurationName "Microsoft.Exchange" -ConnectionUri "https://outlook.office365.com/powershell-liveid/" -Credential $Credential -Authentication "Basic" -AllowRedirection
+   Import-PSSession $PSSession -DisableNameChecking
+   ```
+
+1. Verify connectivity.
+
+   ```PowerShell
+   Get-AcceptedDomain
+   Get-Mailbox
+   ```
+
+#### Task 3: Create groups and assign members
+
+1. Create a distribution group and add a member.
+
+   ```PowerShell
+   New-DistributionGroup -Name "IT2" -Members holly -DisplayName "IT 2"
+   Get-DistributionGroup
+   ```
+
+1. Create a Microsoft 365 group and add a member.
+
+   ```PowerShell
+   New-UnifiedGroup -Name "Social Club" -Members amy, sallie -DisplayName "Social Club" -Alias "socialclub"
+   Get-UnifiedGroup
+   ```
+
+#### Task 4: Create resource mailboxes
+
+1. Create resource mailboxes.
+
+   ```PowerShell
+   New-Mailbox -Name "Conference Room" -DisplayName "Conference Room" -Room -Alias "conferenceroom" 
+   Set-Mailbox -Identity "Conference Room" –ResourceCapacity 25
+   ```
+
+   ```PowerShell
+   New-Mailbox -Name "Demonstration Laptop" -DisplayName "Demonstration Laptop" –Equipment -Alias "demonstrationlaptop"
+   ```
+
+1. Set auto-accept.
+
+   ```PowerShell
+   Get-Mailbox | ft name, recipienttype*
+   ```
+
+   ```PowerShell
+   Get-Mailbox -RecipientTypeDetails RoomMailbox | Set-CalendarProcessing -AutomateProcessing AutoAccept
+   ```
+
+   ```PowerShell
+   Get-Mailbox -RecipientTypeDetails EquipmentMailbox | Set-CalendarProcessing -AutomateProcessing AutoAccept
+   ```
+
+#### Task 5: Test resource mailboxes.
+
+1. Connect to **LON-CL3**. 
+
+1. Open Outlook, signed in as Amy.
+
+1. Note the "Welcome to the Social Club Group" email.
+
+1. Create a meeting. Invite Francisco, Demonstration Laptop and Conference Room.
+
+1. Wait for the "accepted" messages from Demonstration Laptop and Conference Room.
+
+1. Connect to **LON-CL4**. 
+
+1. Open Outlook, signed in as Sallie.
+
+1. Note the "Welcome to the Social Club Group" email.
+
+1. Create a meeting at the same time as Amy's meeting. Select the Scheduling Assistant tab. 
+
+   Invite Francisco, Demonstration Laptop and Conference Room. Note that Francisco's time shows as Tentative and Demonstration Laptop and Conference Room show as Busy.
+
+   Send the meeting request.
+
+1. Wait for the "declined" messages from Demonstration Laptop and Conference Room.
+
+### Exercise 2: Configuring role-based access control
+
+#### Task 1: Assign users to built-in role groups
 
 
 
