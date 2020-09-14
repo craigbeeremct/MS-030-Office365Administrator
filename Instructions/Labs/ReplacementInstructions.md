@@ -1274,13 +1274,11 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**.
 
-1. Enter credential.
+1. Enter a credential. Sign in as the tenant owner account.
 
    ```PowerShell
-   Connect to Exchange Online.
+   $Credential = Get-Credential
    ```
-
-   Sign in as the tenant owner account.
 
 1. Connect to Exchange Online.
 
@@ -1369,9 +1367,45 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 #### Task 1: Assign users to built-in role groups
 
+1. Connect to **LON-CL1**. Sign in as **ADATUM\Administrator**.
+
+1. Swith to Edge connected to the Exchange admin center.
+
+1. In the Navigation menu, click **permissions**. In the centre pane, click **admin roles**.
+
+1. Click **Organization Management**, and then click **Edit** (the pencil icon).
+
+1. Under **Members**, Select **Add** (the + icon).
+
+1. Add **Holly**.
+
+#### Task 2: Create a new admin role and assign a user to it
+
+1. Switch to PowerShell ISE or PowerShell connected to Exchange Online.
+
+1. Enable customization of the Exhange Online tenant.
+
+   ```PowerShell
+   Enable-OrganizationCustomization
+   ```
+
+1. Create a new role group and add a member.
+
+   ```PowerShell
+   New-RoleGroup -Name "Branch Office Admins" -Roles "Mail Recipients", "Distribution Groups", "Move Mailboxes", "Mail Recipient Creation" 
+   Add-RoleGroupMember "Branch Office Admins" -Member Christie
+   ```
+
+1. Swith to Edge connected to the Exchange admin center.
+
+1. In the Navigation menu, click **permissions**. In the centre pane, click **admin roles** then click **Refresh** (the circled arrows icon).
+
+1. Verify that Branch Office Admins is present.
 
 
 
 
 
+   ```PowerShell
 
+   ```
