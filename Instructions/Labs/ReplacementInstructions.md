@@ -4,7 +4,7 @@
 These instructions must be used in the virtual environment provided by learnondemand.net.
 
 
-## Table of Contents ##
+## Table of Contents
 
 - [Lab 1: Planning and Provisioning Office 365](#lab-1-planning-and-provisioning-office-365)
 
@@ -1033,6 +1033,7 @@ ____________________________________________________________
 
 1. Check that Arturs Priede (a researcher) does have an account.
 
+
 ### Exercise 9: Managing AD DS users and groups
 
 1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
@@ -1102,6 +1103,27 @@ ____________________________________________________________
 1. Check that Project Team is present.
 
 1. Check that Ada is a member of the Research group and that Vera and Tia are not.
+
+
+#### Exercise 12: Assign licenses
+
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Users > Active users**. 
+
+1. Select **Filter**, **Licensed users**.
+
+1. Tick all the users imported earlier using the csv file (some or all of Nona, Jessica, Misty, Elvis, Leila, Sheri, Mickey and Leanna).
+
+1. Select **Manage licenses**. Remove all product licenses from the selected users.
+
+1. Select **Filter**, **Unlicensed users**.
+
+1. Tick Ada, Arturs, August and Cai.
+
+1. Select **Manage licenses**. Add **Enterprise Mobility + Security E5** and **Office 365 E5** licenses to the selected users, with a **Usage location** of **Switzerland**.
 
 
 
@@ -1235,7 +1257,7 @@ ____________________________________________________________
 
 1. At the **Stay signed in to all your apps** screen, click **No, sign in to this app only**.
 
-1. Create and save a document. Note that the default save location is OneDrive for Business.
+1. Create a document. Save it to **OneDrive - Contoso** (OneDrive for Business).
 
 1. Close Word.
 
@@ -1251,7 +1273,9 @@ ____________________________________________________________
 
 1. At the **Stay signed in to all your apps** screen, click **No, sign in to this app only**.
 
-1. Create and save a document. Note that OneDrive for Business is not set up for Sallie, because the installation was done as ADATUM\Administrator. Save the document to **Documents**.
+1. Create a document. Save it to **Documents**. 
+
+   Note that OneDrive for Business is not set up for Sallie, because the installation was done as ADATUM\Administrator. 
 
 1. Close Word.
 
@@ -1900,7 +1924,109 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 10: Planning and configuring an Office 365 collaboration solution
 
- 
+### Exercise 1: Configuring Yammer Enterprise
+
+### Exercise 2: Configuring OneDrive for Business
+
+#### Task 1: Enable OneDrive for Business synchronization (cloud-only users)
+
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
+
+1. Open **Word**. 
+
+1. Create a document and save it to **OneDrive - Contoso**.
+
+1. Open Edge. Browse to the **Office 365 home page** and sign in as **amy@adatumXXXXXX.onelearndns.com**.
+
+1. Select **OneDrive**. Verify that the new document is listed.
+
+1. Open **File Explorer**. 
+
+1. Select **OneDrive**. Sign in as **amy@adatumXXXXXX.onelearndns.com**. 
+
+1. Once OneDrive synchronisation is complete, select **OneDrive - Contoso**. Verify that the new document is listed.
+
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
+
+1. Open **Word**. 
+
+1. Select **Account**. Sign out administrator@adatumXXXXXX.onelearndns.com and sign in as **sallie@adatumXXXXXX.onelearndns.com**. 
+
+1. Under **Connected Services**, add **Storage > OneDrive for Business**. Sign in as **sallie@adatumXXXXXX.onelearndns.com**. 
+
+1. Create a document and save it to **OneDrive - Contoso**.
+
+1. Open Edge. Browse to the **Office 365 home page** and sign in as **sallie@adatumXXXXXX.onelearndns.com**.
+
+1. Select **OneDrive**. Verify that the new document is listed.
+
+1. Open **File Explorer**. 
+
+1. Select **OneDrive**. Sign in as **sallie@adatumXXXXXX.onelearndns.com**. 
+
+1. Once OneDrive synchronisation is complete, select **OneDrive - Contoso**. Verify that the new document is listed.
+
+
+#### Task 2: Share files with other users
+
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
+
+1. Open **File Explorer**. 
+
+1. Select **OneDrive - Contoso**.
+
+1. Create a folder called **Tailspin Project**. Right-click **Tailspin Project**, choose **Share**. Select **Anyone with the link can edit**. Send the link to **Amy Santiago**.
+
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
+
+1. Run **Outlook**.
+
+1. Open the "Sallie McIntosh shared the folder" e-mail and click **Tailspin Project**.
+
+1. Verify that the folder loads (in Edge).
+
+
+
+#### Task 3: Enable OneDrive for Business synchronization (synced users) (*Optional*)
+
+1. On **LON-DS1**, signed in as **ADATUM\Administrator**.
+
+1. Open **Azure AD Connect**. Click **Configure**.
+
+1. At the **Additional tasks** screen, select **Change user sign-in** and click **Next**.
+
+1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and click **Next**.
+
+1. 1. At the **User sign-in** screen, select the **Enable single sign-on**, then click **Next**.
+
+1. At the **Enable single-sign-on** screen, click **Enter credentials**. Sign in as **ADATUM\Administrator**. Click *Next*.
+
+1. At the **Ready to congure** screen, click **Configure**.
+
+1. At the **Configuration complete** screen, click **Exit**.
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
+
+1. Perform a manual sync.
+
+   ```PowerShell
+   Start-AdSyncSyncCycle Delta
+   ```
+
+1. On **LON-CL3**, signed in as **ADATUM\Ada**.
+
+
+1. On **LON-CL4**, signed in as **ADATUM\Cai**.
+
+
+
+
+
+
+
+
+
+
 
 
 ---
