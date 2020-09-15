@@ -32,11 +32,10 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 10: Planning and configuring an Office 365 collaboration solution](#lab-10-planning-and-configuring-an-office-365-collaboration-solution)
 
+- [Lab 11: Planning and configuring security and compliance in ‎Office 365](##lab-11-planning-and-configuring-security-and-compliance-in-office-365)
 
 
-- Module 11: Planning and configuring security and compliance in ‎Office 365 - [Lab 11](#lab-11)
-
-- Module 12: Monitoring and troubleshooting Microsoft Office 365 - [Lab 12](#lab-12)
+- [Lab 12: Monitoring and troubleshooting Microsoft Office 365](#lab-12-monitoring-and-troubleshooting-microsoft-office-365)
 
 
 ____________________________________________________________
@@ -1969,6 +1968,8 @@ ____________________________________________________________
 
 ### Exercise 1: Configuring Yammer Enterprise
 
+*Skip*
+
 ### Exercise 2: Configuring OneDrive for Business
 
 #### Task 1: Enable OneDrive for Business synchronization (cloud-only users)
@@ -2186,6 +2187,10 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Send an e-mail to the group.
 
+1. Open **Outlook**. Sign in as **sallie@adatumXXXXXX.onelearndns.com**, choose **No, sign in to this app only**.
+
+1. In the navigation pane, select **Planning Group**. 
+
 1. Open **Teams**. Sign in as **sallie@adatumXXXXXX.onelearndns.com**, choose **No, sign in to this app only**.
 
 1. Note that there is no Planning Group team.
@@ -2200,16 +2205,23 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Select **Join or create a team**, then **Create team**, then  **Create from… An existing Microsoft 365 group or team**, then **Microsoft 365 group**.
 
-1. Select **Planning Group** (which Holly is an owner of) and select **Create**.
+1. Select **Planning Group** and select **Create**.
 
 1. Sign out of Teams.
 
 
 
+ 
+____________________________________________________________
+## Lab 11: Planning and configuring security and compliance in ‎Office 365
 
 
 
 
+
+
+____________________________________________________________
+## Lab 12: Monitoring and troubleshooting Microsoft Office 365
 
 
 ---
