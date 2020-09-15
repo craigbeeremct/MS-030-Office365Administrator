@@ -73,7 +73,7 @@ ____________________________________________________________
 
 1. Sign in using the tenant owner account (`admin@LODSXXXXXX.onmicrosoft.com`).
 
-1. Click the Admin link. This opens the **Microsoft 365 admin center**.
+1. select the Admin link. This opens the **Microsoft 365 admin center**.
 
 1. Close Edge.
 
@@ -83,43 +83,43 @@ ____________________________________________________________
 
 1. If asked to save the password or to stay signed in, choose **Yes**.
 
-1. In the Navigation menu (left-hand pane), click **… Show all**.
+1. In the Navigation menu (left-hand pane), select **… Show all**.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
 1. How many users are listed? What licences are assigned to them?
 
-1. In the Navigation menu, click **Exchange**. This opens the **Exchange admin center**.
+1. In the Navigation menu, select **Exchange**. This opens the **Exchange admin center**.
 
    You can open this site directly by browsing to `https://outlook.office365.com/ecp`.
 
-1. In the Navigation menu, click **recipients**. In the centre pane, click **mailboxes**.
+1. In the Navigation menu, select **recipients**. In the centre pane, select **mailboxes**.
 
 1. How many mailboxes are listed? The number should match the number of active users licensed with Office 365.
 
 1. Select the **Microsoft 365 admin center** browser tab.
 
-1. In the Navigation menu, click **Azure Active Directory**. This opens the **Azure Active Directory admin center**.
+1. In the Navigation menu, select **Azure Active Directory**. This opens the **Azure Active Directory admin center**.
 
    You can open this site directly by browsing to `https://aad.portal.azure.com`.
 
-1. In the navigation menu of the **Azure Active Directory admin center**, click **Azure Active Directory**. In the **Contoso | Overview blade**, click **Users** in the **Manage** section.
+1. In the navigation menu of the **Azure Active Directory admin center**, select **Azure Active Directory**. In the **Contoso | Overview blade**, select **Users** in the **Manage** section.
 
 1. How many accounts are listed? The number should match the number of active users.
 
 1. Select the **Microsoft 365 admin center** browser tab.
 
-1. In the Navigation menu, click **Health > Service health**. 
+1. In the Navigation menu, select **Health > Service health**. 
 
-1. If there are any warnings or advisories then click on the link and read the messages.
+1. If there are any warnings or advisories then select on the link and read the messages.
 
-1. In the Navigation menu, click **Security**. This opens the **Office 365 Security & Compliance**.
+1. In the Navigation menu, select **Security**. This opens the **Office 365 Security & Compliance**.
 
     - Note that you can open this portal by browsing to **https://protection.office.com**.
   
 1. Select the **Microsoft 365 admin center** browser tab.
 
-1. In the Navigation menu, click **Compliance**. This opens the **Microsoft 365 compliance**.
+1. In the Navigation menu, select **Compliance**. This opens the **Microsoft 365 compliance**.
 
     - Note that you can open this portal by browsing to **https://compliance.microsoft.com**.
   
@@ -133,11 +133,11 @@ ____________________________________________________________
 
 1. If asked to save the password or to stay signed in, choose **Yes**.
 
-1. In the Navigation menu, click **Settings > Domains**. Click **Add domain**.
+1. In the Navigation menu, select **Settings > Domains**. select **Add domain**.
 
-1. Type the provided domain name (`adatumXXXXXX.onelearndns.com`) then click **Use this domain**.
+1. Type the provided domain name (`adatumXXXXXX.onelearndns.com`) then select **Use this domain**.
 
-1. Select **Add a TXT record** then click **Continue**.
+1. Select **Add a TXT record** then select **Continue**.
 
 1. Copy the **TXT value** to the clipboard.
 
@@ -153,7 +153,7 @@ ____________________________________________________________
    | Zone name | The provided domain name (`adatumXXXXXX.onelearndns.com`) |
    | Dynamic updates | Allow only secure |
 
-1. Right-click **adatumXXXXXX.onelearndns.com**, choose **Other new records…**, **Text (TXT)**.
+1. Right-select **adatumXXXXXX.onelearndns.com**, choose **Other new records…**, **Text (TXT)**.
 
    | Setting | Value |
    | --- | --- |
@@ -162,9 +162,9 @@ ____________________________________________________________
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
-1. On the **Verify you own this domain** page, click **Verify**.
+1. On the **Verify you own this domain** page, select **Verify**.
 
-1. On the **How do you want to connect your domain?** page, click **Close**. *We will add the DNS records later*.
+1. On the **How do you want to connect your domain?** page, select **Close**. *We will add the DNS records later*.
 
 
 ____________________________________________________________
@@ -176,7 +176,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
 1. Add a user as follows.
 
@@ -272,7 +272,7 @@ ____________________________________________________________
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
-1. In the **Active Users** list, click **Amy Santiago**.
+1. In the **Active Users** list, select **Amy Santiago**.
 
 1. Set Amy's department to Sales.
 
@@ -280,7 +280,7 @@ ____________________________________________________________
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
-1. In the **Active Users** list, click **Francisco Chaves**.
+1. In the **Active Users** list, select **Francisco Chaves**.
 
 1. Block Francisco's sign-in.
 
@@ -292,7 +292,7 @@ ____________________________________________________________
 
 1. Select the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
-1. In the **Active Users** list, click **Francisco Chaves**.
+1. In the **Active Users** list, select **Francisco Chaves**.
 
 1. Unblock Francisco's sign-in. *Note*: This may take up to 15 minutes to take effect. 
 
@@ -304,7 +304,7 @@ ____________________________________________________________
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
-1. In the **Active Users** list, click **Lindsey Gates**.
+1. In the **Active Users** list, select **Lindsey Gates**.
 
 1. Delete Lindsey's account.
 
@@ -316,9 +316,9 @@ ____________________________________________________________
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
-1. In the Navigation menu, click **Users > Deleted users**. 
+1. In the Navigation menu, select **Users > Deleted users**. 
 
-1. In the **Deleted Users** list, click **Lindsey Gates**.
+1. In the **Deleted Users** list, select **Lindsey Gates**.
 
 1. Restore the user account. Use an automatically-generated password and note down the temporary password.
 
@@ -330,9 +330,9 @@ ____________________________________________________________
 
 1. Switch to the **Microsoft 365 admin center** browser window (signed in as the tenant owner account).
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
-1. In the **Active Users** list, click **Lindsey Gates**.
+1. In the **Active Users** list, select **Lindsey Gates**.
 
 1. Assign an Office 365 E5 and an Enterprise Mobility + Security E5 license.
 
@@ -340,9 +340,9 @@ ____________________________________________________________
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
-1. In the Navigation menu, click **Settings > Org settings**. 
+1. In the Navigation menu, select **Settings > Org settings**. 
 
-1. In the middle pane, click **Security & privacy** then click **Password expiration policy**.
+1. In the middle pane, select **Security & privacy** then select **Password expiration policy**.
 
 1. Set 14 days before passwords expire, 14 days before a user is notified.
 
@@ -350,7 +350,7 @@ ____________________________________________________________
 
 1. Note that Lindsey now has Outlook, OneDrive, etc in the list.
 
-1. Click the Notification icon in the top right. Note the "Time to change your password" message.
+1. select the Notification icon in the top right. Note the "Time to change your password" message.
 
 1. Close the InPrivate window.
 
@@ -364,7 +364,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Groups > Active groups**. 
+1. In the Navigation menu, select **Groups > Active groups**. 
 
 1. Add a group.
 
@@ -384,16 +384,16 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 ### Exercise 8: Modify groups
 
-1. In the **Active groups** list, click **Refresh**. Repeat until both Sales and Accounts are in the list.
+1. In the **Active groups** list, select **Refresh**. Repeat until both Sales and Accounts are in the list.
 
-1. In the **Active groups** list, click **Sales**. Set the members as follows.
+1. In the **Active groups** list, select **Sales**. Set the members as follows.
 
    | Setting | Value |
    | --- | --- |
    | Owners | Lindsey Gates |
    | Members | Lindsey Gates, Christie Thomas, Amy Santiago |
     
-1. In the **Active groups** list, click **Accounts**. Set the members as follows.
+1. In the **Active groups** list, select **Accounts**. Set the members as follows.
 
    | Setting | Value |
    | --- | --- |
@@ -402,13 +402,13 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
     
 ### Exercise 9: Delete a group
 
-1. In the **Active groups** list, click **Sales**. 
+1. In the **Active groups** list, select **Sales**. 
 
 1. Delete the group.
 
-1. In the Navigation menu, click **Users > Active users**. Note that the user accounts for Amy, Christie and Lindsey are still present.
+1. In the Navigation menu, select **Users > Active users**. Note that the user accounts for Amy, Christie and Lindsey are still present.
 
-1. In the Navigation menu, click **Groups > Deleted groups**. Note that the Sales group does not appear. Only Microsoft 365 groups can be undeleted.
+1. In the Navigation menu, select **Groups > Deleted groups**. Note that the Sales group does not appear. Only Microsoft 365 groups can be undeleted.
 
 
 ____________________________________________________________
@@ -515,7 +515,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Run **Explorer** and navigate to **C:\Labfiles**.
 
-1. Right-click **O365users.csv**, choose **Edit**.
+1. Right-select **O365users.csv**, choose **Edit**.
 
 1. Replace all "yourdomain.hostdomain.com" with your domain name (adatumXXXXXX.onelearndns.com).
 
@@ -593,17 +593,17 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
-1. In the **Active Users** list, click **Francisco Chaves** then click **Manage roles**.
+1. In the **Active Users** list, select **Francisco Chaves** then select **Manage roles**.
 
 1. Select **Billing admin** (in the **Other** section). 
 
-1. In the **Active Users** list, click **Tameka Reed** then click **Manage roles**.
+1. In the **Active Users** list, select **Tameka Reed** then select **Manage roles**.
 
 1. Select **Password admin** (in the **Identity** section). 
 
-1. In the **Active Users** list, click **Christie Thomas** then click **Manage roles**.
+1. In the **Active Users** list, select **Christie Thomas** then select **Manage roles**.
 
 1. Select **User admin**.
 
@@ -643,9 +643,9 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as Tameka.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
-1. In the **Active Users** list, click **Jessica Jennings**.
+1. In the **Active Users** list, select **Jessica Jennings**.
 
 1. Note that you cannot change group membership or contact information.
 
@@ -655,9 +655,9 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as Tameka.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
-1. In the **Active Users** list, click **Jessica Jennings**.
+1. In the **Active Users** list, select **Jessica Jennings**.
 
 1. Note that you can change group membership and contact information.
 
@@ -676,7 +676,7 @@ ____________________________________________________________
    | Roles | User |
    | Department | (Leave blank) |
     
-1. In the **Active Users** list, click **Chris Breland**.
+1. In the **Active Users** list, select **Chris Breland**.
 
 1. Delete Chris Breland's user account.
 
@@ -693,9 +693,9 @@ ____________________________________________________________
 
 1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Settings > Domains**. 
+1. In the Navigation menu, select **Settings > Domains**. 
 
-1. Click **adatumXXXXXX.onelearndns.com** then click **Continue setup**.
+1. select **adatumXXXXXX.onelearndns.com** then select **Continue setup**.
 
 1. On the Add DNS Records screen, select **Exchange and Exchange Online Protection**, **Skype for Business**, and **Intune and Mobile Device Management for Microsoft 365**.
 
@@ -768,7 +768,7 @@ ____________________________________________________________
 
 1. Switch to the **Microsoft 365 admin center** browser window signed in as the tenant owner account.
 
-1. Click **Continue** then **Done**. Correct any mismatches reported.
+1. select **Continue** then **Done**. Correct any mismatches reported.
 
 ### Exercise 2: Office 365 connectivity analyzer
 
@@ -776,35 +776,35 @@ ____________________________________________________________
 
 1. Open Edge. Browse to **https://testconnectivity.microsoft.com**. This opens the **Microsoft Remote Connectivity Analyzer**.
 
-1. In the navigation menu, click **Office 365**. In the main pane, click **Help Identify My Issue with Exchange DNS**.
+1. In the navigation menu, select **Office 365**. In the main pane, select **Help Identify My Issue with Exchange DNS**.
 
-1. Enter your domain name (adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then click **Perform Test**.
-
-1. Verify that there are no errors.
-
-1. In the navigation menu, click **Office 365**. In the main pane, click **Help Identify My Issue with Lync DNS**.
-
-1. Enter Francisco's sign-in address (francisco@adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then click **Perform Test**.
+1. Enter your domain name (adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then select **Perform Test**.
 
 1. Verify that there are no errors.
 
-1. In the navigation menu, click **Office 365**. In the main pane, click **Outlook Connectivity**.
+1. In the navigation menu, select **Office 365**. In the main pane, select **Help Identify My Issue with Lync DNS**.
 
-1. Enter Francisco's sign-in address and password, select **Use Autodiscover to detect server settings**, select the **I understand** box, then click **Perform Test**.
+1. Enter Francisco's sign-in address (francisco@adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then select **Perform Test**.
 
 1. Verify that there are no errors.
 
-1. In the navigation menu, click **SARA Client**. Download and install the tool.
+1. In the navigation menu, select **Office 365**. In the main pane, select **Outlook Connectivity**.
+
+1. Enter Francisco's sign-in address and password, select **Use Autodiscover to detect server settings**, select the **I understand** box, then select **Perform Test**.
+
+1. Verify that there are no errors.
+
+1. In the navigation menu, select **SARA Client**. Download and install the tool.
 
 ### Exercise 3: Office 365 Support and Recovery Assistant
 
-1. In the **Microsoft Support and Recovery Assistant**, select **Outlook** then click **Next**. 
+1. In the **Microsoft Support and Recovery Assistant**, select **Outlook** then select **Next**. 
 
-1. Select **I need help setting up my Office 365 email in Outlook** then click **Next**.
+1. Select **I need help setting up my Office 365 email in Outlook** then select **Next**.
 
-1. Select **Yes** to **Is this the affected machine?** then click **Next**.
+1. Select **Yes** to **Is this the affected machine?** then select **Next**.
 
-1. Enter the email address and password of the tenant owner account (admin@LODSXXXXXX.onmicrosoft.com) then click **Next**.
+1. Enter the email address and password of the tenant owner account (admin@LODSXXXXXX.onmicrosoft.com) then select **Next**.
 
 1. Note any recommendations then close the tool.
 
@@ -845,7 +845,7 @@ ____________________________________________________________
 
 1. Open **Active Directory Domains and Trusts**.
 
-1. In the console tree, right-click **Active Directory Domains and Trusts [LON-DC1.Adatum.com]** and choose **Prperties**.
+1. In the console tree, right-select **Active Directory Domains and Trusts [LON-DC1.Adatum.com]** and choose **Prperties**.
 
 1. Add a UPN suffix of **adatumXXXXXX.onelearndns.com**.
 
@@ -876,9 +876,9 @@ ____________________________________________________________
 
 1. Open Edge. Browse to **https://github.com/microsoft/idfix**.
 
-1. Scroll down to the ClickOnce Launch heading and click the launch link. Install and run the app.
+1. Scroll down to the selectOnce Launch heading and select the launch link. Install and run the app.
 
-1. In IdFIx, click Query on the toolbar. Five issues will be shown.
+1. In IdFIx, select Query on the toolbar. Five issues will be shown.
 
 1. Issue: An Dung Dao's account has spaces in the User Principal Name.
 
@@ -900,9 +900,9 @@ ____________________________________________________________
 
    Resolution: In the Update column, enter **larar@adatum.com**. In the Action column, select **EDIT**.
 
-1. In the toolbar, click Apply.
+1. In the toolbar, select Apply.
 
-1. In the toolbar, click Query. Verify that no issues are listed.
+1. In the toolbar, select Query. Verify that no issues are listed.
 
 1. Close IdFix.
 
@@ -936,39 +936,39 @@ ____________________________________________________________
 
 1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Azure Acive Directory**. 
+1. In the Navigation menu, select **Azure Acive Directory**. 
 
-1. In the navigation menu of the **Azure Active Directory admin center**, click **Azure Active Directory**. In the **Contoso | Overview blade**, click **Azure AD Connect** in the **Manage** section.
+1. In the navigation menu of the **Azure Active Directory admin center**, select **Azure Active Directory**. In the **Contoso | Overview blade**, select **Azure AD Connect** in the **Manage** section.
 
-1. Click **Download Azure AD Connect**. Download and install the tool.
+1. select **Download Azure AD Connect**. Download and install the tool.
 
-1. In the Microsoft Azure Active Directory Connect tool, click **Customize**.
+1. In the Microsoft Azure Active Directory Connect tool, select **Customize**.
 
-1. At the **Install required components** screen, click **Install**.
+1. At the **Install required components** screen, select **Install**.
 
-1. At the **User-sign-in** screen, select **Password Hash Synchronization** and click **Next**.
+1. At the **User-sign-in** screen, select **Password Hash Synchronization** and select **Next**.
 
-1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and click **Next**.
+1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and select **Next**.
 
-1. At the **Connect your directories** screen, click **Add directory**. 
+1. At the **Connect your directories** screen, select **Add directory**. 
 
-1. At the **Ad forest account** screen, select **Create new AD account**, sign in using **ADATUM\Administrator** and click **OK**.
+1. At the **Ad forest account** screen, select **Create new AD account**, sign in using **ADATUM\Administrator** and select **OK**.
 
-1. At the **Connect your directories** screen, verify that Adatum.com has been added, then click **Next**. 
+1. At the **Connect your directories** screen, verify that Adatum.com has been added, then select **Next**. 
 
-1. At the **Azure AD sign-in configuration** screen, select **Continue without matching all UPN suffixes to verified domains** and click **Next**.
+1. At the **Azure AD sign-in configuration** screen, select **Continue without matching all UPN suffixes to verified domains** and select **Next**.
 
-1. At the **Domain and OU filtering** screen, choose **Sync selected domains and OUs** and select only the **IT** OU, then click **Next**.
+1. At the **Domain and OU filtering** screen, choose **Sync selected domains and OUs** and select only the **IT** OU, then select **Next**.
 
-1. At the **Uniquely identifying your users** screen, click **Next**.
+1. At the **Uniquely identifying your users** screen, select **Next**.
 
-1. At the **Filter users and devices** screen, click **Next**.
+1. At the **Filter users and devices** screen, select **Next**.
 
-1. At the **Optional features** screen, click **Next**.
+1. At the **Optional features** screen, select **Next**.
 
-1. At the **Ready to congure** screen, click **Install**.
+1. At the **Ready to congure** screen, select **Install**.
 
-1. At the **Configuration complete** screen, click **Exit**.
+1. At the **Configuration complete** screen, select **Exit**.
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
@@ -989,7 +989,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
 1. Verify that there are more users than before.
 
@@ -1004,21 +1004,21 @@ ____________________________________________________________
 
 1. On **LON-DS1**, signed in as **ADATUM\Administrator**.
 
-1. Open **Azure AD Connect**. Click **Configure**.
+1. Open **Azure AD Connect**. select **Configure**.
 
-1. At the **Additional tasks** screen, select **Customize synchronisation options** and click **Next**.
+1. At the **Additional tasks** screen, select **Customize synchronisation options** and select **Next**.
 
-1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and click **Next**.
+1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and select **Next**.
 
-1. At the **Connect your directories** screen, click **Next**. 
+1. At the **Connect your directories** screen, select **Next**. 
 
-1. 1. At the **Domain and OU filtering** screen, select the **Research** OU, then click **Next**.
+1. 1. At the **Domain and OU filtering** screen, select the **Research** OU, then select **Next**.
 
-1. At the **Optional features** screen, click **Next**.
+1. At the **Optional features** screen, select **Next**.
 
-1. At the **Ready to congure** screen, click **Configure**.
+1. At the **Ready to congure** screen, select **Configure**.
 
-1. At the **Configuration complete** screen, click **Exit**.
+1. At the **Configuration complete** screen, select **Exit**.
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
@@ -1034,7 +1034,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
 1. Check that Arturs Priede (a researcher) does have an account.
 
@@ -1045,7 +1045,7 @@ ____________________________________________________________
 
 1. Open **Active Directory Users and Computers**.
 
-1. In the console tree, click **Research**.
+1. In the console tree, select **Research**.
 
 1. Create a user.
 
@@ -1068,15 +1068,15 @@ ____________________________________________________________
    | Scope | Universal |
    | Type | Security |
 
-1. Right click **Vera Pace**, choose **Move**. Move the account to the **Marketing** OU.
+1. Right select **Vera Pace**, choose **Move**. Move the account to the **Marketing** OU.
 
-1. Right-click **Research** security group, click **Properties**.
+1. Right-select **Research** security group, select **Properties**.
 
 1. Remove **Vera Pace** and **Tia Zecirevic** from the group. Add **Ada Russell* to the group.
 
-1. In the console tree, click **Marketing**.
+1. In the console tree, select **Marketing**.
 
-1. Right click **Ada Russell**, choose **Move**. Move the account to the **Research** OU.
+1. Right select **Ada Russell**, choose **Move**. Move the account to the **Research** OU.
 
 
 ### Exercise 10: Synchronise
@@ -1097,13 +1097,13 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
 1. Check that Vera Pace (IT) does not have an account.
 
 1. Check that Ada Russell (Marketing) does have an account.
 
-1. In the Navigation menu, click **Groups > Active groups**. 
+1. In the Navigation menu, select **Groups > Active groups**. 
 
 1. Check that Project Team is present.
 
@@ -1116,7 +1116,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
 1. Select **Filter**, **Licensed users**.
 
@@ -1137,19 +1137,19 @@ ____________________________________________________________
 
 1. On **LON-DS1**, signed in as **ADATUM\Administrator**.
 
-1. Open **Azure AD Connect**. Click **Configure**.
+1. Open **Azure AD Connect**. select **Configure**.
 
-1. At the **Additional tasks** screen, select **Change user sign-in** and click **Next**.
+1. At the **Additional tasks** screen, select **Change user sign-in** and select **Next**.
 
-1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and click **Next**.
+1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and select **Next**.
 
-1. At the **User sign-in** screen, select the **Enable single sign-on**, then click **Next**.
+1. At the **User sign-in** screen, select the **Enable single sign-on**, then select **Next**.
 
-1. At the **Enable single-sign-on** screen, click **Enter credentials**. Sign in as **ADATUM\Administrator**. Click *Next*.
+1. At the **Enable single-sign-on** screen, select **Enter credentials**. Sign in as **ADATUM\Administrator**. select *Next*.
 
-1. At the **Ready to congure** screen, click **Configure**.
+1. At the **Ready to congure** screen, select **Configure**.
 
-1. At the **Configuration complete** screen, click **Exit**.
+1. At the **Configuration complete** screen, select **Exit**.
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
 
@@ -1211,7 +1211,7 @@ ____________________________________________________________
 
 1. Run File Explorer. Browse to **C:\Shares\OfficeProPlus**.
 
-1. Right-click **configuration-Office365-x64.xml**, choose **Edit**.
+1. Right-select **configuration-Office365-x64.xml**, choose **Edit**.
 
 1. Edit the XML as follows.
 
@@ -1249,9 +1249,9 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
 
-1. Click **Lindsey Gates**. On a **Licenses and Apps** section, deselect **Microsoft 365 apps for enterprise**. 
+1. select **Lindsey Gates**. On a **Licenses and Apps** section, deselect **Microsoft 365 apps for enterprise**. 
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
@@ -1273,7 +1273,7 @@ ____________________________________________________________
 
    Note that Amy has Outlook and OneDrive and the other apps the option to install Office 365 apps.
 
-1. Click **Install Office** then click **Office 365 apps**. Download and run the tool.
+1. select **Install Office** then select **Office 365 apps**. Download and run the tool.
 
    *This installation takes several minutes to complete. Continue with the next task and leave the download in the background.*
 
@@ -1309,7 +1309,7 @@ ____________________________________________________________
 
 1. Open **Word**. Sign in as Amy.
 
-1. At the **Stay signed in to all your apps** screen, click **No, sign in to this app only**.
+1. At the **Stay signed in to all your apps** screen, select **No, sign in to this app only**.
 
 1. Create a document. Save it to **OneDrive - Contoso** (OneDrive for Business).
 
@@ -1325,7 +1325,7 @@ ____________________________________________________________
 
 1. Open **Word**. Sign in as Sallie.
 
-1. At the **Stay signed in to all your apps** screen, click **No, sign in to this app only**.
+1. At the **Stay signed in to all your apps** screen, select **No, sign in to this app only**.
 
 1. Create a document. Save it to **Documents**. 
 
@@ -1354,15 +1354,15 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Exchange admin center** and sign in using the tenant owner account. 
 
-1. In the Navigation menu, click **recipients**. In the centre pane, click **mailboxes**.
+1. In the Navigation menu, select **recipients**. In the centre pane, select **mailboxes**.
 
    Note the mailboxes for the licensed users.
 
-1. In the centre pane, click **groups**.
+1. In the centre pane, select **groups**.
 
    Note the default groups. 
 
-1. Click the **down arrow** button next to **New Microsoft 365 group**.
+1. select the **down arrow** button next to **New Microsoft 365 group**.
 
    Note that the Exchange admin center allows you to create four types of group: Microsoft 365, distribution, Mail-enabled security, and dynamic distribution.
 
@@ -1457,9 +1457,9 @@ ____________________________________________________________
 
 1. Swith to Edge connected to the Exchange admin center.
 
-1. In the Navigation menu, click **permissions**. In the centre pane, click **admin roles**.
+1. In the Navigation menu, select **permissions**. In the centre pane, select **admin roles**.
 
-1. Click **Organization Management**, then click **Edit** (the pencil icon).
+1. select **Organization Management**, then select **Edit** (the pencil icon).
 
 1. Under **Members**, Select **Add** (the plus icon).
 
@@ -1484,7 +1484,7 @@ ____________________________________________________________
 
 1. Swith to Edge connected to the Exchange admin center.
 
-1. In the Navigation menu, click **permissions**. In the centre pane, click **admin roles** then click **Refresh** (the circled arrows icon).
+1. In the Navigation menu, select **permissions**. In the centre pane, select **admin roles** then select **Refresh** (the circled arrows icon).
 
 1. Verify that Branch Office Admins is present.
 
@@ -1501,9 +1501,9 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Exchange admin center** and sign in using the tenant owner account. 
 
-1. In the Exchange admin center navigation menu, click **mail flow**. In the centre pane, click **connectors**.
+1. In the Exchange admin center navigation menu, select **mail flow**. In the centre pane, select **connectors**.
 
-1. Click **New** (the plus icon).
+1. select **New** (the plus icon).
 
    | Setting | Value |
    | --- | --- |
@@ -1515,7 +1515,7 @@ ____________________________________________________________
    | How should Office 365 connect? | Always use Transport Layer Security, Issued by a trusted CA |
    | Validate this connector | Yes, to postmaster@humongousinsurance.com, but note that this will fail |
 
-1. Click **New** (the plus icon).
+1. select **New** (the plus icon).
 
    | Setting | Value |
    | --- | --- |
@@ -1528,9 +1528,9 @@ ____________________________________________________________
 
 #### Task 2: Create transport rules
 
-1. In the Navigation menu, click **mail flow**. In the centre pane, click **rules**.
+1. In the Navigation menu, select **mail flow**. In the centre pane, select **rules**.
 
-1. Click the **down arrow** button next to the plus icon, choose **Apply disclaimers…**
+1. select the **down arrow** button next to the plus icon, choose **Apply disclaimers…**
 
    | Setting | Value |
    | --- | --- |
@@ -1542,7 +1542,7 @@ ____________________________________________________________
    | Audit this rule with severity level | Low |
    | Choose a mode for this rule | Enforce |
 
-1. Click the **down arrow** button next to the plus icon, choose **Send messages to a moderator…**
+1. select the **down arrow** button next to the plus icon, choose **Send messages to a moderator…**
 
    | Setting | Value |
    | --- | --- |
@@ -1574,11 +1574,11 @@ ____________________________________________________________
 
 1. Switch to Edge running the Exchange admin center.
 
-1. In the navigation menu, click **compliance management**. In the centre pane, click **journal rules**.
+1. In the navigation menu, select **compliance management**. In the centre pane, select **journal rules**.
 
-1. Next to **Send undeliverable journal reports to**, CLick **Select address**. Select **MOD Administrator**
+1. Next to **Send undeliverable journal reports to**, select **Select address**. Select **MOD Administrator**
 
-1. Click **New** (the plus icon).
+1. select **New** (the plus icon).
 
    | Setting | Value |
    | --- | --- |
@@ -1591,9 +1591,9 @@ ____________________________________________________________
 
 1. Open a new Edge tab. Browse to the **Office 365 Security & Compliance** (protection.office.com) and sign in using the tenant owner account.
 
-1. In the navigation pane, click **Mail flow > Message trace**.
+1. In the navigation pane, select **Mail flow > Message trace**.
 
-1. Click **Start a trace**.
+1. select **Start a trace**.
 
    | Setting | Value |
    | --- | --- |
@@ -1616,9 +1616,9 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Exchange admin center** and sign in using the tenant owner account. 
 
-1. In the navigation menu, click **protection**. In the centre pane, click **malware filter**.
+1. In the navigation menu, select **protection**. In the centre pane, select **malware filter**.
 
-1. Click **Default**, and then click **Edit** (the pencil icon).
+1. select **Default**, and then select **Edit** (the pencil icon).
 
    | Setting | Value |
    | --- | --- |
@@ -1630,9 +1630,9 @@ ____________________________________________________________
 
 #### Task 2: Configure the connection filter
 
-1. In the navigation menu, click **protection**. In the centre pane, click **connection filter**.
+1. In the navigation menu, select **protection**. In the centre pane, select **connection filter**.
 
-1. Click **Default**, and then click **Edit** (the pencil icon).
+1. select **Default**, and then select **Edit** (the pencil icon).
 
    | Setting | Value |
    | --- | --- |
@@ -1641,16 +1641,16 @@ ____________________________________________________________
 
 #### Task 3: Configure the spam filter
 
-1. In the navigation menu, click **protection**. In the centre pane, click **spam filter**.
+1. In the navigation menu, select **protection**. In the centre pane, select **spam filter**.
 
-1. Click **Default**, and then click **Edit** (the pencil icon).
+1. select **Default**, and then select **Edit** (the pencil icon).
 
    | Setting | Value |
    | --- | --- |
    | Spam | Move message to Junk Email folder |
    | High confidence spam | Quarantine message |
 
-1. Click **New** (the plus icon).
+1. select **New** (the plus icon).
 
    | Setting | Value |
    | --- | --- |
@@ -1678,7 +1678,7 @@ ____________________________________________________________
 
 1. Switch to the Edge tab running  **Office 365 Security & Compliance**.
 
-1. In the navigation pane, click **Threat management > Review**. In the center pane, click **Quarantine**.
+1. In the navigation pane, select **Threat management > Review**. In the center pane, select **Quarantine**.
 
 1. Review the quarantined messages.
 
@@ -1689,9 +1689,9 @@ ____________________________________________________________
 
 1. Switch to the Edge tab running **Exchange admin center**.
 
-1. In the navigation menu, click **permissions**. In the centre pane, click **Outlook Web App policies**.
+1. In the navigation menu, select **permissions**. In the centre pane, select **Outlook Web App policies**.
 
-1. Click **New** (the plus icon).
+1. select **New** (the plus icon).
 
    | Setting | Value |
    | --- | --- |
@@ -1703,11 +1703,11 @@ ____________________________________________________________
    | Journaling | Not selected |
    | Direct File Access | Not selected |
 
-1. In the navigation menu, click **recipients**. In the centre pane, click **mailboxes**.
+1. In the navigation menu, select **recipients**. In the centre pane, select **mailboxes**.
 
-1. Click **Sallie McIntosh**, then click **Edit** (the pencil icon).
+1. select **Sallie McIntosh**, then select **Edit** (the pencil icon).
 
-1. On the **mailbox features** tab, next to Email Connectivity, Outlook on the web: Enabled, click **View details**. Assign the Limited features policy.
+1. On the **mailbox features** tab, next to Email Connectivity, Outlook on the web: Enabled, select **View details**. Assign the Limited features policy.
 
 1. Open **Outlook 2016**, signed in as MOD Administrator.
 
@@ -1723,9 +1723,9 @@ ____________________________________________________________
 
 1. Switch to the Edge tab running **Exchange admin center**.
 
-1. In the navigation menu, click **mobile**. In the centre pane, click **mobile device access**.
+1. In the navigation menu, select **mobile**. In the centre pane, select **mobile device access**.
 
-1. Click **edit** (right-hand side).
+1. select **edit** (right-hand side).
 
    | Setting | Value |
    | --- | --- |
@@ -1734,9 +1734,9 @@ ____________________________________________________________
 
 #### Task 3: Configure a mailbox policy for mobile devices
 
-1. In the navigation menu, click **mobile**. In the centre pane, click **mobile device mailbox policies**.
+1. In the navigation menu, select **mobile**. In the centre pane, select **mobile device mailbox policies**.
 
-1. Click **Default (default)**, and then click **Edit** (the pencil icon).
+1. select **Default (default)**, and then select **Edit** (the pencil icon).
 
    | Setting | Value |
    | --- | --- |
@@ -1764,7 +1764,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **SharePoint admin center** and sign in using the tenant owner account.
 
-1. In the **SharePoint admin center**, select **Settings** then click **Site storage limits**
+1. In the **SharePoint admin center**, select **Settings** then select **Site storage limits**
 
 1. Verify that Site storage limits is set to **Automatic**.
 
@@ -1772,25 +1772,25 @@ ____________________________________________________________
 
 #### Task 2: Configure user profiles
 
-1. In the **SharePoint admin center**, select **More features**. In the centre pane, under **User profiles** click **Open**.
+1. In the **SharePoint admin center**, select **More features**. In the centre pane, under **User profiles** select **Open**.
 
-1. Click ** Manage user profiles**. 
+1. select ** Manage user profiles**. 
 
-1. Enter "Ada", click **Find**. Edit Ada's profile.
+1. Enter "Ada", select **Find**. Edit Ada's profile.
 
 1. Set the **Manager** to **MOD Administrator**.
 
-1. Close the browser tab and click **Open** again. *This is because many SharePoint central admin pages have no breadcrumb trail.*
+1. Close the browser tab and select **Open** again. *This is because many SharePoint central admin pages have no breadcrumb trail.*
 
-1. Click **Setup My Sites**.
+1. select **Setup My Sites**.
 
-1. Under **My Site Cleanup**, set the **Secondary owner** to **MOD Administrator**. Click **OK** (bottom-right).
+1. Under **My Site Cleanup**, set the **Secondary owner** to **MOD Administrator**. select **OK** (bottom-right).
 
 1. Close the browser tab.
 
 #### Task 3: Configure apps
 
-1. In the **SharePoint admin center**, select **More features**. In the centre pane, under **Apps** click **Open**.
+1. In the **SharePoint admin center**, select **More features**. In the centre pane, under **Apps** select **Open**.
 
 1. Select **Configure Store settings**. Set **Should Apps for Office from the store be able to start when documents are opened in the browser?** to **No**.
 
@@ -1813,7 +1813,7 @@ ____________________________________________________________
    | Addition owners | (None) |
    | Members | (None) |
 
-1. Select the new site's name then click **Sharing**
+1. Select the new site's name then select **Sharing**
 
 1. Set **Site concent can be shared with** to **Anyone**.
 
@@ -1853,7 +1853,7 @@ ____________________________________________________________
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
-1. In the **SharePoint admin center**, select **Sites > Active Sites**, then click the **Site name** column of **Marketing**.
+1. In the **SharePoint admin center**, select **Sites > Active Sites**, then select the **Site name** column of **Marketing**.
 
 1. Under **Permissions**, **Additional Admins**, select **Manage**. Add **Tameka**.
 
@@ -1865,7 +1865,7 @@ ____________________________________________________________
 
 1. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing.
 
-1. Click **Not following** and wait for the link to change to "Following".
+1. select **Not following** and wait for the link to change to "Following".
 
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
@@ -1927,7 +1927,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **SharePoint admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Sites > Active sites**. 
+1. In the Navigation menu, select **Sites > Active sites**. 
 
 1. Select **Policies**, **External Sharing**. Set **Site content can be shared with:** **Anyone**.
 
@@ -1953,11 +1953,11 @@ ____________________________________________________________
 
 1. Open Edge. Open the e-mail client for alias@outlook.com.
 
-1. Open the "MOD Administrator wants to share Accounts project" e-mail and click **Go To Accounts Project**.
+1. Open the "MOD Administrator wants to share Accounts project" e-mail and select **Go To Accounts Project**.
 
 1. Verify that the site loads.
 
-1. Open the "Document link" e-mail and click **Budgets.docx**.
+1. Open the "Document link" e-mail and select **Budgets.docx**.
 
 1. Verify that the document loads.
 
@@ -2018,13 +2018,13 @@ ____________________________________________________________
 
 1. Select **OneDrive - Contoso**.
 
-1. Create a folder called **Tailspin Project**. Right-click **Tailspin Project**, choose **Share**. Select **Anyone with the link can edit**. Send the link to **Amy Santiago**.
+1. Create a folder called **Tailspin Project**. Right-select **Tailspin Project**, choose **Share**. Select **Anyone with the link can edit**. Send the link to **Amy Santiago**.
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
 1. Run **Outlook**.
 
-1. Open the "Sallie McIntosh shared the folder" e-mail and click **Tailspin Project**.
+1. Open the "Sallie McIntosh shared the folder" e-mail and select **Tailspin Project**.
 
 1. Verify that the folder loads (in Edge).
 
@@ -2067,7 +2067,7 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Groups > Active groups**. 
+1. In the Navigation menu, select **Groups > Active groups**. 
 
 1. Add a group.
 
@@ -2158,6 +2158,8 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Search for and join **Planning Group**.
 
+   The group is public, so Amy does not need permission or approval to join the group.
+
 1. In the navigation pane, select **Planning Group** (scroll down).
 
 1. Send an e-mail to the group.
@@ -2190,11 +2192,19 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Select **Join or create a team**, then **Create team**, then  **Create from… An existing Microsoft 365 group or team**.
 
-1. No groups are listed. Sallie is not an owner of any groups.
+1. No groups are listed, because Sallie is not an owner of any groups.
 
 1. Sign out of Teams.
 
 1. Open **Teams**. Sign in as **holly@adatumXXXXXX.onelearndns.com**, choose **No, sign in to this app only**.
+
+1. Select **Join or create a team**, then **Create team**, then  **Create from… An existing Microsoft 365 group or team**, then **Microsoft 365 group**.
+
+1. Select **Planning Group** (which Holly is an owner of) and select **Create**.
+
+1. Sign out of Teams.
+
+
 
 
 
@@ -2208,4 +2218,4 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, click **Users > Active users**. 
+1. In the Navigation menu, select **Users > Active users**. 
