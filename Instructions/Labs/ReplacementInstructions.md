@@ -58,6 +58,11 @@ You require an external email address (for example an outlook.com or gmail.com a
 
 
 ____________________________________________________________
+## TODO
+
+Microsoft 365 admin center, Settings | Org settings, Organization profile, Organization information.
+
+____________________________________________________________
 ## Lab 1: Planning and Provisioning Office 365
 
 ### Exercise 1: Explore the various administrative portals.
@@ -361,7 +366,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. In the Navigation menu, click **Groups > Active groups**. 
 
-1. Add a group as follows.
+1. Add a group.
 
    | Setting | Value |
    | --- | --- |
@@ -369,7 +374,7 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
    | Name | Sales |
    | Description | Sales department |
 
-1. Add a group as follows.
+1. Add a group.
 
    | Setting | Value |
    | --- | --- |
@@ -1126,6 +1131,55 @@ ____________________________________________________________
 1. Select **Manage licenses**. Add **Enterprise Mobility + Security E5** and **Office 365 E5** licenses to the selected users, with a **Usage location** of **Switzerland**.
 
 
+#### Exercise 13: Enable Seamless SSO (*Optional*)
+
+#### Task 1: Azure AD Connect
+
+1. On **LON-DS1**, signed in as **ADATUM\Administrator**.
+
+1. Open **Azure AD Connect**. Click **Configure**.
+
+1. At the **Additional tasks** screen, select **Change user sign-in** and click **Next**.
+
+1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and click **Next**.
+
+1. At the **User sign-in** screen, select the **Enable single sign-on**, then click **Next**.
+
+1. At the **Enable single-sign-on** screen, click **Enter credentials**. Sign in as **ADATUM\Administrator**. Click *Next*.
+
+1. At the **Ready to congure** screen, click **Configure**.
+
+1. At the **Configuration complete** screen, click **Exit**.
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
+
+1. Perform a manual sync.
+
+   ```PowerShell
+   Start-AdSyncSyncCycle Delta
+   ```
+
+#### Task 2: Group Policy
+
+1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
+
+1. Open **Group Policy Management**.
+
+1. Edit *Default Domain Policy*. Navigate to  **User Configuration** > **Preferences** > **Window Settings** > **Registry**.
+
+1. Create a new **Registry item**.
+
+   | Setting | Value |
+   | --- | --- |
+   | Action | Update |
+   | Hive | HKEY_CURRENT_USER |
+   | Key Path | software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\microsoftazuread-sso.com\autologon |
+   | Value name | https |
+   | Value type | REG_DWORD |
+   | Value data | 1 |
+
+1. Close **Group Policy Management Editor**.
+
 
 ____________________________________________________________
 ## Lab 5: Planning and deploying Office 365 ProPlus
@@ -1346,13 +1400,6 @@ ____________________________________________________________
    New-DistributionGroup -Name "Sales" -Members lindsey, christie -DisplayName "Sales"   Get-DistributionGroup
    ```
 
-1. Create Microsoft 365 groups.
-
-   ```PowerShell
-   New-UnifiedGroup -Name "Social Club" -Members amy, sallie -DisplayName "Social Club" -Alias "socialclub"
-   Get-UnifiedGroup
-   ```
-
 #### Task 4: Create resource mailboxes
 
 1. Create resource mailboxes.
@@ -1386,8 +1433,6 @@ ____________________________________________________________
 
 1. Open Outlook, signed in as Amy.
 
-1. Note the "Welcome to the Social Club Group" email.
-
 1. Create a meeting. Invite Francisco, Demonstration Laptop and Conference Room.
 
 1. Wait for the "accepted" messages from Demonstration Laptop and Conference Room.
@@ -1395,8 +1440,6 @@ ____________________________________________________________
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
 1. Open Outlook, signed in as Sallie.
-
-1. Note the "Welcome to the Social Club Group" email.
 
 1. Create a meeting at the same time as Amy's meeting. Select the Scheduling Assistant tab. 
 
@@ -1985,43 +2028,173 @@ ____________________________________________________________
 
 1. Verify that the folder loads (in Edge).
 
-
-
 #### Task 3: Enable OneDrive for Business synchronization (synced users) (*Optional*)
 
-1. On **LON-DS1**, signed in as **ADATUM\Administrator**.
-
-1. Open **Azure AD Connect**. Click **Configure**.
-
-1. At the **Additional tasks** screen, select **Change user sign-in** and click **Next**.
-
-1. At the **Connect to Azure AD** screen, sign in using the tenant owner account and click **Next**.
-
-1. 1. At the **User sign-in** screen, select the **Enable single sign-on**, then click **Next**.
-
-1. At the **Enable single-sign-on** screen, click **Enter credentials**. Sign in as **ADATUM\Administrator**. Click *Next*.
-
-1. At the **Ready to congure** screen, click **Configure**.
-
-1. At the **Configuration complete** screen, click **Exit**.
-
-1. Open **Windows PowerShell ISE** or **Windows PowerShell**. 
-
-1. Perform a manual sync.
-
-   ```PowerShell
-   Start-AdSyncSyncCycle Delta
-   ```
+If Seamless SSO has been set up then the AD DS users will not need to provide passwords to sign in to Office 365 resources.
 
 1. On **LON-CL3**, signed in as **ADATUM\Ada**.
 
+1. Open **Word**. 
+
+1. Select **Account**. If required, sign in as **ada@adatumXXXXXX.onelearndns.com**. 
+
+1. Create a document and save it to **OneDrive - Contoso**.
+
+1. Open Edge. Browse to the **Office 365 home page** and sign in as **ada@adatumXXXXXX.onelearndns.com**.
+
+1. Select **OneDrive**. Verify that the new document is listed.
+
+1. Open **File Explorer**. 
+
+1. Select **OneDrive**. Sign in as **ada@adatumXXXXXX.onelearndns.com**. 
+
+1. Once OneDrive synchronisation is complete, select **OneDrive - Contoso**. Verify that the new document is listed.
 
 1. On **LON-CL4**, signed in as **ADATUM\Cai**.
 
+1. *Repeat the above steps.*
+
+*Note*: Why is the OneDrive for Business folder called "OneDrive - Contoso"? Because the tenant name is "Contoso".
+
+Microsoft 365 admin center, Settings | Org settings, Organization profile, Organization information.
 
 
+### Exercise 3: Configuring Microsoft 365 groups
+
+#### Task 1: Configure a private Microsoft 365 group using the portal
+
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
+
+1. In the Navigation menu, click **Groups > Active groups**. 
+
+1. Add a group.
+
+   | Setting | Value |
+   | --- | --- |
+   | Type | Microsoft 365 |
+   | Name | ADatum Marketing |
+   | Description | A. Datum Corporation Marketing team |
+   | Owners | MOD Administrator, Holly Dickson |
+   | Group email address | adatummarketing@adatumXXXXXX.onelearndns.com |
+   | Privacy | Private |
+   |Create a team for this group | Selected |
 
 
+1. *Refresh* the list until ADatum Marketing appears.
+
+1. Select **ADatum Marketing**. Add a member, select **Amy**. 
+
+#### Task 2: Configure a public Office 365 group using PowerShell
+
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**.
+
+1. Enter a credential. Sign in as the tenant owner account.
+
+   ```PowerShell
+   $Credential = Get-Credential
+   ```
+
+1. Connect to Exchange Online.
+
+   ```PowerShell
+   $PSSession = New-PSSession -ConfigurationName "Microsoft.Exchange" -ConnectionUri "https://outlook.office365.com/powershell-liveid/" -Credential $Credential -Authentication "Basic" -AllowRedirection
+   Import-PSSession $PSSession -DisableNameChecking
+   ```
+
+1. Create a Microsoft 365 group.
+
+   ```PowerShell
+   New-UnifiedGroup –DisplayName "Planning Group" -Alias "PlanningGroup" –EmailAddresses "planninggroup@adatumXXXXXX.onelearndns.com" -Owner "MOD Administrator" -Members "Francisco" -AccessType Public
+   ```
+
+1. Add additional owners.
+
+   ```PowerShell
+   Add-UnifiedGroupLinks "Planning Group" –Links "Holly Dickson" –LinkType Owner
+   ```
+
+   Note the "Only Members can be Owners of a group. Please add 'holly' first as members before adding them as owners." error message.
+
+1. Add additional members.
+
+   ```PowerShell
+   Add-UnifiedGroupLinks "Planning Group" –Links "Sallie McIntosh", "Holly Dickson" –LinkType Member
+   ```
+
+1. Add additional owners.
+
+   ```PowerShell
+   Add-UnifiedGroupLinks "Planning Group" –Links "Holly Dickson" –LinkType Owner
+   ```
+
+1. List groups and members.
+
+   ```PowerShell
+   Get-UnifiedGroup
+   Get-UnifiedGroup | fl *name
+   Get-UnifiedGroup "Planning Group" | Get-UnifiedGroupLinks -LinkType Member
+   Get-UnifiedGroup "Planning Group" | Get-UnifiedGroupLinks -LinkType Owner
+   ```
+
+#### Task 3: Explore the Office 365 group components
+
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Office 365 home page** and sign in as **amy@adatumXXXXXX.onelearndns.com**.
+
+1. Select **Outlook**. 
+
+1. Note the "You've joined the ADatum Marketing group" e-mail.
+
+1. In the navigation pane, select **ADatum Marketing** (scroll down).
+
+1. Send an e-mail to the group.
+
+1. In the navigation pane, select **Discover groups** (scroll down).
+
+1. Search for and join **Planning Group**.
+
+1. In the navigation pane, select **Planning Group** (scroll down).
+
+1. Send an e-mail to the group.
+
+1. Open **Outlook**. Sign in as **amy@adatumXXXXXX.onelearndns.com**, choose **No, sign in to this app only**.
+
+1. In the navigation pane, select **Planning Group**. 
+
+1. Open **Teams**. Sign in as **amy@adatumXXXXXX.onelearndns.com**, choose **No, sign in to this app only**.
+
+1. In the **Teams** list, select **Adatum Marketing**.
+
+1. In the **Activity feed**, note the "MOD added you to ADatum Marketing" message.
+
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Office 365 home page** and sign in as **sallie@adatumXXXXXX.onelearndns.com**.
+
+1. Select **Outlook**. 
+
+1. Note that there is no "You've joined the Planning Group group" e-mail (because Sallie was added using powerShell).
+
+1. In the navigation pane, select **Planning Group** (scroll down).
+
+1. Send an e-mail to the group.
+
+1. Open **Teams**. Sign in as **sallie@adatumXXXXXX.onelearndns.com**, choose **No, sign in to this app only**.
+
+1. Note that there is no Planning Group team.
+
+1. Select **Join or create a team**, then **Create team**, then  **Create from… An existing Microsoft 365 group or team**.
+
+1. No groups are listed. Sallie is not an owner of any groups.
+
+1. Sign out of Teams.
+
+1. Open **Teams**. Sign in as **holly@adatumXXXXXX.onelearndns.com**, choose **No, sign in to this app only**.
 
 
 
