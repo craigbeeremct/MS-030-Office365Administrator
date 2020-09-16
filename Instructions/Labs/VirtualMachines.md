@@ -1,7 +1,7 @@
 # Virtual Machines
 
 | Machine | OS, Roles, Apps | Local Accounts |
-| :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- |
 |	**LON-CL1**	| Windows 10 Enterprise<br />Office Professional Plus 2016 | .\Admin, Pa55w.rd<br />(administrator)<br />.\Student, Pa55w.rd<br />(user) |
 |	**LON-CL2**	| Windows 10 Enterprise<br />Office Professional Plus 2016<br />*Workgroup member* | .\Admin, Pa55w.rd<br />(administrator)<br />.\Francisco, Pa55w.rd<br />(administrator)<br />.\Student, Pa55w.rd<br />(user) |
 |	**LON-CL3**	| Windows 10 Enterprise | .\Admin, Pa55w.rd<br />(administrator)<br />.\Student, Pa55w.rd<br />(user) |
