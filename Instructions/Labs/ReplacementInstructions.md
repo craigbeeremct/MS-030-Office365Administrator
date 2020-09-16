@@ -8,7 +8,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 1: Planning and Provisioning Office 365](#lab-1-planning-and-provisioning-office-365)
 
-   - [Portal Reference](#portal-reference)
+   - [Admin Center Reference](#admin-center-reference)
 
 - [Lab 2A: Managing Office 365 users and groups using the portal](#lab-2a-managing-office-365-users-and-groups-using-the-portal)
 
@@ -73,11 +73,11 @@ ____________________________________________________________
 
 1. Sign in using the tenant owner account (`admin@LODSXXXXXX.onmicrosoft.com`).
 
-1. select the Admin link. This opens the **Microsoft 365 admin center**.
+1. Select the Admin link. This opens the **Microsoft 365 admin center**.
 
 1. Close Edge.
 
-1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center** directly, without having to go to the Office 365 home page.
+1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center** directly, without having to go to the Office 365 home page first.
 
 1. Sign in using the tenant owner account (`admin@LODSXXXXXX.onmicrosoft.com`).
 
@@ -113,16 +113,18 @@ ____________________________________________________________
 
 1. If there are any warnings or advisories then select on the link and read the messages.
 
-1. In the Navigation menu, select **Security**. This opens the **Office 365 Security & Compliance**.
+1. In the Navigation menu, select **Security**. This opens the old **Office 365 Security & Compliance** admin center.
 
     - Note that you can open this portal by browsing to **https://protection.office.com**.
   
 1. Select the **Microsoft 365 admin center** browser tab.
 
-1. In the Navigation menu, select **Compliance**. This opens the **Microsoft 365 compliance**.
+1. In the Navigation menu, select **Compliance**. This opens the new **Microsoft 365 Compliance** portal.
 
     - Note that you can open this portal by browsing to **https://compliance.microsoft.com**.
   
+1. Open a new tab and browse to https://compliance.microsoft.com. This opens the new **Microsoft 365 Security** portal.
+
 1. Select the **Microsoft 365 admin center** browser tab.
 
 ### Exercise 2: Add a DNS domain
@@ -166,20 +168,27 @@ ____________________________________________________________
 
 1. On the **How do you want to connect your domain?** page, select **Close**. *We will add the DNS records later*.
 
-### Portal Reference
+### Admin Center Reference
 
 - Microsoft 365 admin center - [https://admin.microsoft.com](https://admin.microsoft.com) or [https://portal.office.com/adminportal/home](https://portal.office.com/adminportal/home)
 
-- Microsoft 365 Compliance portal - [https://compliance.microsoft.com](https://compliance.microsoft.com)
+- Microsoft 365 Compliance admin center - [https://compliance.microsoft.com](https://compliance.microsoft.com)
 
-- Microsoft 365 Security portal - [https://security.microsoft.com](https://security.microsoft.com)
+- Microsoft 365 Security admin center - [https://security.microsoft.com](https://security.microsoft.com)
 
-- Office 365 Security & Compliance (superseded by the above two) - [https://protection.microsoft.com](https://protection.microsoft.com)
+- Office 365 Security & Compliance admin center (superseded by the above two) - [https://protection.microsoft.com](https://protection.microsoft.com)
 
 - Microsoft Endpoint Manager admin center - [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
 
 - Azure Active Directory admin center - [https://aad.portal.azure.com](https://aad.portal.azure.com)
 
+- Exchange Admin Center - [https://outlook/office365.com/ecp](https://outlook/office365.com/ecp)
+
+- (Preview) Exchange Admin Center - [https://admin.exchange.microsoft.com](https://admin.exchange.microsoft.com)
+
+- SharePoint admin center - https://\<TenantName\>-admin.sharepoint.com
+
+- Teams admin center - [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com)
 
 
 ____________________________________________________________
@@ -2253,12 +2262,53 @@ ____________________________________________________________
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to the **Microsoft 365 Compliance** portal and sign in using the tenant owner account.
+1. Open Edge. Browse to the **Microsoft 365 Compliance** admin center and sign in using the tenant owner account.
 
-  Note that sensitivity labels can also be modified in the Office 365 Security & Compliance and Microsoft 365 security portals.
+1. In the Navigation menu, select **Solutions > Information protection**. 
 
-1. In the Navigation menu, select **Data Classification**. 
+  Note that sensitivity labels can also be modified in the Office 365 Security & Compliance admin center (Classification > Sensitivity labels) and the Microsoft 365 security admin center (Classification > Sensitivity labels).
 
+1. Select **+Create a label**.
+
+   | Setting | Value |
+   | --- | --- |
+   | Name | PII |
+   | Description for users | Personal Identifiable Information |
+   | Description for admins | Personal Identifiable Information |
+   | Encryption | None |
+   | Content Marking | On |
+   | Add a watermark | On |
+   | Watermark text | Personal Identifiable Information (PII) |
+   | Font size | 10 |
+   | Font color | Red |
+   | Text laoyt | Diagonal |
+   | Add a header | Off |
+   | Add a footer | Not Off |
+   | Auto-labelling for Office apps | On |
+   | Detect content that matches these conditions | Document contains New Zealand Inland Revenue number |
+   | When content matches these conditions | Automatically apply the label |
+   | Display this message to users when the label is applied | Personal Identifiable Information (PII) was detected |
+
+1. Select **Publish labels*. This creates a policy.
+
+   | Setting | Value |
+   | --- | --- |
+   | Sensitivity labels to publish | All |
+   | Publish to users and groups | All |
+   | Apply this label by default | None |
+   | Users must provide justification to set a lower classification label | Selected |
+   | Require users to apply a label to their email or documents | Not selected |
+   | Provide users with a link to a custom help page | Selected |
+   | Custom help page | https://docs.microsoft.com/en-us/azure/information-protection/faqs |
+   | Policy name | ADatum PII |
+   | Policy description | A. Datum Corporation Personal Identifiable Information (PII) policy |
+
+
+
+
+
+
+	
 
 
 
