@@ -8,6 +8,8 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 1: Planning and Provisioning Office 365](#lab-1-planning-and-provisioning-office-365)
 
+   - [Portal Reference](#portal-reference)
+
 - [Lab 2A: Managing Office 365 users and groups using the portal](#lab-2a-managing-office-365-users-and-groups-using-the-portal)
 
 - [Lab 2B: Managing Office 365 users and groups using PowerShell](#lab-2b-managing-office-365-users-and-groups-using-powershell)
@@ -166,7 +168,18 @@ ____________________________________________________________
 
 ### Portal Reference
 
-- Microsoft 365 admin center [https://admin.microsoft.com](https://admin.microsoft.com)
+- Microsoft 365 admin center - [https://admin.microsoft.com](https://admin.microsoft.com) or [https://portal.office.com/adminportal/home](https://portal.office.com/adminportal/home)
+
+- Microsoft 365 Compliance portal - [https://compliance.microsoft.com](https://compliance.microsoft.com)
+
+- Microsoft 365 Security portal - [https://security.microsoft.com](https://security.microsoft.com)
+
+- Office 365 Security & Compliance (superseded by the above two) - [https://protection.microsoft.com](https://protection.microsoft.com)
+
+- Microsoft Endpoint Manager admin center - [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
+
+- Azure Active Directory admin center - [https://aad.portal.azure.com](https://aad.portal.azure.com)
+
 
 
 ____________________________________________________________
