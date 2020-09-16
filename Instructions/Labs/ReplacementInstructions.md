@@ -71,7 +71,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to **https://portal.office.com**. This opens the **Office 365 home page**.
 
-1. Sign in using the tenant owner account (`admin@LODSXXXXXX.onmicrosoft.com`).
+1. Sign in using the tenant owner account (`admin@LODSXXXXXXX.onmicrosoft.com`).
 
 1. Select the Admin link. This opens the **Microsoft 365 admin center**.
 
@@ -79,7 +79,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center** directly, without having to go to the Office 365 home page first.
 
-1. Sign in using the tenant owner account (`admin@LODSXXXXXX.onmicrosoft.com`).
+1. Sign in using the tenant owner account.
 
 1. If asked to save the password or to stay signed in, choose **Yes**.
 
@@ -109,19 +109,15 @@ ____________________________________________________________
 
 1. Select the **Microsoft 365 admin center** browser tab.
 
-1. In the Navigation menu, select **Health > Service health**. 
+1. In the Navigation menu, select **Security**. This opens the old **Office 365 Security & Compliance** center.
 
-1. If there are any warnings or advisories then select on the link and read the messages.
-
-1. In the Navigation menu, select **Security**. This opens the old **Office 365 Security & Compliance** admin center.
-
-    - Note that you can open this portal by browsing to **https://protection.office.com**.
+   Note that you can open this portal by browsing to **https://protection.office.com**.
   
 1. Select the **Microsoft 365 admin center** browser tab.
 
 1. In the Navigation menu, select **Compliance**. This opens the new **Microsoft 365 Compliance** portal.
 
-    - Note that you can open this portal by browsing to **https://compliance.microsoft.com**.
+   Note that you can open this portal by browsing to **https://compliance.microsoft.com**.
   
 1. Open a new tab and browse to https://compliance.microsoft.com. This opens the new **Microsoft 365 Security** portal.
 
@@ -184,7 +180,7 @@ ____________________________________________________________
 
 - Exchange Admin Center - [https://outlook/office365.com/ecp](https://outlook/office365.com/ecp)
 
-- (Preview) Exchange Admin Center - [https://admin.exchange.microsoft.com](https://admin.exchange.microsoft.com)
+- (Preview) Modern Exchange Admin Center - [https://admin.exchange.microsoft.com](https://admin.exchange.microsoft.com)
 
 - SharePoint admin center - https://\<TenantName\>-admin.sharepoint.com
 
@@ -1611,23 +1607,6 @@ ____________________________________________________________
    | If the message is sent to or received from… | A specific user or group… Development |
    | Journal the following messages… | All messages |
 
-#### Task 5: Track internal and external message delivery
-
-1. Open a new Edge tab. Browse to the **Office 365 Security & Compliance** (protection.office.com) and sign in using the tenant owner account.
-
-1. In the navigation pane, select **Mail flow > Message trace**.
-
-1. select **Start a trace**.
-
-   | Setting | Value |
-   | --- | --- |
-   | By these people | Amy |
-   | To these people | All recipients |
-   | Within this time range | In the last 6 hours |
-
-1. Review the message trace search results.
-
-
 
 ____________________________________________________________
 ## Lab 7B: Configuring email protection and client policies
@@ -2103,10 +2082,9 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
    | Privacy | Private |
    |Create a team for this group | Selected |
 
-
 1. *Refresh* the list until ADatum Marketing appears.
 
-1. Select **ADatum Marketing**. Add a member, select **Amy**. 
+1. Select **ADatum Marketing**. Add a member, select **Amy** and **Cai**. 
 
 #### Task 2: Configure a public Office 365 group using PowerShell
 
@@ -2238,7 +2216,7 @@ ____________________________________________________________
 
 ### Exercise 1: Azure Information Protection 
 
-#### Task 1 – Install the Azure Information Protection client
+#### Task 1: Install the Azure Information Protection client
 
 1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
@@ -2258,7 +2236,12 @@ ____________________________________________________________
 1. Run\
 **\\LON-DC1\OfficeProPlus\AzInfoProtection_UL.exe**
 
-#### Task 2 – Configure Azure Information Protection
+1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
+
+1. Run\
+**\\LON-DC1\OfficeProPlus\AzInfoProtection_UL.exe**
+
+#### Task 2: Configure Azure Information Protection
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -2267,6 +2250,8 @@ ____________________________________________________________
 1. In the Navigation menu, select **Solutions > Information protection**. 
 
   Note that sensitivity labels can also be modified in the Office 365 Security & Compliance admin center (Classification > Sensitivity labels) and the Microsoft 365 security admin center (Classification > Sensitivity labels).
+
+1. If you see a message to turn on the ability to process content in Office online files, then select **Turn on now**.
 
 1. Select **+Create a label**.
 
@@ -2303,25 +2288,181 @@ ____________________________________________________________
    | Policy name | ADatum PII |
    | Policy description | A. Datum Corporation Personal Identifiable Information (PII) policy |
 
+#### Task 3: Create protected content (cloud-only user)
 
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
+1. Open Edge. Browse to **https://lodsXXXXXXX.sharepoint.com/sites/adatummarketing**. Sign in as Amy.
 
+1. Follow the site.
 
+1.. Select the Documents library. Note the files and folders present.
 
-	
+1. Open **Word**. 
 
+1. Open **Accounts** and verify that Office ProPlus is signed in as Amy and that OneDrive - Contoso and Sites - Contoso are both under Connected Services.
 
+1. If prompted to sign in to Microsoft Azure Information Protection then sign in as **Amy**.
+
+1. Create a new document. Enter the following text into the document.\
+Memo to HR.\
+Alex Wilbur's IRD number is 21-234-567.
+
+   *Note: This number was generated (2 then 123456 then the correct checksum digit). Any resemblance to an actual entity is accidental.*
+
+1. Save the document to the **Documents** library of the **ADatum Marketing** SharePoint site.
+
+   Note: If the Sites location in the Sav As dialog shows "There are no sites to show right now" then Office has not yet cached the SharePoint Sites. In this case, select Browse and enter https://lodsXXXXXXX.sharepoint.com/sites/adatummarketing in the address bar.
+
+1. Word should automatically apply the PII policy.
+
+  *It should, but often doesn't. I can't find anything on the web for why it might not work. Watch this space, I guess.*
+
+#### Task 3: Create protected content (AD DS user)
+
+1. On **LON-CL4**, signed in as **ADATUM\Cai**.
+
+*Repeat the above steps.*
 
 
 
 ____________________________________________________________
 ## Lab 12: Monitoring and troubleshooting Microsoft Office 365
 
+### Exercise 1: Monitoring Office 365
 
----
+#### Task 1: Send an email to a nonexistent domain
+
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
+
+1. Open **Outlook**, signed in as **Amy**.
+
+1. Send an email to **user@alt.none** with a subject of **Test email to nonexistent domain**.
+
+1. Open the "Delivery has failed" message.
+
+1. Copy the grey body text (from "Diagnostic information for administrators" to the end) to the clipboard.
+
+1. Open Edge. Browse to **https://testconnectivity.microsoft.com**.
+
+1. Select **Message Analyzer**.
+
+1. Paste the text, select **Analyze headers**.
+
+1. Review the results, in particular the first header, that contains "DNS domain … does not exist."
+
+#### Task 2: Send an email to a nonexistent user
+
+1. Send an email to **difflop1248999@outlook.com** with a subject of **Test email to nonexistent user**.
+
+1. Open the "Delivery has failed" message.
+
+1. Copy the grey body text (from "Diagnostic information for administrators" to the end) to the clipboard.
+
+1. Open Edge. Browse to **https://testconnectivity.microsoft.com**.
+
+1. Select **Message Analyzer**.
+
+1. Paste the text, select **Analyze headers**.
+
+1. Review the results, in particular the first header, that contains "Mailbox unavailable."
+
+#### Task 3: Analyse Mail Flow using the portal
+
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Office 365 Security & Compliance Center** and sign in using the tenant owner account.
+
+   *Note*: Message Trace is also available in the Modern Exchange Admin Center, but not in the Microsoft 365 Compliance center or the Microsoft 365 Security center. *At the time of writing, anyway…*
+
+1. In the navigation pane, select **Mail flow > Message trace**.
+
+1. select **Start a trace**.
+
+   | Setting | Value |
+   | --- | --- |
+   | By these people | Amy |
+   | To these people | All recipients |
+   | Within this time range | In the last 6 hours |
+
+1. Review the message trace search results. In particular, review the two failed messages from Amy. 
+
+   The message detail pane does not allow you to copy the message headers in the same way we did above.
+
+1. Select **Export results > Export loaded results**.
+
+1. Open the downloaded csv file. Note how little information is included.
+
+#### Task 4: Analyse Mail Flow using PowerShell.
+
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+
+1. Open **Windows PowerShell ISE** or **Windows PowerShell**.
+
+1. Enter a credential. Sign in as the tenant owner account.
+
+   ```PowerShell
+   $Credential = Get-Credential
+   ```
+
+1. Connect to Exchange Online.
+
+   ```PowerShell
+   $PSSession = New-PSSession -ConfigurationName "Microsoft.Exchange" -ConnectionUri "https://outlook.office365.com/powershell-liveid/" -Credential $Credential -Authentication "Basic" -AllowRedirection
+   Import-PSSession $PSSession -DisableNameChecking
+   ```
+
+1. View the message trace.
+
+   ```PowerShell
+   Get-MessageTrace -Page 1 -PageSize 10
+   ```
+
+1. View message trace details.
+
+   ```PowerShell
+   Get-MessageTrace -Page 1 -PageSize 10 | fl *address, *id, subject
+   ```
+
+   Copy the MessageTraceId of the "Test email to nonexistent user" message.
+
+   ```PowerShell
+   Get-MessageTraceDetail -MessageTraceId "\<paste\>" -RecipientAddress "difflop1248999@outlook.com" 
+   ```
+
+### Exercise 2: Monitoring service health and analyzing reports
+
+#### Task 1: View Office 365 service health
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in using the tenant owner account.
 
-1. In the Navigation menu, select **Users > Active users**. 
+1. In the Navigation menu, select **Health > Service health**. 
+
+1. If there are any warnings or advisories then select on the link and read the messages.
+
+1. In the Navigation menu, select **Health > Message center**. 
+
+1. Review the content.
+
+1. In the Navigation menu, select **Reports > Usage**. 
+
+1. Review the content. Note the "Date as of" - these reports are 48 hours behind the current time. 
+
+1. In Edge, open a new tab. Browse to the **Microsoft 365 security center**.
+
+1. In the Navigation menu, select **Reports**. 
+
+1. Review the content.
+
+1. In Edge, open a new tab. Browse to the **Microsoft 365 Compliance Center**.
+
+1. In the Navigation menu, select **Reports**. 
+
+1. Review the content.
+
+
+
+
+
