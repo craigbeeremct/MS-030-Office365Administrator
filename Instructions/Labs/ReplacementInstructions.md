@@ -164,6 +164,10 @@ ____________________________________________________________
 
 1. On the **How do you want to connect your domain?** page, select **Close**. *We will add the DNS records later*.
 
+### Portal Reference
+
+- Microsoft 365 admin center [https://admin.microsoft.com](https://admin.microsoft.com)
+
 
 ____________________________________________________________
 ## Lab 2A: Managing Office 365 users and groups using the portal
@@ -2226,6 +2230,21 @@ ____________________________________________________________
 
 1. Run\
 **\\LON-DC1\OfficeProPlus\AzInfoProtection_UL.exe**
+
+1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
+
+1. Run\
+**\\LON-DC1\OfficeProPlus\AzInfoProtection_UL.exe**
+
+#### Task 2 – Configure Azure Information Protection
+
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+
+1. Open Edge. Browse to the **Microsoft 365 Compliance** portal and sign in using the tenant owner account.
+
+  Note that sensitivity labels can also be modified in the Office 365 Security & Compliance and Microsoft 365 security portals.
+
+1. In the Navigation menu, select **Data Classification**. 
 
 
 
