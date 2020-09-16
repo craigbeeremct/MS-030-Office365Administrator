@@ -32,8 +32,7 @@ These instructions must be used in the virtual environment provided by learnonde
 
 - [Lab 10: Planning and configuring an Office 365 collaboration solution](#lab-10-planning-and-configuring-an-office-365-collaboration-solution)
 
-- [Lab 11: Planning and configuring security and compliance in ‎Office 365](##lab-11-planning-and-configuring-security-and-compliance-in-office-365)
-
+- [Lab 11: Planning and configuring security and compliance in ‎Office 365](#lab-11-planning-and-configuring-security-and-compliance-in-office-365)
 
 - [Lab 12: Monitoring and troubleshooting Microsoft Office 365](#lab-12-monitoring-and-troubleshooting-microsoft-office-365)
 
@@ -1966,10 +1965,6 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 10: Planning and configuring an Office 365 collaboration solution
 
-### Exercise 1: Configuring Yammer Enterprise
-
-*Skip*
-
 ### Exercise 2: Configuring OneDrive for Business
 
 #### Task 1: Enable OneDrive for Business synchronization (cloud-only users)
@@ -2181,7 +2176,7 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Select **Outlook**. 
 
-1. Note that there is no "You've joined the Planning Group group" e-mail (because Sallie was added using powerShell).
+1. Note that there is no "You've joined the Planning Group group" e-mail (because Sallie was added using powerShell). **TODO**
 
 1. In the navigation pane, select **Planning Group** (scroll down).
 
@@ -2214,6 +2209,23 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
  
 ____________________________________________________________
 ## Lab 11: Planning and configuring security and compliance in ‎Office 365
+
+### Exercise 1: Azure Information Protection 
+
+#### Task 1 – Install the Azure Information Protection client
+
+1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
+
+1. Run Ineternet Explorer. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=53018**, the Azure Information Protection unified labeling client.
+
+1. Download **AzInfoProtection_UL.exe** and save it to **C:\Shares\OfficeProPlus**.
+
+   Note that there is a msi download available for centralised software deployment.
+
+1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
+
+1. Run\
+**\\LON-DC1\OfficeProPlus\AzInfoProtection_UL.exe**
 
 
 
