@@ -13,5 +13,5 @@
 
 
 
-Except as noted, machines are members of the AD DS domain **adatum.com**.
+Except as noted, machines are members of the AD DS domain **adatum.com**.\
 The domain admin is ADATUM\administrator), Pa55w.rd.
