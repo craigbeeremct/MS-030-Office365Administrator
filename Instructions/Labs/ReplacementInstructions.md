@@ -82,7 +82,7 @@ During this lab, if asked to save the password or to stay signed in, select **Ye
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** directly (**https://admin.microsoft.com**). Sign in using the tenant owner.
 
-1. In the Navigation menu (left-hand pane), select **… Show all**.
+1. In the Navigation menu (the left-hand pane), select **…Show all**.
 
 1. In the Navigation menu, select **Users > Active users**.
 
@@ -92,7 +92,7 @@ During this lab, if asked to save the password or to stay signed in, select **Ye
 
    You can open this site directly by browsing to **https://outlook.office365.com/ecp**.
 
-1. In the Navigation menu, select **recipients**. In the centre pane, select **mailboxes**.
+1. In the Navigation menu, select **recipients** then select **mailboxes**.
 
 1. How many mailboxes are listed? The number should match the number of active users licensed with Office 365.
 
@@ -102,7 +102,7 @@ During this lab, if asked to save the password or to stay signed in, select **Ye
 
    You can open this site directly by browsing to **https://aad.portal.azure.com**.
 
-1. In the **Azure Active Directory admin center**, select **Azure Active Directory**. In the **Contoso | Overview blade**, in the **Manage** section, select **Users**.
+1. In the navigation menu, select **Azure Active Directory**. In the **Contoso | Overview blade** scroll to the the **Manage** section and select **Users**.
 
 1. How many accounts are listed? The number should match the number of active users.
 
@@ -370,7 +370,7 @@ ____________________________________________________________
 
 1. In the Navigation menu, select **Settings > Org settings**.
 
-1. In the middle pane, select **Security & privacy** then select **Password expiration policy**.
+1. Select **Security & privacy** then select **Password expiration policy**.
 
 1. Set 14 days before passwords expire, 14 days before a user is notified.
 
@@ -809,19 +809,19 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Microsoft Remote Connectivity Analyzer** (**https://testconnectivity.microsoft.com**).
 
-1. In the navigation menu, select **Office 365**. In the main pane, select **Help Identify My Issue with Exchange DNS**.
+1. In the navigation menu, select **Office 365**. In the centre pane, select **Help Identify My Issue with Exchange DNS**.
 
 1. Enter **adatumXXXXXX.onelearndns.com**, select **Office 365 (Default)**, then select **Perform Test**.
 
 1. Verify that there are no errors.
 
-1. In the navigation menu, select **Office 365**. In the main pane, select **Help Identify My Issue with Lync DNS**.
+1. In the navigation menu, select **Office 365**. In the centre pane, select **Help Identify My Issue with Lync DNS**.
 
 1. Enter **francisco@adatumXXXXXX.onelearndns.com**, select **Office 365 (Default)**, then select **Perform Test**.
 
 1. Verify that there are no errors.
 
-1. In the navigation menu, select **Office 365**. In the main pane, select **Outlook Connectivity**.
+1. In the navigation menu, select **Office 365**. In the centre pane, select **Outlook Connectivity**.
 
 1. Enter Francisco’s sign-in address and password, select **Use Autodiscover to detect server settings**, select the **I understand** box, then select **Perform Test**.
 
@@ -1395,11 +1395,11 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Exchange admin center** and sign in as the tenant owner.
 
-1. In the Navigation menu, select **recipients**. In the centre pane, select **mailboxes**.
+1. In the Navigation menu, select **recipients** then select **mailboxes**.
 
    Note the mailboxes for the licensed users.
 
-1. In the centre pane, select **groups**.
+1. Select **groups**.
 
    Note the default groups.
 
@@ -1499,7 +1499,7 @@ ____________________________________________________________
 
 1. Switch to Edge connected to the **Exchange admin center**.
 
-1. In the Navigation menu, select **permissions**. In the centre pane, select **admin roles**.
+1. In the Navigation menu, select **permissions** then select **admin roles**.
 
 1. Select **Organization Management**, then select **Edit** (the pencil icon).
 
@@ -1526,7 +1526,9 @@ ____________________________________________________________
 
 1. Switch to Edge connected to the Exchange admin center.
 
-1. In the Navigation menu, select **permissions**. In the centre pane, select **admin roles** then select **Refresh** (the circled arrows icon).
+1. In the Navigation menu, select **permissions** then select **admin roles**. 
+
+1. Select **Refresh** (the circled arrows icon).
 
 1. Verify that Branch Office Admins is present.
 
@@ -1543,7 +1545,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Exchange admin center** and sign in as the tenant owner.
 
-1. In the navigation menu, select **mail flow**. In the centre pane, select **connectors**.
+1. In the navigation menu, select **mail flow** then select **connectors**.
 
 1. Select **New** (the plus icon).
 
@@ -1570,7 +1572,7 @@ ____________________________________________________________
 
 #### Task 2: Create transport rules
 
-1. In the Navigation menu, select **mail flow**. In the centre pane, select **rules**.
+1. In the Navigation menu, select **mail flow** then select **rules**.
 
 1. Select the **down arrow** button next to the plus icon then select **Apply disclaimers…**
 
@@ -1618,7 +1620,7 @@ ____________________________________________________________
 
 1. Switch to Edge running the Exchange admin center.
 
-1. In the navigation menu, select **compliance management**. In the centre pane, select **journal rules**.
+1. In the navigation menu, select **compliance management** then select **journal rules**.
 
 1. Next to **Send undeliverable journal reports to**, select **Select address**. Select **MOD Administrator**
 
@@ -1643,7 +1645,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Exchange admin center** and sign in as the tenant owner.
 
-1. In the navigation menu, select **protection**. In the centre pane, select **malware filter**.
+1. In the navigation menu, select **protection** then select **malware filter**.
 
 1. Select **Default**, and then select **Edit** (the pencil icon).
 
@@ -1657,7 +1659,7 @@ ____________________________________________________________
 
 #### Task 2: Configure the connection filter
 
-1. In the navigation menu, select **protection**. In the centre pane, select **connection filter**.
+1. In the navigation menu, select **protection** then select **connection filter**.
 
 1. Select **Default**, and then select **Edit** (the pencil icon).
 
@@ -1668,7 +1670,7 @@ ____________________________________________________________
 
 #### Task 3: Configure the spam filter
 
-1. In the navigation menu, select **protection**. In the centre pane, select **spam filter**.
+1. In the navigation menu, select **protection** then select **spam filter**.
 
 1. Select **Default**, and then select **Edit** (the pencil icon).
 
@@ -1705,7 +1707,7 @@ ____________________________________________________________
 
 1. Switch to the Edge tab running **Office 365 Security & Compliance**.
 
-1. In the navigation pane, select **Threat management > Review**. In the center pane, select **Quarantine**.
+1. In the navigation menu, select **Threat management > Review** then select **Quarantine**.
 
 1. Review the quarantined messages.
 
@@ -1717,7 +1719,7 @@ ____________________________________________________________
 
 1. Switch to the Edge tab running **Exchange admin center**.
 
-1. In the navigation menu, select **permissions**. In the centre pane, select **Outlook Web App policies**.
+1. In the navigation menu, select **permissions** then select **Outlook Web App policies**.
 
 1. Select **New** (the plus icon).
 
@@ -1731,7 +1733,7 @@ ____________________________________________________________
    | Journaling | Not selected |
    | Direct File Access | Not selected |
 
-1. In the navigation menu, select **recipients**. In the centre pane, select **mailboxes**.
+1. In the navigation menu, select **recipients** then select **mailboxes**.
 
 1. Select **Sallie McIntosh**, then select **Edit** (the pencil icon).
 
@@ -1751,7 +1753,7 @@ ____________________________________________________________
 
 1. Switch to the Edge tab running **Exchange admin center**.
 
-1. In the navigation menu, select **mobile**. In the centre pane, select **mobile device access**.
+1. In the navigation menu, select **mobile** then select **mobile device access**.
 
 1. Select **edit** (right-hand side).
 
@@ -1762,7 +1764,7 @@ ____________________________________________________________
 
 #### Task 3: Configure a mailbox policy for mobile devices
 
-1. In the navigation menu, select **mobile**. In the centre pane, select **mobile device mailbox policies**.
+1. In the navigation menu, select **mobile** then select **mobile device mailbox policies**.
 
 1. Select **Default (default)**, and then select **Edit** (the pencil icon).
 
@@ -2184,23 +2186,23 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Note the “You've joined the ADatum Marketing group” e-mail.
 
-1. In the navigation pane, select **ADatum Marketing** (scroll down).
+1. In the left pane, select **ADatum Marketing** (scroll down).
 
 1. Send an e-mail to the group.
 
-1. In the navigation pane, select **Discover groups** (scroll down).
+1. In the left pane, select **Discover groups** (scroll down).
 
 1. Search for **Planning Group** and join it.
 
    The group is public, so Amy does not need permission or approval to join the group.
 
-1. In the navigation pane, select **Planning Group** (scroll down).
+1. In the left pane, select **Planning Group** (scroll down).
 
 1. Send an e-mail to the group.
 
 1. Open **Outlook**. Sign in as **Amy**, select **No, sign in to this app only**.
 
-1. In the navigation pane, select **Planning Group**.
+1. In the left pane, select **Planning Group**.
 
 1. Verify that the message from Amy is present.
 
@@ -2220,13 +2222,13 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Note that there is no “You've joined the Planning Group group” e-mail (because Sallie was added using PowerShell). **TODO**
 
-1. In the navigation pane, select **Planning Group** (scroll down).
+1. In the left pane, select **Planning Group** (scroll down).
 
 1. Send an e-mail to the group.
 
 1. Open **Outlook**. Sign in as **Sallie**, select **No, sign in to this app only**.
 
-1. In the navigation pane, select **Planning Group**.
+1. In the left pane, select **Planning Group**.
 
 1. Verify that the message from Amy and the mesage from Sallie are present.
 
@@ -2417,9 +2419,7 @@ ____________________________________________________________
 
    At the time of writing, Message Trace is also available in the Modern Exchange admin center, but not in the Microsoft 365 Compliance center or the Microsoft 365 Security center.
 
-1. In the navigation pane, select **Mail flow > Message trace**.
-
-1. Select **Start a trace**.
+1. In the navigation pane, select **Mail flow > Message trace** then select **Start a trace**.
 
    | Setting | Value |
    | --- | --- |
