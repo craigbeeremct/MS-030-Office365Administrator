@@ -208,16 +208,16 @@ ____________________________________________________________
 
    | Setting | Value |
    | --- | --- |
-   | First name | Lindsey |
-   | Last name | Gates |
-   | Display Name | Lindsey Gates |
-   | Username | lindsey@adatumXXXXXX.onelearndns.com |
+   | First name | Amy |
+   | Last name | Santiago |
+   | Display Name | Amy Santiago |
+   | Username | amy@adatumXXXXXX.onelearndns.com |
    | Password | Pa55w.rd1234 |
    | Require the user to change their password when they first sign in | No |
    | Location | Switzerland |
    | Licenses | Office 365 E5, Enterprise Mobility + Security E5 |
    | Roles | User |
-   | Department | Sales |
+   | Department | (Leave blank) |
 
 1. Add a user.
 
@@ -238,25 +238,10 @@ ____________________________________________________________
 
    | Setting | Value |
    | --- | --- |
-   | First name | Amy |
-   | Last name | Santiago |
-   | Display Name | Amy Santiago |
-   | Username | amy@adatumXXXXXX.onelearndns.com |
-   | Password | Pa55w.rd1234 |
-   | Require the user to change their password when they first sign in | No |
-   | Location | Switzerland |
-   | Licenses | Office 365 E5, Enterprise Mobility + Security E5 |
-   | Roles | User |
-   | Department | (Leave blank) |
-
-1. Add a user.
-
-   | Setting | Value |
-   | --- | --- |
-   | First name | Sallie |
-   | Last name | McIntosh |
-   | Display Name | Sallie McIntosh |
-   | Username | sallie@adatumXXXXXX.onelearndns.com |
+   | First name | Francisco |
+   | Last name | Chaves |
+   | Display Name | Francisco Chaves |
+   | Username | francisco@adatumXXXXXX.onelearndns.com |
    | Password | Pa55w.rd1234 |
    | Require the user to change their password when they first sign in | No |
    | Location | Switzerland |
@@ -268,10 +253,25 @@ ____________________________________________________________
 
    | Setting | Value |
    | --- | --- |
-   | First name | Francisco |
-   | Last name | Chaves |
-   | Display Name | Francisco Chaves |
-   | Username | francisco@adatumXXXXXX.onelearndns.com |
+   | First name | Lindsey |
+   | Last name | Gates |
+   | Display Name | Lindsey Gates |
+   | Username | lindsey@adatumXXXXXX.onelearndns.com |
+   | Password | Pa55w.rd1234 |
+   | Require the user to change their password when they first sign in | No |
+   | Location | Switzerland |
+   | Licenses | Office 365 E5, Enterprise Mobility + Security E5 |
+   | Roles | User |
+   | Department | Sales |
+
+1. Add a user.
+
+   | Setting | Value |
+   | --- | --- |
+   | First name | Sallie |
+   | Last name | McIntosh |
+   | Display Name | Sallie McIntosh |
+   | Username | sallie@adatumXXXXXX.onelearndns.com |
    | Password | Pa55w.rd1234 |
    | Require the user to change their password when they first sign in | No |
    | Location | Switzerland |
@@ -312,7 +312,7 @@ ____________________________________________________________
 
 1. Open an InPrivate Edge window. Browse to the **Office 365 home page** and sign in as **Francisco**.
 
-1. You will see a "Your account has been locked" message.
+1. You will see a “Your account has been locked” message.
 
 1. Close the InPrivate window.
 
@@ -338,7 +338,7 @@ ____________________________________________________________
 
 1. Open an InPrivate Edge window. Browse to the **Office 365 home page** and sign in as **Lindsey**.
 
-1. You will see a "This username may be incorrect" message.
+1. You will see a “This username may be incorrect” message.
 
 1. Close the InPrivate window.
 
@@ -378,7 +378,7 @@ ____________________________________________________________
 
 1. Note that Lindsey now has Outlook, OneDrive, etc in the list.
 
-1. Select the Notification icon in the top right. Note the "Time to change your password" message.
+1. Select the Notification icon in the top right. Note the “Time to change your password” message.
 
 1. Close the InPrivate window.
 
@@ -441,8 +441,6 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 ____________________________________________________________
 ## Lab 2B: Managing Office 365 users and groups using PowerShell
-
-Before running the code below, you must replace the placeholder "@adatumXXXXXX.onelearndns.com" with your actual domain name.
 
 ### Exercise 1: Create users
 
@@ -546,17 +544,15 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-MsolUser -ReturnDeletedUsers
    ```
 
-TODO: Catherine’s licenses.
-
 ### Exercise 5: Bulk create users
 
 1. Run **Explorer** and navigate to **C:\Labfiles**.
 
 1. Right-click **O365users.csv**, choose **Edit**.
 
-1. Replace all "yourdomain.hostdomain.com" with adatumXXXXXX.onelearndns.com.
+1. Replace all yourdomain.hostdomain.com with adatumXXXXXX.onelearndns.com.
 
-1. Replace all "adatumyyxxxx:ENTERPRISEPACK" with LODSXXXXXXX:ENTERPRISEPREMIUM.
+1. Replace all adatumyyxxxx:ENTERPRISEPACK with LODSXXXXXXX:ENTERPRISEPREMIUM.
 
 1. Save the file and close Notepad.
 
@@ -738,7 +734,7 @@ ____________________________________________________________
 
 1. Open **DNS Manager**.
 
-1. Add the following records, copying the values from the web browser.
+1. Add the following records, copying and pasting the values from admin center.
 
    1. Mail Exchanger (MX).
       | Setting | Value |
@@ -811,18 +807,17 @@ ____________________________________________________________
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to **https://testconnectivity.microsoft.com**.
-This opens the **Microsoft Remote Connectivity Analyzer**.
+1. Open Edge. Browse to the **Microsoft Remote Connectivity Analyzer** (**https://testconnectivity.microsoft.com**).
 
 1. In the navigation menu, select **Office 365**. In the main pane, select **Help Identify My Issue with Exchange DNS**.
 
-1. Enter your domain name (adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then select **Perform Test**.
+1. Enter **adatumXXXXXX.onelearndns.com**, select **Office 365 (Default)**, then select **Perform Test**.
 
 1. Verify that there are no errors.
 
 1. In the navigation menu, select **Office 365**. In the main pane, select **Help Identify My Issue with Lync DNS**.
 
-1. Enter Francisco’s sign-in address (francisco@adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then select **Perform Test**.
+1. Enter **francisco@adatumXXXXXX.onelearndns.com**, select **Office 365 (Default)**, then select **Perform Test**.
 
 1. Verify that there are no errors.
 
@@ -842,7 +837,7 @@ This opens the **Microsoft Remote Connectivity Analyzer**.
 
 1. Select **Yes** to **Is this the affected machine?** then select **Next**.
 
-1. Enter the email address and password of the tenant owner account (admin@LODSXXXXXX.onmicrosoft.com) then select **Next**.
+1. Enter the tenant owner email address and password, then select **Next**.
 
 1. Note any recommendations then close the tool.
 
@@ -914,9 +909,11 @@ ____________________________________________________________
 
 1. Open Edge. Browse to **https://github.com/microsoft/idfix**.
 
-1. Scroll down to the ClickOnce Launch heading and select the launch link. Install and run the app.
+1. Scroll down to the **ClickOnce Launch** heading and select the launch link. Install and run the app.
 
-1. In IdFix, select Query on the toolbar. Five issues will be shown.
+1. In IdFix, select **Query** on the toolbar. 
+
+   Five issues will be shown.
 
 1. Issue: An Dung Dao’s account has spaces in the User Principal Name.
 
@@ -938,9 +935,9 @@ ____________________________________________________________
 
    Resolution: In the Update column, enter **larar@adatum.com**. In the Action column, select **EDIT**.
 
-1. In the toolbar, select Apply.
+1. In the toolbar, select **Apply**.
 
-1. In the toolbar, select Query. Verify that no issues are listed.
+1. In the toolbar, select **Query**. Verify that no issues are listed.
 
 1. Close IdFix.
 
@@ -966,13 +963,11 @@ ____________________________________________________________
    Get-MsolCompanyInformation | fl *sync*
    ```
 
-   Verify that DirectorySynchronizationEnable is True. If it is not then run the following and check again.
+1. Verify that DirectorySynchronizationEnable is True. If it is not then run the following and check again.
 
    ```PowerShell
    Set-MsolDirSyncEnabled -EnableDirSync $true -Force
    ```
-
-1. Do not close PowerShell, it will be used later.
 
 ### Exercise 5: Download and install AD Connect, set up synchronization
 
@@ -986,7 +981,7 @@ ____________________________________________________________
 
 1. Select **Download Azure AD Connect**. Download and install the tool.
 
-1. In the Microsoft Azure Active Directory Connect tool, select **Customize**.
+1. When Microsoft Azure Active Directory Connect runs, select **Customize**.
 
 1. At the **Install required components** screen, select **Install**.
 
@@ -1029,7 +1024,7 @@ ____________________________________________________________
    Get-MsolCompanyInformation | fl *sync*
    ```
 
-   Verify that all the properties have values (in particular that LastDirSyncTime has a date and time).
+1. Verify that all the properties have values (in particular that LastDirSyncTime has a date and time).
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as the tenant owner.
 
@@ -1056,7 +1051,7 @@ ____________________________________________________________
 
 1. At the **Connect your directories** screen, select **Next**.
 
-1. 1. At the **Domain and OU filtering** screen, select the **Research** OU, then select **Next**.
+1. At the **Domain and OU filtering** screen, select the **Research** OU, then select **Next**.
 
 1. At the **Optional features** screen, select **Next**.
 
@@ -1088,7 +1083,7 @@ ____________________________________________________________
 
 1. Open **Active Directory Users and Computers**.
 
-1. In the console tree, select **Research**.
+1. Select the **Research** OU.
 
 1. Create a user.
 
@@ -1111,15 +1106,15 @@ ____________________________________________________________
    | Scope | Universal |
    | Type | Security |
 
-1. Right select **Vera Pace**, choose **Move**. Move the account to the **Marketing** OU.
+1. Move **Vera Pace** to the **Marketing** OU.
 
-1. Right-click **Research** security group, select **Properties**.
+1. Edit the **Research** security group.
 
-1. Remove **Vera Pace** and **Tia Zecirevic** from the group. Add **Ada Russell* to the group.
+   Remove **Vera Pace** and **Tia Zecirevic**. Add **Ada Russell**.
 
-1. In the console tree, select **Marketing**.
+1. Select the **Marketing** OU.
 
-1. Right select **Ada Russell**, choose **Move**. Move the account to the **Research** OU.
+1. Move **Ada Russell** to the **Research** OU.
 
 
 ### Exercise 10: Synchronise
@@ -1165,13 +1160,13 @@ ____________________________________________________________
 
 1. Tick all the users imported earlier using the csv file (some or all of Nona, Jessica, Misty, Elvis, Leila, Sheri, Mickey and Leanna).
 
-1. Select **Manage licenses**. Remove all product licenses from the selected users.
+1. Remove all product licenses.
 
 1. Select **Filter**, **Unlicensed users**.
 
 1. Tick Ada, Arturs, August and Cai.
 
-1. Select **Manage licenses**. Add **Enterprise Mobility + Security E5** and **Office 365 E5** licenses to the selected users, with a **Usage location** of **Switzerland**.
+1. Add **Enterprise Mobility + Security E5** and **Office 365 E5** licenses, with a **Usage location** of **Switzerland**.
 
 
 #### Exercise 13: Enable Seamless SSO (*Optional*)
@@ -1188,7 +1183,7 @@ ____________________________________________________________
 
 1. At the **User sign-in** screen, select the **Enable single sign-on**, then select **Next**.
 
-1. At the **Enable single-sign-on** screen, select **Enter credentials**. Sign in as **ADATUM\Administrator**. Select *Next*.
+1. At the **Enable single-sign-on** screen, select **Enter credentials**. Sign in as **ADATUM\Administrator**. Select **Next**.
 
 1. At the **Ready to congure** screen, select **Configure**.
 
@@ -1208,7 +1203,7 @@ ____________________________________________________________
 
 1. Open **Group Policy Management**.
 
-1. Edit *Default Domain Policy*. Navigate to **User Configuration** > **Preferences** > **Window Settings** > **Registry**.
+1. Edit **Default Domain Policy**. Navigate to **User Configuration** > **Preferences** > **Window Settings** > **Registry**.
 
 1. Create a new **Registry item**.
 
@@ -1248,7 +1243,9 @@ ____________________________________________________________
    | NTFS Permissions | Disable inheritance, leave entries as default |
    | Share permissions | Authenticated Users: Full Control |
 
-1. Open Internet Explorer. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=49117**. Download and run the tool. Store the extracted files in **C:\Shares\OfficeProPlus**.
+1. Open Internet Explorer. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=49117** (Office Deployment Tool). Download and run the tool. 
+
+   Store the extracted files in **C:\Shares\OfficeProPlus**.
 
 #### Task 2: Modify an Office 365 ProPlus installation
 
@@ -1294,7 +1291,9 @@ ____________________________________________________________
 
 1. In the Navigation menu, select **Users > Active users**.
 
-1. Select **Lindsey Gates**. On a **Licenses and Apps** section, deselect **Microsoft 365 apps for enterprise**.
+1. Select **Lindsey Gates**. On the **Licenses and Apps** section, deselect **Microsoft 365 apps for enterprise**.
+
+#### Task 2: Installing Office 365 ProPlus from the Office 365 portal
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
@@ -1311,8 +1310,6 @@ ____________________________________________________________
 1. Verify that Lindsey has Outlook and OneDrive and the other apps but no option to install Office 365 apps.
 
 1. Sign out from the portal. Close Edge.
-
-#### Task 2: Installing Office 365 ProPlus from the Office 365 portal
 
 1. Open Edge. Browse to the **Office 365 home page** and sign in as **Amy**.
 
@@ -1334,13 +1331,13 @@ ____________________________________________________________
 
    Note the Office folder containing the installation source files.
 
-#### Task 2: Install Office 365 apps
+#### Task 2: Install Office 365 ProPlus using the ODT
 
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
 1. Using **Run as Administrator**, open **Windows PowerShell ISE** or **Windows PowerShell**.
 
-1. Install Office 365 apps.
+1. Install the app.
 
    ```PowerShell
    \\LON-DC1\OfficeProPlus\setup.exe /configure \\LON-DC1\OfficeProPlus\AdatumConfiguration.xml
@@ -1348,7 +1345,7 @@ ____________________________________________________________
 
 1. Wait until the installation has finished on both **LON-CL3** and **LON-CL4**.
 
-#### Task 2: Verify installation
+#### Task 3: Verify installation
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
@@ -1356,7 +1353,7 @@ ____________________________________________________________
 
 1. At the **Stay signed in to all your apps** screen, select **No, sign in to this app only**.
 
-1. Create a document. Save it to **OneDrive - Contoso** (OneDrive for Business).
+1. Create a document. Save it to **OneDrive - Contoso**.
 
 1. Close Word.
 
@@ -1374,7 +1371,7 @@ ____________________________________________________________
 
 1. Create a document. Save it to **Documents**.
 
-   Note that OneDrive for Business is not set up for Sallie, because the installation was done as ADATUM\Administrator.
+   Note that OneDrive for Business is not set up for Sallie, because the Office 365 ProPlus installation was done as ADATUM\Administrator.
 
 1. Close Word.
 
@@ -1441,7 +1438,8 @@ ____________________________________________________________
    ```PowerShell
    New-DistributionGroup -Name "IT2" -Members holly -DisplayName "IT 2"
    New-DistributionGroup -Name "Development" -Members catherine, tameka -DisplayName "Development"
-   New-DistributionGroup -Name "Sales" -Members lindsey, christie -DisplayName "Sales"   Get-DistributionGroup
+   New-DistributionGroup -Name "Sales" -Members lindsey, christie -DisplayName "Sales"   
+   Get-DistributionGroup
    ```
 
 #### Task 4: Create resource mailboxes
@@ -1479,7 +1477,7 @@ ____________________________________________________________
 
 1. Create a meeting. Invite Francisco, Demonstration Laptop and Conference Room.
 
-1. Wait for the "accepted" messages from Demonstration Laptop and Conference Room.
+1. Wait for the “accepted” messages from Demonstration Laptop and Conference Room.
 
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
@@ -1491,7 +1489,7 @@ ____________________________________________________________
 
    Send the meeting request.
 
-1. Wait for the "declined" messages from Demonstration Laptop and Conference Room.
+1. Wait for the “declined” messages from Demonstration Laptop and Conference Room.
 
 ### Exercise 2: Configuring role-based access control
 
@@ -1499,7 +1497,7 @@ ____________________________________________________________
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
-1. Switch to Edge connected to the Exchange admin center.
+1. Switch to Edge connected to the **Exchange admin center**.
 
 1. In the Navigation menu, select **permissions**. In the centre pane, select **admin roles**.
 
@@ -1602,11 +1600,13 @@ ____________________________________________________________
 
 1. Open **Outlook**, signed in as **Amy**.
 
-1. Send an e-mail to alias@outlook.com.
+1. Send an e-mail to **alias@outlook.com** with a subject of “External recipient”.
 
 1. Send an email to Holly.
 
-1. Open a web browser and sign in to alias@outlook.com  and verify the disclaimer has been added.
+1. Open a web browser and sign in to **alias@outlook.com**.
+
+1. Read the email from Amy and verify the disclaimer has been added.
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -1699,6 +1699,8 @@ ____________________________________________________________
    XJS*C4JDBQADN1.NSBN3*2IDNEN*GTUBE-STANDARD-ANTI-UBE-TEST-EMAIL*C.34X
    ```
 
+   *Link*:  https://spamassassin.apache.org/gtube/
+
 1. Repeat the above, to francisco@adatumXXXXXX.onelearndns.com.
 
 1. Switch to the Edge tab running **Office 365 Security & Compliance**.
@@ -1707,7 +1709,7 @@ ____________________________________________________________
 
 1. Review the quarantined messages.
 
-*The GTUBE test email should trigger the anti-spam features of an email system. Sometimes, however, Exchange Online rejects it before the message reaches a tenant. Check the inbox of alias@outlook.com for any NDRs.*
+*The GTUBE test email should trigger the anti-spam features of an email system. Often, however, Exchange Online rejects it before the message even reaches a tenant. Check the inbox of alias@outlook.com for any NDRs.*
 
 ### Exercise 2: Configuring client access policies
 
@@ -1733,7 +1735,7 @@ ____________________________________________________________
 
 1. Select **Sallie McIntosh**, then select **Edit** (the pencil icon).
 
-1. On the **mailbox features** tab, next to Email Connectivity, Outlook on the web: Enabled, select **View details**. Assign the Limited features policy.
+1. On the **mailbox features** tab, next to Email Connectivity, Outlook on the web: Enabled, select **View details**. Assign the **Limited features** policy.
 
 1. Open **Outlook 2016**, signed in as MOD Administrator.
 
@@ -1790,23 +1792,25 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **SharePoint admin center** and sign in as the tenant owner.
 
-1. Select **Settings** then select **Site storage limits**
+1. Select **Settings** then **Site storage limits**
 
 1. Verify that Site storage limits is set to **Automatic**.
 
-1. In the **SharePoint admin center**, select **Policies > Sharing**. Verify that both SharePoint and OneDrive are set to **Most permissive**.
+1. In the **SharePoint admin center**, select **Policies > Sharing**. 
+
+   Verify that both SharePoint and OneDrive are set to **Most permissive**.
 
 #### Task 2: Configure user profiles
 
 1. In the **SharePoint admin center**, select **More features**. In the centre pane, under **User profiles** select **Open**.
 
-1. Select ** Manage user profiles**.
+1. Select **Manage user profiles**.
 
-1. Enter "Ada", select **Find**. Edit Ada’s profile.
+1. Enter **Ada**, select **Find**. 
 
-1. Set the **Manager** to **MOD Administrator**.
+1. Edit Ada’s profile. Set the **Manager** to **MOD Administrator**.
 
-1. Close the browser tab and select **Open** again. *This is because many SharePoint central admin pages have no breadcrumb trail.*
+1. Close the browser tab and select **Open** again. *This is because many SharePoint admin pages have no breadcrumb trail.*
 
 1. Select **Setup My Sites**.
 
@@ -1822,7 +1826,7 @@ ____________________________________________________________
 
 ### Exercise 2: Creating and configuring SharePoint Online site collections
 
-#### Task 1: Create a site collection using the SharePoint admin center
+#### Task 1: Create a site collection using the portal
 
 1. In the **SharePoint admin center**, select **Sites > Active Sites**, then select **+ Create**.
 
@@ -1847,7 +1851,7 @@ ____________________________________________________________
 
    In the script below, replace *LODSAXXXXXX* with your tenant details (for example, LODSA1234567).
 
-1. Open Edge. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=35588**. Download and install the x64 version of the tool.
+1. Open Edge. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=35588** (SharePoint Online Management Shell). Download and install the x64 version of the tool.
 
 1. Run **Windows PowerShell ISE** or **Windows PowerShell**.
 
@@ -1891,13 +1895,15 @@ ____________________________________________________________
 
 1. Open a new browser tab. Browse to **https://LODSAXXXXXX.sharepoint.com/sites/marketing**.
 
-1. Select **Not following** and wait for the link to change to "Following".
+1. Select **Not following** and wait for the link to change to “Following”.
 
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
 1. Open a new browser tab. Browse to **https://LODSAXXXXXX.sharepoint.com/sites/marketing**. Sign in as **Catherine**.
 
-   This should fail. Catherine’s account is blocked (from a previous lab).
+   This will fail. Catherine’s account is blocked (from a previous lab).
+
+1. Close Edge.
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -1961,7 +1967,7 @@ ____________________________________________________________
 
 1. Select **Share** (top-right).
 
-1. Invite alias@outlook.com.
+1. Invite **alias@outlook.com**.
 
 1. Select the **Documents** collection. Create a **Word document** called **Budgets**.
 
@@ -1969,7 +1975,7 @@ ____________________________________________________________
 
 1. Open Outlook on the Web in a new browser tab.
 
-1. Send an e-mail to Alias@outlook.com with a subject of "Document link" and the link pasted into the message body.
+1. Send an e-mail to **alias@outlook.com** with a subject of “Document link” and the link pasted into the message body.
 
 #### Task 2: Verify external user sharing
 
@@ -1977,13 +1983,13 @@ ____________________________________________________________
 
 1. Close all Edge windows.
 
-1. Open Edge. Open the e-mail client for alias@outlook.com.
+1. Open Edge. Open the e-mail client for **alias@outlook.com**.
 
-1. Open the "MOD Administrator wants to share Accounts project" e-mail and select **Go To Accounts Project**.
+1. Open the “MOD Administrator wants to share Accounts project” e-mail and select **Go To Accounts Project**.
 
 1. Verify that the site loads.
 
-1. Open the "Document link" e-mail and select **Budgets.docx**.
+1. Open the “Document link” e-mail and select **Budgets.docx**.
 
 1. Verify that the document loads.
 
@@ -1993,13 +1999,18 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 10: Planning and configuring an Office 365 collaboration solution
 
+### Exercise 2: Configuring Yammer
+
+TODO:
+
+
 ### Exercise 2: Configuring OneDrive for Business
 
 #### Task 1: Enable OneDrive for Business synchronization (cloud-only users)
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
-1. Open **Word**.
+1. Open **Word**. Sign in as **Amy**.
 
 1. Create a document and save it to **OneDrive - Contoso**.
 
@@ -2046,9 +2057,9 @@ ____________________________________________________________
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
-1. Run **Outlook**.
+1. Run **Outlook**. Sign in as **Amy**.
 
-1. Open the "Sallie McIntosh shared the folder" e-mail and select **Tailspin Project**.
+1. Open the “Sallie McIntosh shared the folder” e-mail and select **Tailspin Project**.
 
 1. Verify that the folder loads (in Edge).
 
@@ -2078,7 +2089,7 @@ If Seamless SSO has been set up then the AD DS users will not need to provide pa
 
 1. *Repeat the above steps.*
 
-*Note*: Why is the OneDrive for Business folder called "OneDrive - Contoso"? Because the tenant name is "Contoso".
+*Note*: Why is the OneDrive for Business folder called “OneDrive – Contoso”? Because the tenant name is “Contoso”.
 
 Microsoft 365 admin center, Settings | Org settings, Organization profile, Organization information.
 
@@ -2103,7 +2114,7 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
    | Owners | MOD Administrator, Holly Dickson |
    | Group email address | adatummarketing@adatumXXXXXX.onelearndns.com |
    | Privacy | Private |
-   |Create a team for this group | Selected |
+   | Create a team for this group | Selected |
 
 1. *Refresh* the list until ADatum Marketing appears.
 
@@ -2140,7 +2151,7 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
    Add-UnifiedGroupLinks "Planning Group" –Links "Holly Dickson" –LinkType Owner
    ```
 
-   Note the "Only Members can be Owners of a group. Please add 'holly' first as members before adding them as owners." error message.
+   Note the “Only Members can be Owners of a group. Please add 'holly' first as members before adding them as owners.” error message.
 
 1. Add additional members.
 
@@ -2169,9 +2180,9 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Open Edge. Browse to the **Office 365 home page** and sign in as **Amy**.
 
-1. Select **Outlook**.
+1. From the home page, select **Outlook**.
 
-1. Note the "You've joined the ADatum Marketing group" e-mail.
+1. Note the “You've joined the ADatum Marketing group” e-mail.
 
 1. In the navigation pane, select **ADatum Marketing** (scroll down).
 
@@ -2179,7 +2190,7 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. In the navigation pane, select **Discover groups** (scroll down).
 
-1. Search for and join **Planning Group**.
+1. Search for **Planning Group** and join it.
 
    The group is public, so Amy does not need permission or approval to join the group.
 
@@ -2191,19 +2202,23 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. In the navigation pane, select **Planning Group**.
 
+1. Verify that the message from Amy is present.
+
 1. Open **Teams**. Sign in as **Amy**, select **No, sign in to this app only**.
 
 1. In the **Teams** list, select **Adatum Marketing**.
 
-1. In the **Activity feed**, note the "MOD added you to ADatum Marketing" message.
+1. Verify that there are no posts. Email messages to a group do not appear in the Teams app.
+
+1. In the **Activity feed**, note the “MOD added you to ADatum Marketing” message.
 
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Office 365 home page** and sign in as **Sallie**.
 
-1. Select **Outlook**.
+1. From the home page, select **Outlook**.
 
-1. Note that there is no "You've joined the Planning Group group" e-mail (because Sallie was added using PowerShell). **TODO**
+1. Note that there is no “You've joined the Planning Group group” e-mail (because Sallie was added using PowerShell). **TODO**
 
 1. In the navigation pane, select **Planning Group** (scroll down).
 
@@ -2213,9 +2228,11 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. In the navigation pane, select **Planning Group**.
 
+1. Verify that the message from Amy and the mesage from Sallie are present.
+
 1. Open **Teams**. Sign in as **Sallie**, select **No, sign in to this app only**.
 
-1. Note that there is no Planning Group team.
+1. Verify that there is no Planning Group team.
 
 1. Select **Join or create a team**, then **Create team**, then **Create from… An existing Microsoft 365 group or team**.
 
@@ -2228,6 +2245,8 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 1. Select **Join or create a team**, then **Create team**, then **Create from… An existing Microsoft 365 group or team**, then **Microsoft 365 group**.
 
 1. Select **Planning Group** and select **Create**.
+
+1. Verify that the Planning Group team is present.
 
 1. Sign out of Teams.
 
@@ -2243,7 +2262,7 @@ ____________________________________________________________
 
 1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
-1. Run Internet Explorer. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=53018**, the Azure Information Protection unified labelling client.
+1. Run Internet Explorer. Browse to **https://www.microsoft.com/en-us/download/details.aspx?id=53018** (Azure Information Protection unified labelling client).
 
 1. Download **AzInfoProtection_UL.exe** and save it to **C:\Shares\OfficeProPlus**.
 
@@ -2297,7 +2316,7 @@ ____________________________________________________________
    | When content matches these conditions | Automatically apply the label |
    | Display this message to users when the label is applied | Personal Identifiable Information (PII) was detected |
 
-1. Select **Publish labels*. This creates a policy.
+1. Select **Publish labels**. This creates a policy.
 
    | Setting | Value |
    | --- | --- |
@@ -2335,11 +2354,11 @@ Alex Wilbur’s IRD number is 21-234-567.
 
 1. Save the document to the **Documents** library of the **ADatum Marketing** SharePoint site.
 
-   Note: If the Sites location in the Sav As dialog shows "There are no sites to show right now" then Office has not yet cached the SharePoint Sites. In this case, select Browse and enter https://lodsXXXXXXX.sharepoint.com/sites/adatummarketing in the address bar.
+   Note: If the Sites location in the Save As dialog shows “There are no sites to show right now” then Office has not yet cached the SharePoint Sites. In this case, select Browse and enter https://lodsXXXXXXX.sharepoint.com/sites/adatummarketing in the address bar.
 
 1. Word should automatically apply the PII policy.
 
-  *It should, but often doesn't. I can't find anything on the web for why it might not work. TODO.*
+  *It should, but often doesn't. I can't find anything on the web for why it might not work.* **TODO**
 
 #### Task 3: Create protected content (AD DS user)
 
@@ -2362,9 +2381,9 @@ ____________________________________________________________
 
 1. Send an email to **user@alt.none** with a subject of **Test email to non-existent domain**.
 
-1. Open the "Delivery has failed" message.
+1. Open the “Delivery has failed” message.
 
-1. Copy the grey body text (from "Diagnostic information for administrators" to the end) to the clipboard.
+1. Copy the grey body text (from “Diagnostic information for administrators” to the end) to the clipboard.
 
 1. Open Edge. Browse to **https://testconnectivity.microsoft.com**.
 
@@ -2378,9 +2397,9 @@ ____________________________________________________________
 
 1. Send an email to **difflop1248999@outlook.com** with a subject of **Test email to non-existent user**.
 
-1. Open the "Delivery has failed" message.
+1. Open the “Delivery has failed” message.
 
-1. Copy the grey body text (from "Diagnostic information for administrators" to the end) to the clipboard.
+1. Copy the grey body text (from “Diagnostic information for administrators” to the end) to the clipboard.
 
 1. Open Edge. Browse to **https://testconnectivity.microsoft.com**.
 
@@ -2388,7 +2407,7 @@ ____________________________________________________________
 
 1. Paste the text, select **Analyze headers**.
 
-1. Review the results, in particular the first header, that contains "Mailbox unavailable."
+1. Review the results, in particular the first header, that contains “Mailbox unavailable.”
 
 #### Task 3: Analyse Mail Flow using the portal
 
@@ -2396,7 +2415,7 @@ ____________________________________________________________
 
 1. Open Edge. Browse to the **Office 365 Security & Compliance Center** and sign in as the tenant owner.
 
-   *Note*: At the time of writing, Message Trace is also available in the Modern Exchange admin center, but not in the Microsoft 365 Compliance center or the Microsoft 365 Security center.
+   At the time of writing, Message Trace is also available in the Modern Exchange admin center, but not in the Microsoft 365 Compliance center or the Microsoft 365 Security center.
 
 1. In the navigation pane, select **Mail flow > Message trace**.
 
@@ -2410,11 +2429,11 @@ ____________________________________________________________
 
 1. Review the message trace search results. In particular, review the two failed messages from Amy.
 
-   The message detail pane does not allow you to copy the message headers in the same way we did above.
+   The message detail pane does not allow you to copy the message headers in the same way Outlook does.
 
 1. Select **Export results > Export loaded results**.
 
-1. Open the downloaded csv file. Note how little information is included.
+1. Open the downloaded csv file. Review the (limited) information.
 
 #### Task 4: Analyse Mail Flow using PowerShell.
 
@@ -2447,7 +2466,7 @@ ____________________________________________________________
    Get-MessageTrace -Page 1 -PageSize 10 | fl *address, *id, subject
    ```
 
-   Copy the MessageTraceId of the "Test email to non-existent user" message.
+   Copy the MessageTraceId of the “Test email to non-existent user” message.
 
    ```PowerShell
    Get-MessageTraceDetail -MessageTraceId "<paste>" -RecipientAddress "difflop1248999@outlook.com"
@@ -2463,7 +2482,7 @@ ____________________________________________________________
 
 1. In the Navigation menu, select **Health > Service health**.
 
-1. If there are any warnings or advisories then select on the link and read the messages.
+1. Review the content.
 
 1. In the Navigation menu, select **Health > Message center**.
 
@@ -2471,7 +2490,7 @@ ____________________________________________________________
 
 1. In the Navigation menu, select **Reports > Usage**.
 
-1. Review the content. Note the "Date as of" - these reports are 48 hours behind the current time.
+1. Review the content. Note the “Date as of” - these reports are 48 hours behind the current time.
 
 1. In Edge, open a new tab. Browse to the **Microsoft 365 security center**.
 
