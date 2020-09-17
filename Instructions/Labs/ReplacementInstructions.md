@@ -49,6 +49,10 @@ ____________________________________________________________
 
 1. Record the full domain name (`adatumXXXXXX.onelearndns.com`), name server name (`NSadatumXXXXXX`), and public IP address in the text boxes in the LODS interface.
 
+When these labs use “adatumXXXXXX.onelearndns.com”, replace it with your actual domain name.
+
+When these labs use “LODSXXXXXXX”, replace it with your actual tenant prefix.
+
 ### External email address
 
 You require an external email address (for example an outlook.com or gmail.com account). The lab instructions refer to this as *alias@outlook.com*.
@@ -66,21 +70,17 @@ ____________________________________________________________
 
 ### Exercise 1: Explore the various administrative portals.
 
+During this lab, if asked to save the password or to stay signed in, select **Yes**.
+
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to **https://portal.office.com**. This opens the **Office 365 home page**.
-
-1. Sign in using the tenant owner account (**admin@LODSXXXXXXX.onmicrosoft.com**).
+1. Open Edge. Browse to the **Office 365 home page** (**https://portal.office.com**). Sign in using the tenant owner (**admin@LODSXXXXXXX.onmicrosoft.com**).
 
 1. Select the Admin link. This opens the **Microsoft 365 admin center**.
 
 1. Close Edge.
 
-1. Open Edge. Browse to **https://admin.microsoft.com**. This opens the **Microsoft 365 admin center** directly, without having to go to the Office 365 home page first.
-
-1. Sign in using the tenant owner account.
-
-1. If asked to save the password or to stay signed in, select **Yes**.
+1. Open Edge. Browse to the **Microsoft 365 admin center** directly (**https://admin.microsoft.com**). Sign in using the tenant owner.
 
 1. In the Navigation menu (left-hand pane), select **… Show all**.
 
@@ -102,13 +102,13 @@ ____________________________________________________________
 
    You can open this site directly by browsing to **https://aad.portal.azure.com**.
 
-1. In the navigation menu of the **Azure Active Directory admin center**, select **Azure Active Directory**. In the **Contoso | Overview blade**, select **Users** in the **Manage** section.
+1. In the **Azure Active Directory admin center**, select **Azure Active Directory**. In the **Contoso | Overview blade**, in the **Manage** section, select **Users**.
 
 1. How many accounts are listed? The number should match the number of active users.
 
 1. Select the **Microsoft 365 admin center** browser tab.
 
-1. In the Navigation menu, select **Security**. This opens the old **Office 365 Security & Compliance** center.
+1. In the Navigation menu, select **Security**. This opens the **Office 365 Security & Compliance** center.
 
    Note that you can open this portal by browsing to **https://protection.office.com**.
 
@@ -118,7 +118,7 @@ ____________________________________________________________
 
    Note that you can open this portal by browsing to **https://compliance.microsoft.com**.
 
-1. Open a new tab and browse to https://compliance.microsoft.com. This opens the new **Microsoft 365 Security** portal.
+1. Open a new tab and browse to **https://compliance.microsoft.com**. This opens the new **Microsoft 365 Security** portal.
 
 1. Select the **Microsoft 365 admin center** browser tab.
 
@@ -126,9 +126,7 @@ ____________________________________________________________
 
 1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
-1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** (admin.microsoft.com) and sign in as the tenant owner.
-
-1. If asked to save the password or to stay signed in, select **Yes**.
+1. Open Internet Explorer. Browse to the **Microsoft 365 admin center** and sign in as the tenant owner.
 
 1. In the Navigation menu, select **Settings > Domains**.
 
@@ -136,7 +134,7 @@ ____________________________________________________________
 
 1. Type **adatumXXXXXX.onelearndns.com** then select **Use this domain**.
 
-1. Select **Add a TXT record** then select **Continue**.
+1. Select **Add a TXT record** then **Continue**.
 
 1. Copy the **TXT value** to the clipboard.
 
@@ -300,19 +298,19 @@ ____________________________________________________________
 
 1. Switch to the **Microsoft 365 admin center** browser.
 
-1. In the **Active Users** list, select **Amy Santiago**.
+1. Select **Amy Santiago**.
 
-1. Set Amy's department to Sales.
+1. Set Amy’s department to Sales.
 
 ### Exercise 3: Block a user
 
 1. Switch to the **Microsoft 365 admin center** browser.
 
-1. In the **Active Users** list, select **Francisco Chaves**.
+1. Select **Francisco Chaves**.
 
-1. Block Francisco's sign-in.
+1. Block Francisco’s sign-in.
 
-1. In Edge, open an InPrivate window and browse to the **Office 365 home page**and sign in as Francisco.
+1. Open an InPrivate Edge window. Browse to the **Office 365 home page** and sign in as **Francisco**.
 
 1. You will see a "Your account has been locked" message.
 
@@ -322,7 +320,9 @@ ____________________________________________________________
 
 1. In the **Active Users** list, select **Francisco Chaves**.
 
-1. Unblock Francisco's sign-in. *Note*: This may take up to 15 minutes to take effect.
+1. Unblock Francisco’s sign-in.
+
+   *This may take up to 15 minutes to take effect.*
 
 1. In Edge, open an InPrivate window and sign in to the Office portal again as Francisco.
 
@@ -334,9 +334,9 @@ ____________________________________________________________
 
 1. In the **Active Users** list, select **Lindsey Gates**.
 
-1. Delete Lindsey's account.
+1. Delete Lindsey’s account.
 
-1. In Edge, open an InPrivate window and browse to the **Office 365 home page**and sign in as Lindsey.
+1. Open an InPrivate Edge window. Browse to the **Office 365 home page** and sign in as **Lindsey**.
 
 1. You will see a "This username may be incorrect" message.
 
@@ -362,7 +362,7 @@ ____________________________________________________________
 
 1. In the **Active Users** list, select **Lindsey Gates**.
 
-1. Assign an Office 365 E5 and an Enterprise Mobility + Security E5 license.
+1. Assign *Office 365 E5* and *Enterprise Mobility + Security E5* licenses.
 
 ### Exercise 5: Password Policy
 
@@ -374,7 +374,7 @@ ____________________________________________________________
 
 1. Set 14 days before passwords expire, 14 days before a user is notified.
 
-1. In Edge, open an InPrivate window and browse to the **Office 365 home page**and sign in as Lindsey.
+1. Open an InPrivate Edge window. Browse to the **Office 365 home page** and sign in as **Lindsey**.
 
 1. Note that Lindsey now has Outlook, OneDrive, etc in the list.
 
@@ -414,14 +414,14 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 1. In the **Active groups** list, select **Refresh**. Repeat until both Sales and Accounts are in the list.
 
-1. In the **Active groups** list, select **Sales**. Set the members.
+1. Select **Sales**. Set the members.
 
    | Setting | Value |
    | --- | --- |
    | Owners | Lindsey Gates |
    | Members | Lindsey Gates, Christie Thomas, Amy Santiago |
 
-1. In the **Active groups** list, select **Accounts**. Set the members.
+1. Select **Accounts**. Set the members.
 
    | Setting | Value |
    | --- | --- |
@@ -430,13 +430,13 @@ TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tut
 
 ### Exercise 9: Delete a group
 
-1. In the **Active groups** list, select **Sales**.
+1. Select **Sales**.
 
 1. Delete the group.
 
-1. In the Navigation menu, select **Users > Active users**. Note that the user accounts for Amy, Christie and Lindsey are still present.
+1. In the Navigation menu, select **Users > Active users**. Verify that the user accounts for Amy, Christie and Lindsey are still present.
 
-1. In the Navigation menu, select **Groups > Deleted groups**. Note that the Sales group does not appear. Only Microsoft 365 groups can be undeleted.
+1. In the Navigation menu, select **Groups > Deleted groups**. The Sales group does not appear. Only Microsoft 365 groups can be undeleted.
 
 
 ____________________________________________________________
@@ -458,7 +458,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 1. Close **Windows PowerShell ISE** and open it again without using Run as administrator.
 
-1. Create a credential. Sign in as the tenant owner account.
+1. Create a credential. Sign in as the tenant owner.
 
    ```PowerShell
    $Credential = Get-Credential
@@ -512,7 +512,7 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 3: Block a user
 
-1. Block Catherine's sign-in.
+1. Block Catherine’s sign-in.
 
    ```PowerShell
    Set-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com" -BlockCredential $true
@@ -520,18 +520,19 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
 
 ### Exercise 4: Delete and undelete a user
 
-1. Delete Catherine's user account.
+1. Delete Catherine’s user account.
 
    ```PowerShell
    Remove-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com"
    ```
-1. List all deleted users. Note that Catherine's account is still licensed.
+
+1. List all deleted users. Note that Catherine’s account is still licensed.
 
    ```PowerShell
    Get-MsolUser -ReturnDeletedUsers
    ```
 
-1. Undelete Catherine's user account.
+1. Undelete Catherine’s user account.
 
    ```PowerShell
    Restore-MsolUser -UserPrincipalName "catherine@adatumXXXXXX.onelearndns.com"
@@ -545,15 +546,17 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Get-MsolUser -ReturnDeletedUsers
    ```
 
+TODO: Catherine’s licenses.
+
 ### Exercise 5: Bulk create users
 
 1. Run **Explorer** and navigate to **C:\Labfiles**.
 
 1. Right-click **O365users.csv**, choose **Edit**.
 
-1. Replace all "yourdomain.hostdomain.com" with your domain name (adatumXXXXXX.onelearndns.com).
+1. Replace all "yourdomain.hostdomain.com" with adatumXXXXXX.onelearndns.com.
 
-1. Replace all "adatumyyxxxx:ENTERPRISEPACK" with your license name (LODSXXXXXXX:ENTERPRISEPREMIUM).
+1. Replace all "adatumyyxxxx:ENTERPRISEPACK" with LODSXXXXXXX:ENTERPRISEPREMIUM.
 
 1. Save the file and close Notepad.
 
@@ -601,22 +604,22 @@ Before running the code below, you must replace the placeholder "@adatumXXXXXX.o
    Set-MsolPasswordPolicy -DomainName "adatumXXXXXX.onelearndns.com" -ValidityPeriod 90 -NotificationDays 14
    ```
 
-   If you wanted to do this for all your domains, you could use the following.
+   If you wanted to do this for all of your domains, you could use the following.
 
    ```PowerShell
    Get-MsolDomain | Where-Object IsInitial -eq $false | Select-Object @{ l="DomainName"; e={$PSItem.Name} } | Set-MsolPasswordPolicy -ValidityPeriod 90 -NotificationDays 14
    ```
 
-1. Reset a user's password.
+1. Reset a user’s password.
 
    ```PowerShell
    Set-MsolUserPassword –UserPrincipalName "tameka@adatumXXXXXX.onelearndns.com" –NewPassword "Pa55w.rd9876"
    ```
 
-1. Enable password expiry for all users.
+1. Disable password expiry for all users (for ease of use during the labs).
 
    ```PowerShell
-   Get-MsolUser | Set-MsolUser –PasswordNeverExpires $false
+   Get-MsolUser | Set-MsolUser –PasswordNeverExpires $true
    ```
 
 
@@ -629,17 +632,17 @@ ____________________________________________________________
 
 1. In the Navigation menu, select **Users > Active users**.
 
-1. In the **Active Users** list, select **Francisco Chaves** then select **Manage roles**.
+1. Select **Francisco Chaves**.
 
-1. Select **Billing admin** (in the **Other** section).
+1. Select **Manage roles**, **Billing admin** (in the **Other** section).
 
-1. In the **Active Users** list, select **Tameka Reed** then select **Manage roles**.
+1. Select **Tameka Reed**.
 
-1. Select **Password admin** (in the **Identity** section).
+1. Select **Manage roles**, **Password admin** (in the **Identity** section).
 
-1. In the **Active Users** list, select **Christie Thomas** then select **Manage roles**.
+1. Select **Christie Thomas**.
 
-1. Select **User admin**.
+1. Select **Manage roles**, **User admin**.
 
 1. Close all Edge windows.
 
@@ -675,7 +678,7 @@ ____________________________________________________________
 
 ### Exercise 3: Test service administrators
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as Tameka.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as **Tameka**.
 
 1. In the Navigation menu, select **Users > Active users**.
 
@@ -683,11 +686,11 @@ ____________________________________________________________
 
 1. Note that you cannot change group membership or contact information.
 
-1. Reset Jessica's password. Make a note of the new password.
+1. Reset Jessica’s password to **Pa55w.rd9876**.
 
 1. Sign out of the admin center and close Edge.
 
-1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as Tameka.
+1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as **Tameka**.
 
 1. In the Navigation menu, select **Users > Active users**.
 
@@ -712,7 +715,7 @@ ____________________________________________________________
 
 1. In the **Active Users** list, select **Chris Breland**.
 
-1. Delete Chris Breland's user account.
+1. Delete Chris’s account.
 
 1. Sign out of the admin center and close Edge.
 
@@ -819,13 +822,13 @@ This opens the **Microsoft Remote Connectivity Analyzer**.
 
 1. In the navigation menu, select **Office 365**. In the main pane, select **Help Identify My Issue with Lync DNS**.
 
-1. Enter Francisco's sign-in address (francisco@adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then select **Perform Test**.
+1. Enter Francisco’s sign-in address (francisco@adatumXXXXXX.onelearndns.com), select **Office 365 (Default)**, then select **Perform Test**.
 
 1. Verify that there are no errors.
 
 1. In the navigation menu, select **Office 365**. In the main pane, select **Outlook Connectivity**.
 
-1. Enter Francisco's sign-in address and password, select **Use Autodiscover to detect server settings**, select the **I understand** box, then select **Perform Test**.
+1. Enter Francisco’s sign-in address and password, select **Use Autodiscover to detect server settings**, select the **I understand** box, then select **Perform Test**.
 
 1. Verify that there are no errors.
 
@@ -865,9 +868,9 @@ This opens the **Microsoft Remote Connectivity Analyzer**.
    | Your name | Francisco Chaves |
    | E-mail address | francisco@adatumXXXXXX.onelearndns.com |
 
-1. Reply to MOD Administrator's email.
+1. Reply to MOD Administrator’s email.
 
-1. Accept MOD Administrator's meeting request.
+1. Accept MOD Administrator’s meeting request.
 
 
 
@@ -915,7 +918,7 @@ ____________________________________________________________
 
 1. In IdFix, select Query on the toolbar. Five issues will be shown.
 
-1. Issue: An Dung Dao's account has spaces in the User Principal Name.
+1. Issue: An Dung Dao’s account has spaces in the User Principal Name.
 
    Resolution: In the Action column, select **EDIT**.
 
@@ -923,15 +926,15 @@ ____________________________________________________________
 
    Resolution: In the Action column, select **EDIT**.
 
-1. Issue: Klemen Sic's account has two @ symbols in the User Principal Name.
+1. Issue: Klemen Sic’s account has two @ symbols in the User Principal Name.
 
    Resolution: In the Action column, select **EDIT**.
 
-1. Issue: Ngoc Bich Tran's account has spaces in the User Principal Name.
+1. Issue: Ngoc Bich Tran’s account has spaces in the User Principal Name.
 
    Resolution: In the Action column, select **EDIT**.
 
-1. Issue: Lara Raisic and Logan Boyle have the same email adrress. IdFix doesn't display Logan's account (it should – this is a bug in the tool).
+1. Issue: Lara Raisic and Logan Boyle have the same email adrress. IdFix doesn't display Logan’s account (it should – this is a bug in the tool).
 
    Resolution: In the Update column, enter **larar@adatum.com**. In the Action column, select **EDIT**.
 
@@ -945,7 +948,7 @@ ____________________________________________________________
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**.
 
-1. Create a credential. Sign in as the tenant owner account.
+1. Create a credential. Sign in as the tenant owner.
 
    ```PowerShell
    $Credential = Get-Credential
@@ -1349,7 +1352,7 @@ ____________________________________________________________
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
-1. Open **Word**. Sign in as Amy.
+1. Open **Word**. Sign in as **Amy**.
 
 1. At the **Stay signed in to all your apps** screen, select **No, sign in to this app only**.
 
@@ -1377,9 +1380,9 @@ ____________________________________________________________
 
 1. Open **Outlook**. Sign in as **Sallie**.
 
-1. Reply to Amy's e-mail.
+1. Reply to Amy’s e-mail.
 
-1. Accept Amy's meeting request.
+1. Accept Amy’s meeting request.
 
 
 
@@ -1411,7 +1414,7 @@ ____________________________________________________________
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**.
 
-1. Create a credential. Sign in as the tenant owner account.
+1. Create a credential. Sign in as the tenant owner.
 
    ```PowerShell
    $Credential = Get-Credential
@@ -1482,9 +1485,9 @@ ____________________________________________________________
 
 1. Open **Outlook**, signed in as **Sallie**.
 
-1. Create a meeting at the same time as Amy's meeting. Select the Scheduling Assistant tab.
+1. Create a meeting at the same time as Amy’s meeting. Select the Scheduling Assistant tab.
 
-   Invite Francisco, Demonstration Laptop and Conference Room. Note that Francisco's time shows as Tentative and Demonstration Laptop and Conference Room show as Busy.
+   Invite Francisco, Demonstration Laptop and Conference Room. Note that Francisco’s time shows as Tentative and Demonstration Laptop and Conference Room show as Busy.
 
    Send the meeting request.
 
@@ -1563,7 +1566,7 @@ ____________________________________________________________
    | From | Partner organization |
    | To | Office 365 |
    | Name | Humongous Insurance Incoming |
-   | How do you want to identify the partner organization? | Use the sender's domain |
+   | How do you want to identify the partner organization? | Use the sender’s domain |
    | What sender domain? | humongousinsurance.com |
    | What security restrictions do you want to apply? | Reject email messages if they aren’t sent over TLS |
 
@@ -1609,7 +1612,7 @@ ____________________________________________________________
 
 1. Open **Outlook 2016**, signed in as **MOD Administrator**.
 
-1. Approve Amy's e-mail message to Holly.
+1. Approve Amy’s e-mail message to Holly.
 
 #### Task 4: Create a journal rule for members of the research department
 
@@ -1736,7 +1739,7 @@ ____________________________________________________________
 
 1. Send a message to Sallie, attaching the csv files in C:\Labfiles.
 
-1. In Edge, open an InPrivate window and browse to the **Office 365 home page**and sign in as Sallie.
+1. Open an InPrivate Edge window. Browse to the **Office 365 home page** and sign in as **Sallie**.
 
 1. Open the e-mail from MOD Administrator. 
 
@@ -1799,7 +1802,7 @@ ____________________________________________________________
 
 1. Select ** Manage user profiles**.
 
-1. Enter "Ada", select **Find**. Edit Ada's profile.
+1. Enter "Ada", select **Find**. Edit Ada’s profile.
 
 1. Set the **Manager** to **MOD Administrator**.
 
@@ -1836,7 +1839,7 @@ ____________________________________________________________
    | Addition owners | (None) |
    | Members | (None) |
 
-1. Select the new site's name then select **Sharing**
+1. Select the new site’s name then select **Sharing**
 
 1. Set **Site content can be shared with** to **Anyone**.
 
@@ -1848,7 +1851,7 @@ ____________________________________________________________
 
 1. Run **Windows PowerShell ISE** or **Windows PowerShell**.
 
-1. Create a credential. Sign in as the tenant owner account.
+1. Create a credential. Sign in as the tenant owner.
 
    ```PowerShell
    $Credential = Get-Credential
@@ -1886,25 +1889,25 @@ ____________________________________________________________
 
 1. Select SharePoint. Note that Tameka has no sites listed.
 
-1. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing.
+1. Open a new browser tab. Browse to **https://LODSAXXXXXX.sharepoint.com/sites/marketing**.
 
 1. Select **Not following** and wait for the link to change to "Following".
 
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
-1. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing. Sign in as **catherine@adatumXXXXXX.onelearndns.com**.
+1. Open a new browser tab. Browse to **https://LODSAXXXXXX.sharepoint.com/sites/marketing**. Sign in as **Catherine**.
 
-   This should fail. Catherine's account is blocked (from a previous lab).
+   This should fail. Catherine’s account is blocked (from a previous lab).
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as the tenant owner.
 
-1. Unblock Catherine's account.
+1. Unblock Catherine’s account.
 
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
-1. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing. Sign in as **catherine@adatumXXXXXX.onelearndns.com**.
+1. Open a new browser tab. Browse to **https://LODSAXXXXXX.sharepoint.com/sites/marketing**. Sign in as **Catherine**.
 
 1. In the **You need permission to access this site** box, enter some text and request access.
 
@@ -1918,7 +1921,7 @@ ____________________________________________________________
 
 1. Select **Settings** (the cog icon), **Site permissions**, **Advanced permissions settings**.
 
-1. Select **Show access requests and invitations**. **Approve** Catherine's request.
+1. Select **Show access requests and invitations**. **Approve** Catherine’s request.
 
 1. Select **Home**.
 
@@ -1930,13 +1933,13 @@ ____________________________________________________________
 
 1. On **LON-CL4**, signed in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing. Sign in as **catherine@adatumXXXXXX.onelearndns.com**.
+1. Open Edge. Browse to **https://LODSAXXXXXX.sharepoint.com/sites/marketing**. Sign in as **Catherine**.
 
    Catherine has access to the site.
 
 1. Sign out Catherine and close Edge.
 
-1. Open Edge. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/marketing. Sign in as **francisco@adatumXXXXXX.onelearndns.com**.
+1. Open Edge. Browse to **https://LODSAXXXXXX.sharepoint.com/sites/marketing**. Sign in as **Francisco**.
 
    Francisco has access to the site.
 
@@ -1954,7 +1957,7 @@ ____________________________________________________________
 
 1. Select **Policies**, **External Sharing**. Set **Site content can be shared with:** **Anyone**.
 
-1. Open a new browser tab. Browse to  https://LODSAXXXXXX.sharepoint.com/sites/AcctsProj.
+1. Open a new browser tab. Browse to **https://LODSAXXXXXX.sharepoint.com/sites/AcctsProj**.
 
 1. Select **Share** (top-right).
 
@@ -2006,7 +2009,7 @@ ____________________________________________________________
 
 1. Open **File Explorer**.
 
-1. Select **OneDrive**. Sign in as **amy@adatumXXXXXX.onelearndns.com**.
+1. Select **OneDrive**. Sign in as **Amy**.
 
 1. Once OneDrive synchronisation is complete, select **OneDrive - Contoso**. Verify that the new document is listed.
 
@@ -2112,7 +2115,7 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**.
 
-1. Create a credential. Sign in as the tenant owner account.
+1. Create a credential. Sign in as the tenant owner.
 
    ```PowerShell
    $Credential = Get-Credential
@@ -2184,11 +2187,11 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Send an e-mail to the group.
 
-1. Open **Outlook**. Sign in as **amy@adatumXXXXXX.onelearndns.com**, select **No, sign in to this app only**.
+1. Open **Outlook**. Sign in as **Amy**, select **No, sign in to this app only**.
 
 1. In the navigation pane, select **Planning Group**.
 
-1. Open **Teams**. Sign in as **amy@adatumXXXXXX.onelearndns.com**, select **No, sign in to this app only**.
+1. Open **Teams**. Sign in as **Amy**, select **No, sign in to this app only**.
 
 1. In the **Teams** list, select **Adatum Marketing**.
 
@@ -2206,11 +2209,11 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Send an e-mail to the group.
 
-1. Open **Outlook**. Sign in as **sallie@adatumXXXXXX.onelearndns.com**, select **No, sign in to this app only**.
+1. Open **Outlook**. Sign in as **Sallie**, select **No, sign in to this app only**.
 
 1. In the navigation pane, select **Planning Group**.
 
-1. Open **Teams**. Sign in as **sallie@adatumXXXXXX.onelearndns.com**, select **No, sign in to this app only**.
+1. Open **Teams**. Sign in as **Sallie**, select **No, sign in to this app only**.
 
 1. Note that there is no Planning Group team.
 
@@ -2220,7 +2223,7 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 
 1. Sign out of Teams.
 
-1. Open **Teams**. Sign in as **holly@adatumXXXXXX.onelearndns.com**, select **No, sign in to this app only**.
+1. Open **Teams**. Sign in as **Holly**, select **No, sign in to this app only**.
 
 1. Select **Join or create a team**, then **Create team**, then **Create from… An existing Microsoft 365 group or team**, then **Microsoft 365 group**.
 
@@ -2312,7 +2315,7 @@ ____________________________________________________________
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
-1. Open Edge. Browse to **https://lodsXXXXXXX.sharepoint.com/sites/adatummarketing**. Sign in as Amy.
+1. Open Edge. Browse to **https://lodsXXXXXXX.sharepoint.com/sites/adatummarketing**. Sign in as **Amy**.
 
 1. Follow the site.
 
@@ -2326,7 +2329,7 @@ ____________________________________________________________
 
 1. Create a new document. Enter the following text into the document.\
 Memo to HR.\
-Alex Wilbur's IRD number is 21-234-567.
+Alex Wilbur’s IRD number is 21-234-567.
 
    *Note: This number was generated (2 then 123456 then the correct checksum digit). Any resemblance to an actual entity is accidental.*
 
@@ -2419,7 +2422,7 @@ ____________________________________________________________
 
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**.
 
-1. Create a credential. Sign in as the tenant owner account.
+1. Create a credential. Sign in as the tenant owner.
 
    ```PowerShell
    $Credential = Get-Credential
@@ -2481,4 +2484,8 @@ ____________________________________________________________
 1. In the Navigation menu, select **Reports**.
 
 1. Review the content.
+
+
+
+
 
