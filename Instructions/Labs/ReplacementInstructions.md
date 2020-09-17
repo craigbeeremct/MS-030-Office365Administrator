@@ -1701,7 +1701,7 @@ ____________________________________________________________
 
    *Link*:  https://spamassassin.apache.org/gtube/
 
-1. Repeat the above, to francisco@adatumXXXXXX.onelearndns.com.
+1. Repeat the above, to **francisco@adatumXXXXXX.onelearndns.com**.
 
 1. Switch to the Edge tab running **Office 365 Security & Compliance**.
 
