@@ -364,7 +364,7 @@ ____________________________________________________________
 
 1. Assign **Office 365 E5** and **Enterprise Mobility + Security E5** licenses.
 
-### Exercise 5: Password Policy
+### Exercise 5: Manage password policy
 
 1. Switch to the **Microsoft 365 admin center** browser.
 
@@ -382,7 +382,7 @@ ____________________________________________________________
 
 1. Close the InPrivate window.
 
-### Exercise 6: Multifactor Authentication
+### Exercise 6: Enable multifactor authentication
 
 TODO: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-azure-mfa
 
@@ -592,7 +592,7 @@ ____________________________________________________________
    Get-MsolGroupMember -GroupObjectId $MarketingGroup.ObjectId
    ```
 
-### Exercise 7: Passwords, Password Policy
+### Exercise 7: Manage passwords and password policy
 
 1. Set password expiry.
 
@@ -622,7 +622,7 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 2C: Managing Office 365 service administrators
 
-### Exercise 1: Setting service administrators using the portal
+### Exercise 1: Set service administrators using the portal
 
 1. Open Edge. Browse to the **Microsoft 365 admin center** and sign in as the tenant owner.
 
@@ -643,7 +643,7 @@ ____________________________________________________________
 1. Close all Edge windows.
 
 
-### Exercise 2: Setting service administrators using PowerShell
+### Exercise 2: Set service administrators using PowerShell
 
 1. Assign roles.
 
@@ -720,7 +720,7 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 3: Configuring client connectivity to Microsoft Office 365
 
-### Exercise 1: DNS Records
+### Exercise 1: Create DNS records
 
 1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
@@ -803,7 +803,7 @@ ____________________________________________________________
 
 1. Select **Continue** then **Done**. Correct any mismatches reported.
 
-### Exercise 2: Office 365 Connectivity Analyzer
+### Exercise 2: Use the Microsoft Remote Connectivity Analyzer
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -829,7 +829,7 @@ ____________________________________________________________
 
 1. In the navigation menu, select **SARA Client**. Download and install the tool.
 
-### Exercise 3: Office 365 Support and Recovery Assistant
+### Exercise 3: Use the Microsoft Support and Recovery Assistant
 
 1. In the **Microsoft Support and Recovery Assistant**, select **Outlook** then select **Next**.
 
@@ -841,7 +841,7 @@ ____________________________________________________________
 
 1. Note any recommendations then close the tool.
 
-### Exercise 4: Connecting Office 2016 clients
+### Exercise 4: Connect Office 2016 clients
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -872,7 +872,7 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 4: Planning and configuring directory synchronization
 
-### Exercise 1: Preparing for Directory Synchonisation
+### Exercise 1: Prepare for directory synchonisation
 
 1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
@@ -969,7 +969,7 @@ ____________________________________________________________
    Set-MsolDirSyncEnabled -EnableDirSync $true -Force
    ```
 
-### Exercise 5: Download and install AD Connect, set up synchronization
+### Exercise 5: Download and install AD Connect, set up synchronisation
 
 1. On **LON-DS1**, signed in as **ADATUM\Administrator**.
 
@@ -1012,7 +1012,7 @@ ____________________________________________________________
 1. Open **Windows PowerShell ISE** or **Windows PowerShell**.
 
 
-### Exercise 6: Verify that synchronization was successful
+### Exercise 6: Verify synchronisation
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -1067,7 +1067,7 @@ ____________________________________________________________
    Start-AdSyncSyncCycle Delta
    ```
 
-### Exercise 8: Verify that synchronization was successful
+### Exercise 8: Verify synchronisation
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -1077,7 +1077,7 @@ ____________________________________________________________
 
 1. Check that Arturs Priede (a researcher) does have an account.
 
-### Exercise 9: Managing AD DS users and groups
+### Exercise 9: Manage AD DS users and groups
 
 1. On **LON-DC1**, signed in as **ADATUM\Administrator**.
 
@@ -1129,7 +1129,7 @@ ____________________________________________________________
    Start-AdSyncSyncCycle Delta
    ```
 
-### Exercise 11: Verify that synchronization was successful
+### Exercise 11: Verify synchronisation
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -1222,7 +1222,7 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 5: Planning and deploying Office 365 ProPlus
 
-### Exercise 1: Preparing an Office 365 ProPlus managed installation
+### Exercise 1: Prepare an Office 365 ProPlus managed installation
 
 #### Task 1: Download the Office 365 deployment tool
 
@@ -1281,9 +1281,9 @@ ____________________________________________________________
 
    This download takes several minutes to complete. Continue with the next task and leave the download in the background.
 
-### Exercise 2: Managing user-driven Office 365 ProPlus installations
+### Exercise 2: Manage user-driven Office 365 ProPlus installations
 
-#### Task 1: Managing user rights to install Office 365 ProPlus
+#### Task 1: Manage user rights to install Office 365 ProPlus
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -1293,7 +1293,7 @@ ____________________________________________________________
 
 1. Select **Lindsey Gates**. On the **Licenses and Apps** section, deselect **Microsoft 365 apps for enterprise**.
 
-#### Task 2: Installing Office 365 ProPlus from the Office 365 portal
+#### Task 2: Install Office 365 ProPlus from the Office 365 portal
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
@@ -1319,7 +1319,7 @@ ____________________________________________________________
 
    This installation takes several minutes to complete. Continue with the next task and leave the download in the background.
 
-### Exercise 3: Managing centralized Office 365 ProPlus installations
+### Exercise 3: Manage centralized Office 365 ProPlus installations
 
 #### Task 1: Verify ODT download
 
@@ -1387,9 +1387,9 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 6: Managing Exchange Online recipients and permissions
 
-### Exercise 1: Configuring Exchange Online recipients
+### Exercise 1: Configure Exchange Online recipients
 
-#### Task 1: Exchange admin center
+#### Task 1: Use the Exchange admin center
 
 1. On **LON-CL1**, signed in as **ADATUM\Administrator**.
 
@@ -1469,7 +1469,7 @@ ____________________________________________________________
    Get-Mailbox -RecipientTypeDetails EquipmentMailbox | Set-CalendarProcessing -AutomateProcessing AutoAccept
    ```
 
-#### Task 5: Test resource mailboxes.
+#### Task 5: Test resource mailboxes
 
 1. On **LON-CL3**, signed in as **ADATUM\Administrator**.
 
@@ -1491,7 +1491,7 @@ ____________________________________________________________
 
 1. Wait for the “declined” messages from Demonstration Laptop and Conference Room.
 
-### Exercise 2: Configuring role-based access control
+### Exercise 2: Configure role-based access control
 
 #### Task 1: Assign users to built-in role groups
 
@@ -1537,7 +1537,7 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 7A: Configuring message transport in Exchange Online
 
-### Exercise 1: Configuring message-transport settings
+### Exercise 1: Configure message-transport settings
 
 #### Task 1: Create a custom send and receive connector to enforce TLS
 
@@ -1616,7 +1616,7 @@ ____________________________________________________________
 
 1. Approve Amy’s e-mail message to Holly.
 
-#### Task 4: Create a journal rule for members of the research department
+#### Task 4: Create a journal rule
 
 1. Switch to Edge running the Exchange admin center.
 
@@ -1637,7 +1637,7 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 7B: Configuring email protection and client policies
 
-### Exercise 1: Configuring email protection
+### Exercise 1: Configure email protection
 
 #### Task 1: Configure the malware filter
 
@@ -1689,7 +1689,7 @@ ____________________________________________________________
    | Prepend subject line with this text | Junk: |
    | Applied to *(scroll to bottom)* | If the recipient is a member of… Sales |
 
-#### Task 4: Test the spam-filter settings *(optional)*
+#### Task 4: Test the spam-filter *(optional)*
 
 1. Open a web browser and sign in to **alias@outlook.com**.
 
@@ -1713,7 +1713,7 @@ ____________________________________________________________
 
 *The GTUBE test email should trigger the anti-spam features of an email system. Often, however, Exchange Online rejects it before the message even reaches a tenant. Check the inbox of alias@outlook.com for any NDRs.*
 
-### Exercise 2: Configuring client access policies
+### Exercise 2: Configure client access policies
 
 #### Task 1: Configure an Outlook Web App policy
 
@@ -1786,7 +1786,7 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 9: Configuring SharePoint Online
 
-### Exercise 1: Configuring SharePoint Online settings
+### Exercise 1: Configure SharePoint Online settings
 
 #### Task 1: Configure settings
 
@@ -1826,7 +1826,7 @@ ____________________________________________________________
 
 1. Select **Configure Store settings**. Set **Should Apps for Office from the store be able to start when documents are opened in the browser?** to **No**.
 
-### Exercise 2: Creating and configuring SharePoint Online site collections
+### Exercise 2: Create and configure SharePoint Online site collections
 
 #### Task 1: Create a site collection using the portal
 
@@ -1953,7 +1953,7 @@ ____________________________________________________________
 
 1. Sign out Francisco and close Edge.
 
-### Exercise 3: Configuring and verifying external user sharing
+### Exercise 3: Configure and verify external user sharing
 
 #### Task 1: Configure a site collection for external user sharing
 
@@ -2001,12 +2001,12 @@ ____________________________________________________________
 ____________________________________________________________
 ## Lab 10: Planning and configuring an Office 365 collaboration solution
 
-### Exercise 2: Configuring Yammer
+### Exercise 1: Configure Yammer
 
 TODO:
 
 
-### Exercise 2: Configuring OneDrive for Business
+### Exercise 2: Configure OneDrive for Business
 
 #### Task 1: Enable OneDrive for Business synchronization (cloud-only users)
 
@@ -2258,7 +2258,7 @@ Microsoft 365 admin center, Settings | Org settings, Organization profile, Organ
 ____________________________________________________________
 ## Lab 11: Planning and configuring security and compliance in ‎Office 365
 
-### Exercise 1: Azure Information Protection
+### Exercise 1: Manage Azure Information Protection
 
 #### Task 1: Install the Azure Information Protection client
 
@@ -2362,7 +2362,7 @@ Alex Wilbur’s IRD number is 21-234-567.
 
   *It should, but often doesn't. I can't find anything on the web for why it might not work.* **TODO**
 
-#### Task 3: Create protected content (AD DS user)
+#### Task 4: Create protected content (AD DS user)
 
 1. On **LON-CL4**, signed in as **ADATUM\Cai**.
 
@@ -2373,7 +2373,7 @@ Alex Wilbur’s IRD number is 21-234-567.
 ____________________________________________________________
 ## Lab 12: Monitoring and troubleshooting Microsoft Office 365
 
-### Exercise 1: Monitoring Office 365
+### Exercise 1: Monitor Office 365
 
 #### Task 1: Send an email to a non-existent domain
 
@@ -2472,7 +2472,7 @@ ____________________________________________________________
    Get-MessageTraceDetail -MessageTraceId "<paste>" -RecipientAddress "difflop1248999@outlook.com"
    ```
 
-### Exercise 2: Monitoring service health and analyzing reports
+### Exercise 2: Monitor service health
 
 #### Task 1: View Office 365 service health
 
