@@ -362,7 +362,7 @@ ____________________________________________________________
 
 1. In the **Active Users** list, select **Lindsey Gates**.
 
-1. Assign *Office 365 E5* and *Enterprise Mobility + Security E5* licenses.
+1. Assign **Office 365 E5** and **Enterprise Mobility + Security E5** licenses.
 
 ### Exercise 5: Password Policy
 
