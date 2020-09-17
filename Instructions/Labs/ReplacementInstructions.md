@@ -110,13 +110,13 @@ During this lab, if asked to save the password or to stay signed in, select **Ye
 
 1. In the Navigation menu, select **Security**. This opens the **Office 365 Security & Compliance** center.
 
-   Note that you can open this portal by browsing to **https://protection.office.com**.
+   You can open this site directly by browsing to **https://protection.office.com**.
 
 1. Select the **Microsoft 365 admin center** browser tab.
 
 1. In the Navigation menu, select **Compliance**. This opens the new **Microsoft 365 Compliance** portal.
 
-   Note that you can open this portal by browsing to **https://compliance.microsoft.com**.
+   You can open this site directly by browsing to **https://compliance.microsoft.com**.
 
 1. Open a new tab and browse to **https://compliance.microsoft.com**. This opens the new **Microsoft 365 Security** portal.
 
