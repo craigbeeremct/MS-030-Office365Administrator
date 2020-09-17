@@ -10,8 +10,5 @@
 |	**LON-DS1**	| Windows Server 2016 Datacenter | .\Administrator, Pa55w.rd | |
 |	**LON-WAP1**	| Windows Server 2016 Datacenter | .\Administrator, Pa55w.rd | |
 
-
-
-
 Except as noted, machines are members of the AD DS domain **adatum.com**.\
-The domain admin is ADATUM\administrator), Pa55w.rd.
+The domain admin is ADATUM\administrator, Pa55w.rd.
